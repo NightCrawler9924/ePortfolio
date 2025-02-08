@@ -1,0 +1,172 @@
+/* General Body Styling */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+body {
+    flex: 1;
+    font-size: 18px;
+}
+
+/* Header */
+header {
+    background-color: #1f1f1f;
+    padding: 30px 0;
+    text-align: center;
+}
+
+header h1 {
+    color: #ffcc00; /* Yellow */
+    font-size: 3em;
+    margin: 0;
+    font-weight: bold; /* Ensures bold style */
+    margin-bottom: 20px; /* Added space after the name */
+}
+
+/* Achievements Page Specific */
+.achievements h1 {
+    color: #ffcc00; /* Yellow */
+    font-size: 3em;  /* Larger size */
+    font-weight: bold; /* Bold text */
+    margin: 0;
+    margin-bottom: 20px; /* Added space below the heading */
+}
+
+/* Updated paragraph styling for Achievements page */
+.achievements p {
+    font-size: 2em;  /* Increased font size for the achievements page */
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #64ffda;
+}
+
+/* Section Styling */
+section {
+    width: 80%;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(100, 255, 218, 0.3);
+    text-align: center;
+}
+
+/* Section Titles */
+h2 {
+    color: #ffcc00; /* Yellow for h2 */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 1.5em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Social Media Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 40px; /* Uniform size for all icons */
+    height: 40px;
+}
+
+.social-links img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Footer Icons Styling */
+footer .social-links img {
+    width: 40px; /* Ensuring the size remains the same */
+    height: 40px;
+    margin: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    section {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1.4em;
+    }
+
+    /* Adjust social icons for smaller screens */
+    .social-links {
+        gap: 10px;
+    }
+
+    .social-links a {
+        width: 35px;
+        height: 35px;
+    }
+}
