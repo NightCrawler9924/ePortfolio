@@ -2,15 +2,16 @@
 
 ## This is my responsive personal portfolio website built with HTML, CSS, and JavaScript. It highlights my education, skills, and projects in a clean, modern layout.
 🔗 Live Demo: [Deepansh Sabharwal](https://deepanshsabharwal.me)
-📁 Project Structure
-├── index.html         → Home page  
-├── education.html     → Academic background  
-├── projects.html      → Projects I've built  
-├── skills.html        → Technologies and skills  
-├── styles.css         → Custom styling  
-├── script.js          → JavaScript interactions  
-├── images/            → Portfolio images  
-└── README.md          → Project description  
+
+# 📁 Project Structure
+    ├── index.html         → Home page  
+    ├── education.html     → Academic background  
+    ├── projects.html      → Projects I've built  
+    ├── skills.html        → Technologies and skills  
+    ├── styles.css         → Custom styling  
+    ├── script.js          → JavaScript interactions  
+    ├── images/            → Portfolio images  
+    └── README.md          → Project description  
 
 # 🧠 Features
 🎓 Education – Academic background and milestones
