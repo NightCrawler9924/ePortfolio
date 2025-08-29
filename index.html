@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Deepansh Sabharwal | Engineering Portfolio</title>
+  <meta name="description" content="Deepansh Sabharwal | Computer Engineering Student Portfolio showcasing projects, skills, and contact information.">
+  <meta name="keywords" content="Computer Engineering, Software Development, Hardware Design, UBC, Portfolio, Deepansh Sabharwal">
+  <meta name="author" content="Deepansh Sabharwal">
+  <meta property="og:title" content="Deepansh Sabharwal | Engineering Portfolio">
+  <meta property="og:description" content="Computer Engineering Student at UBC - Building innovative solutions through hardware and software integration.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav-blur fixed top-0 w-full z-50 border-b border-border-color">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <span class="logo font-mono font-semibold text-lg">&lt;DS/&gt;</span>
+        </div>
+        <div class="flex items-center space-x-8">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <button id="theme-toggle" class="theme-toggle">
+            <svg id="sun-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+            </svg>
+            <svg id="moon-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section gradient-bg">
+    <div class="hero-particles">
+      <div class="particle" style="top: 20%; left: 20%; animation-delay: 0s;"></div>
+      <div class="particle" style="top: 40%; right: 32%; animation-delay: 1s;"></div>
+      <div class="particle" style="bottom: 32%; left: 33%; animation-delay: 0.5s;"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-text">Computer Engineering Student</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="text-accent">Deepansh </span>
+        <span class="text-primary">Sabharwal</span>
+      </h1>
+      <p class="hero-subtitle">
+        Building the future through innovative engineering solutions, 
+        <span class="text-accent">one circuit at a time</span>
+      </p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn-primary glow">
+          <svg class="btn-icon" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
+          </svg>
+          View Projects
+        </a>
+        <a href="#contact" class="btn-secondary">
+          <svg class="btn-icon" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+          </svg>
+          Get in Touch
+        </a>
+        <a href="Deepansh Sabharwal.docx" class="btn-resume" target="_blank" download>
+          <svg class="btn-icon" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+          </svg>
+          Download Resume
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="text-accent">About</span> the Engineer
+        </h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <p class="text-lg leading-relaxed">
+            I'm a passionate Computer Engineering student at UBC, driven by the intersection of hardware and software innovation. 
+            My journey in engineering is fueled by curiosity and the desire to create solutions that make a real impact.
+          </p>
+          <p class="text-lg leading-relaxed">
+            From designing electric vehicles to developing AI-powered tools, I thrive on complex challenges that require both 
+            analytical thinking and creative problem-solving. Every project is an opportunity to push boundaries and learn something new.
+          </p>
+          <div class="skills-tags">
+            <span class="tag tag-blue">Hardware Design</span>
+            <span class="tag tag-green">Software Development</span>
+            <span class="tag tag-orange">System Integration</span>
+          </div>
+        </div>
+        <div class="code-block">
+          <div class="code-header">
+            <div class="code-dots">
+              <div class="code-dot red"></div>
+              <div class="code-dot yellow"></div>
+              <div class="code-dot green"></div>
+            </div>
+            <span class="code-filename">engineer.js</span>
+          </div>
+          <pre class="code-content"><code>class Engineer {
+  constructor() {
+    this.name = "Deepansh Sabharwal";
+    this.role = "Computer Engineer";
+    this.location = "Kelowna, BC";
+    this.passion = "Innovation";
+  }
+
+  async solveProblem(complexity) {
+    const solution = await this.analyze(complexity);
+    return this.implement(solution);
+  }
+
+  innovate() {
+    return "Building tomorrow's solutions today";
+  }
+}
+
+const me = new Engineer();
+me.innovate(); // "Building tomorrow's solutions today"</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="education-section bg-secondary">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="text-accent">Education</span> & Background
+        </h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="education-content">
+        <div class="education-card">
+          <div class="education-header">
+            <div class="education-logo">
+              <svg class="school-icon" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838l-2.727 1.17 1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path>
+              </svg>
+            </div>
+            <div class="education-info">
+              <h3 class="education-degree">Bachelor of Applied Science in Computer Engineering</h3>
+              <div class="education-school">University of British Columbia (UBC)</div>
+              <div class="education-location">Kelowna, British Columbia</div>
+            </div>
+            <div class="education-status">
+              <span class="status-badge">In Progress</span>
+            </div>
+          </div>
+          <div class="education-details">
+            <div class="education-highlights">
+              <span class="highlight">🎯 Focus: Hardware-Software Integration</span>
+              <span class="highlight">🔬 Research: AI & Machine Learning</span>
+              <span class="highlight">⚡ Projects: EV Design, System Architecture</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section-padding bg-secondary">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">
+          Featured <span class="text-accent">Projects</span>
+        </h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <a href="https://www.linkedin.com/in/deepansh-sabharwal-315033257/" class="project-card glow" target="_blank" rel="noopener noreferrer">
+          <div class="project-header">
+            <h3 class="project-title">CyberTrike™</h3>
+            <span class="project-tag tag-blue">EV Design</span>
+          </div>
+          <p class="project-description">
+            Innovative 3-wheeled electric vehicle prototype designed and built with a multidisciplinary team at UBC. 
+            Features lightweight carbon fiber frame and advanced battery management system.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">SolidWorks</span>
+            <span class="tech-tag">MATLAB</span>
+            <span class="tech-tag">Prototyping</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-arrow">→</span>
+          </div>
+        </a>
+
+        <!-- Project 2 -->
+        <a href="https://github.com/NightCrawler9924/AI-in-Farming" class="project-card glow" target="_blank" rel="noopener noreferrer">
+          <div class="project-header">
+            <h3 class="project-title">AI in Farming</h3>
+            <span class="project-tag tag-green">Machine Learning</span>
+          </div>
+          <p class="project-description">
+            Built a soil condition prediction system using machine learning algorithms to optimize agricultural 
+            practices and improve crop yield predictions.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Machine Learning</span>
+            <span class="tech-tag">Data Analysis</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-arrow">→</span>
+          </div>
+        </a>
+
+        <!-- Project 3 -->
+        <a href="https://github.com/NightCrawler9924/Bank-Manager-C-" class="project-card glow" target="_blank" rel="noopener noreferrer">
+          <div class="project-header">
+            <h3 class="project-title">Bank Manager</h3>
+            <span class="project-tag tag-orange">System Design</span>
+          </div>
+          <p class="project-description">
+            Comprehensive banking management system developed in C programming language. Features account 
+            management, transaction processing, and secure data handling.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">C</span>
+            <span class="tech-tag">File I/O</span>
+            <span class="tech-tag">Data Structures</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-arrow">→</span>
+          </div>
+        </a>
+
+        <!-- Project 4 -->
+        <a href="https://github.com/NightCrawler9924/SolveMate" class="project-card glow" target="_blank" rel="noopener noreferrer">
+          <div class="project-header">
+            <h3 class="project-title">SolveMate</h3>
+            <span class="project-tag tag-blue">Mathematics</span>
+          </div>
+          <p class="project-description">
+            Advanced mathematical problem solver using Python's SymPy library. Capable of solving derivatives, integrals, 
+            limits, and complex mathematical expressions with step-by-step solutions.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">SymPy</span>
+            <span class="tech-tag">Mathematics</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-arrow">→</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">
+          Technical <span class="text-accent">Skills</span>
+        </h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="skills-grid">
+        <!-- Software Skills -->
+        <div class="skill-card">
+          <h3 class="skill-title">
+            <svg class="skill-icon" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+            Software Development
+          </h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <span class="skill-name">MATLAB</span>
+              <div class="progress-bar">
+                <div class="progress-fill" data-width="90%" style="width: 0%; background: var(--accent-green);"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <span class="skill-name">C</span>
+              <div class="progress-bar">
+                <div class="progress-fill" data-width="85%" style="width: 0%; background: var(--accent-green);"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <span class="skill-name">Java</span>
+              <div class="progress-bar">
+                <div class="progress-fill" data-width="80%" style="width: 0%; background: var(--accent-green);"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <span class="skill-name">Python</span>
+              <div class="progress-bar">
+                <div class="progress-fill" data-width="88%" style="width: 0%; background: var(--accent-green);"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <span class="skill-name">R</span>
+              <div class="progress-bar">
+                <div class="progress-fill" data-width="75%" style="width: 0%; background: var(--accent-green);"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hardware & Design Skills -->
+        <div class="skill-card">
+          <h3 class="skill-title">
+            <svg class="skill-icon" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+            </svg>
+            Hardware & Design
+          </h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <span class="skill-name">SolidWorks</span>
+              <div class="progress-bar">
+                <div class="progress-fill" data-width="85%" style="width: 0%; background: var(--engineering-blue);"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <span class="skill-name">Arduino</span>
+              <div class="progress-bar">
+                <div class="progress-fill" data-width="80%" style="width: 0%; background: var(--engineering-blue);"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <span class="skill-name">Circuit Design</span>
+              <div class="progress-bar">
+                <div class="progress-fill" data-width="75%" style="width: 0%; background: var(--engineering-blue);"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <span class="skill-name">3D Modeling</span>
+              <div class="progress-bar">
+                <div class="progress-fill" data-width="82%" style="width: 0%; background: var(--engineering-blue);"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools & Technologies -->
+        <div class="skill-card">
+          <h3 class="skill-title">
+            <svg class="skill-icon" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            Tools & Technologies
+          </h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <span class="skill-name">Git</span>
+              <div class="progress-bar">
+                <div class="progress-fill" data-width="85%" style="width: 0%; background: var(--accent-orange);"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <span class="skill-name">Linux</span>
+              <div class="progress-bar">
+                <div class="progress-fill" data-width="80%" style="width: 0%; background: var(--accent-orange);"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <span class="skill-name">Bash Scripting</span>
+              <div class="progress-bar">
+                <div class="progress-fill" data-width="75%" style="width: 0%; background: var(--accent-orange);"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="section-padding bg-secondary">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">
+          Let's <span class="text-accent">Connect</span>
+        </h2>
+        <div class="section-divider"></div>
+      </div>
+      <p class="contact-subtitle">
+        Ready to collaborate on the next big engineering challenge? 
+        Let's build something amazing together.
+      </p>
+      <div class="connect-cta">
+        <h3 class="connect-title">Get In Touch</h3>
+        <p class="connect-description">I'm always open to discussing new opportunities, innovative projects, and engineering collaborations.</p>
+      </div>
+      <div class="social-links">
+                <a href="mailto:deepanshsabh.60@gmail.com" class="social-link email">
+          <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+          <span>Email</span>
+        </a>
+        <a href="https://www.linkedin.com/in/deepansh-sabharwal-315033257/" class="social-link linkedin">
+          <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://www.instagram.com/deepansh_100/?hl=en" class="social-link instagram">
+          <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          <span>Instagram</span>
+        </a>
+        <a href="https://github.com/NightCrawler9924" class="social-link github">
+          <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+        <a href="https://discord.com/channels/@me" class="social-link discord">
+          <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419-.019 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1568 2.4189Z"/>
+          </svg>
+          <span>Discord</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">
+        © 2025 Deepansh Sabharwal. Built with 
+        <span class="text-accent">engineering precision</span> and 
+        <span class="text-accent">modern design</span>.
+      </p>
+      <div class="footer-stats">
+        <span class="stat">🚀 Performance Optimized</span>
+        <span class="stat">📱 Mobile Responsive</span>
+        <span class="stat">♿ Accessibility Compliant</span>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>
