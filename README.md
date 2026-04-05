@@ -1,36 +1,52 @@
-# 🌐 Personal Portfolio Website
+# Deepansh Sabharwal — Portfolio
 
-## This is my responsive personal portfolio website built with HTML, CSS, and JavaScript. It highlights my education, skills, and projects in a clean, modern layout.
-🔗 Live Demo: [Deepansh Sabharwal](https://deepanshsabharwal.me)
+Personal portfolio website for Deepansh Sabharwal, Computer Engineering student at UBC. Built with vanilla HTML, CSS, and JavaScript, deployed on GitHub Pages with a custom domain.
 
-# 📁 Project Structure
-    ├── index.html         → Home page  
-    ├── education.html     → Academic background  
-    ├── projects.html      → Projects I've built  
-    ├── skills.html        → Technologies and skills  
-    ├── styles.css         → Custom styling  
-    ├── script.js          → JavaScript interactions  
-    ├── images/            → Portfolio images  
-    └── README.md          → Project description  
+**Live:** [deepanshsabharwal.me](https://deepanshsabharwal.me)
 
-# 🧠 Features
-🎓 Education – Academic background and milestones
-💼 Projects – Real-world work and experiments
-💻 Skills – Tools, languages, and frameworks
+---
 
-# ⚙️ Tech Stack
-HTML5
-CSS3
-Vanilla JavaScript
-GitHub Pages (for hosting)
+## About
 
-#🚀 Run Locally
-Clone the repo:
+This site serves as a technical portfolio targeting co-op roles in embedded systems, FPGA engineering, firmware, and edge AI. It documents real projects with verified implementation metrics, not placeholder content.
+
+Featured work includes:
+
+- **FaultLatchedPWM** — Verilog PWM controller on GW2A-LV18 FPGA with hardware fault latching, 127 MHz Fmax, verified via Icarus Verilog
+- **RISC-V Toolchain Pipeline** — Bare-metal C to RISC-V ELF compilation and QEMU emulation, no OS
+- **AI Soil Suitability Predictor** — Logistic regression ML model with cross-validation
+- **CyberTrike** — RC-controlled EV prototype, led electrical sub-team
+- **Wildlife-Vehicle Collision Warning System** — Edge AI research proposal, FLIR thermal + YOLOv8-nano on Jetson, targeting BC MoTI Hwy 97 corridor
+
+---
+
+## Stack
+
+- HTML5, CSS3, Vanilla JavaScript
+- WebGL particle canvas (hero background)
+- Hosted on GitHub Pages with custom domain
+
+---
+
+## Structure
+├── index.html       — Main portfolio page
+├── styles.css       — Styling
+├── script.js        — WebGL canvas, mobile nav, scroll behavior
+└── README.md
+
+---
+
+## Running Locally
+```bash
 git clone https://github.com/NightCrawler9924/ePortfolio.git
-Open index.html in your browser.
-Customize the HTML, CSS, and JavaScript to make it your own.
+cd ePortfolio
+open index.html
+```
 
-#🛡 License
-MIT License © 2025 Deepansh Sabharwal
+No build step required.
 
-# Made with 💻 + ☕ by Deepansh Sabharwal
+---
+
+## License
+
+MIT License © 2026 Deepansh Sabharwal
