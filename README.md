@@ -1,4 +1,4 @@
-# Deepansh Sabharwal — Portfolio
+# Deepansh Sabharwal - Portfolio
 
 Personal portfolio website for Deepansh Sabharwal, Computer Engineering student at UBC. Built with vanilla HTML, CSS, and JavaScript, deployed on GitHub Pages with a custom domain.
 
@@ -12,11 +12,11 @@ This site serves as a technical portfolio targeting co-op roles in embedded syst
 
 Featured work includes:
 
-- **FaultLatchedPWM** — Verilog PWM controller on GW2A-LV18 FPGA with hardware fault latching, 127 MHz Fmax, verified via Icarus Verilog
-- **RISC-V Toolchain Pipeline** — Bare-metal C to RISC-V ELF compilation and QEMU emulation, no OS
-- **AI Soil Suitability Predictor** — Logistic regression ML model with cross-validation
-- **CyberTrike** — RC-controlled EV prototype, led electrical sub-team
-- **Wildlife-Vehicle Collision Warning System** — Edge AI research proposal, FLIR thermal + YOLOv8-nano on Jetson, targeting BC MoTI Hwy 97 corridor
+- **FaultLatchedPWM** - Verilog PWM controller on GW2A-LV18 FPGA with hardware fault latching, 127 MHz Fmax, verified via Icarus Verilog
+- **RISC-V Toolchain Pipeline** - Bare-metal C to RISC-V ELF compilation and QEMU emulation, no OS
+- **AI Soil Suitability Predictor** - Logistic regression ML model with cross-validation
+- **CyberTrike** - RC-controlled EV prototype, led electrical sub-team
+- **Wildlife-Vehicle Collision Warning System** - Edge AI research proposal, FLIR thermal + YOLOv8-nano on Jetson, targeting BC MoTI Hwy 97 corridor
 
 ---
 
@@ -29,9 +29,9 @@ Featured work includes:
 ---
 
 ## Structure
-├── index.html       — Main portfolio page
-├── styles.css       — Styling
-├── script.js        — WebGL canvas, mobile nav, scroll behavior
+├── index.html       - Main portfolio page
+├── styles.css       - Styling
+├── script.js        - WebGL canvas, mobile nav, scroll behavior
 └── README.md
 
 ---
