@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deepansh Sabharwal — Computer Engineering</title>
-  <meta name="description" content="Deepansh Sabharwal — Computer Engineering at UBC Okanagan. FPGA, embedded systems, edge AI, hardware-software integration.">
+  <title>Deepansh Sabharwal - Computer Engineering</title>
+  <meta name="description" content="Deepansh Sabharwal - Computer Engineering at UBC. FPGA, embedded systems, edge AI, hardware-software integration.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
@@ -64,7 +64,7 @@
   <!-- INTRO STRIP -->
   <div class="intro-strip">
     <div class="wrap">
-      <p class="intro-text">I build systems where hardware and software meet — from RTL-level FPGA design and bare-metal RISC-V pipelines to thermal-camera CV inference running on embedded hardware in the field. Second-year Computer Engineering at UBC Okanagan, pursuing co-op in <strong>embedded engineering</strong>, <strong>FPGA development</strong>, and <strong>applied AI</strong>.</p>
+      <p class="intro-text">I build systems where hardware and software meet - from RTL-level FPGA design and bare-metal RISC-V pipelines to thermal-camera CV inference running on embedded hardware in the field. Second-year Computer Engineering at UBC Okanagan, pursuing co-op in <strong>embedded engineering</strong>, <strong>FPGA development</strong>, and <strong>applied AI</strong>.</p>
       <div class="intro-chips">
         <span>Verilog / HDL</span>
         <span>FPGA Design</span>
@@ -96,11 +96,11 @@
         <div class="proj-featured-grid">
           <div class="proj-content">
             <h3 class="proj-title">FaultLatchedPWM</h3>
-            <p class="proj-lead">A deterministic, hardware-enforced PWM controller implemented in Verilog on the GW2A-LV18 FPGA (Tang Nano 20K). Fault handling and safe-state enforcement at the RTL level — no software override path.</p>
+            <p class="proj-lead">A deterministic, hardware-enforced PWM controller implemented in Verilog on the GW2A-LV18 FPGA (Tang Nano 20K). Fault handling and safe-state enforcement at the RTL level - no software override path.</p>
             <p class="proj-body">The system generates a 32-bit configurable PWM signal for motor control and embedded actuation. A guard module validates period and duty constraints directly in hardware before enabling output. Any violation drives the FSM into a latched FAULT state that requires an explicit recovery sequence to exit.</p>
             <ul class="proj-bullets">
               <li>FSM: INIT → IDLE → RUN → FAULT → SAFE</li>
-              <li>Hardware-level guard module — constraint violations caught pre-output</li>
+              <li>Hardware-level guard module - constraint violations caught pre-output</li>
               <li>127 MHz Fmax achieved under a 100 MHz constraint</li>
               <li>~2% LUT utilization, &lt;1% register utilization on GW2A-LV18</li>
               <li>Verified: Icarus Verilog simulation + waveform-based fault injection</li>
@@ -148,7 +148,7 @@
           <div class="proj-content">
             <h3 class="proj-title">RISC-V Toolchain to Hardware Emulation Pipeline</h3>
             <p class="proj-lead">Full bare-metal compilation and emulation pipeline: C source → cross-compiled RISC-V ELF → 64-bit virtual RISC-V machine via QEMU, running without a conventional OS.</p>
-            <p class="proj-body">Used GCC cross-compiler to produce RISC-V ELF binaries, with OpenSBI and riscv-pk managing boot flow and privilege transitions. Analyzed the complete pipeline — ELF generation, ISA targeting, boot sequences, and hardware emulation — to build ground-up understanding of instruction set architecture and firmware-hardware interaction. Next phase targets physical deployment on Tang Nano 20K FPGA.</p>
+            <p class="proj-body">Used GCC cross-compiler to produce RISC-V ELF binaries, with OpenSBI and riscv-pk managing boot flow and privilege transitions. Analyzed the complete pipeline - ELF generation, ISA targeting, boot sequences, and hardware emulation - to build ground-up understanding of instruction set architecture and firmware-hardware interaction. Next phase targets physical deployment on Tang Nano 20K FPGA.</p>
             <ul class="proj-bullets">
               <li>Cross-compiled C → RISC-V ELF using GNU Compiler Collection</li>
               <li>Integrated OpenSBI for M-mode boot and privilege management</li>
@@ -186,7 +186,7 @@
             <span class="proj-tag tag-ml">ML · Python</span>
           </div>
           <h3 class="proj-card-title">AI Soil Suitability Predictor</h3>
-          <p class="proj-card-body">ML model predicting soil suitability for crop growth from environmental inputs — temperature, humidity, rainfall, wind speed, soil moisture. Logistic regression with cross-validation and an interactive decision interface for farmers.</p>
+          <p class="proj-card-body">ML model predicting soil suitability for crop growth from environmental inputs - temperature, humidity, rainfall, wind speed, soil moisture. Logistic regression with cross-validation and an interactive decision interface for farmers.</p>
           <div class="proj-stack">
             <span>Python</span><span>Scikit-learn</span><span>Logistic Regression</span><span>Cross-validation</span>
           </div>
@@ -225,11 +225,11 @@
             <span class="proj-tag tag-research">Research · Edge AI</span>
           </div>
           <h3 class="proj-card-title">Wildlife-Vehicle Collision Warning System</h3>
-          <p class="proj-card-body">Research proposal for a solar-powered edge AI node using a FLIR thermal camera and YOLOv8-nano on Jetson hardware to detect and classify large animals approaching a road in real time — triggering dynamic LED warning signs with no cloud dependency. Addresses a documented gap in North American RADS: no deployed system uses on-device CV to classify animals. Target corridor: Hwy 97, Okanagan.</p>
+          <p class="proj-card-body">Research proposal for a solar-powered edge AI node using a FLIR thermal camera and YOLOv8-nano on Jetson hardware to detect and classify large animals approaching a road in real time - triggering dynamic LED warning signs with no cloud dependency. Addresses a documented gap in North American RADS: no deployed system uses on-device CV to classify animals. Target corridor: Hwy 97, Okanagan.</p>
           <div class="proj-stack">
             <span>Jetson Orin NX</span><span>FLIR Thermal</span><span>YOLOv8-nano</span><span>TensorRT</span><span>LoRaWAN</span>
           </div>
-          <span class="proj-tag-inline">UBC Research Proposal · April 2026</span>
+          <span class="proj-tag-inline">UBC Research Proposal · Summer 2026</span>
         </div>
 
       </div>
@@ -252,17 +252,20 @@
             <div class="skill-row"><span>Digital Circuit Design</span><span class="badge-strong">Strong</span></div>
             <div class="skill-row"><span>Arduino / Embedded C</span><span class="badge-strong">Strong</span></div>
             <div class="skill-row"><span>SolidWorks / CAD</span><span class="badge-mid">Working</span></div>
+            <div class="skill-row"><span>Gowin EDA / Synthesis</span><span class="badge-mid">Working</span></div>
           </div>
         </div>
 
         <div class="skill-group">
-          <h3 class="sg-title">Software</h3>
+          <h3 class="sg-title">Languages</h3>
           <div class="skill-rows">
             <div class="skill-row"><span>C / C++</span><span class="badge-strong">Strong</span></div>
             <div class="skill-row"><span>Python</span><span class="badge-strong">Strong</span></div>
             <div class="skill-row"><span>Java</span><span class="badge-strong">Strong</span></div>
-            <div class="skill-row"><span>Bash Scripting</span><span class="badge-strong">Strong</span></div>
+            <div class="skill-row"><span>Bash / Shell Scripting</span><span class="badge-strong">Strong</span></div>
+            <div class="skill-row"><span>Verilog / HDL</span><span class="badge-strong">Strong</span></div>
             <div class="skill-row"><span>MATLAB</span><span class="badge-mid">Working</span></div>
+            <div class="skill-row"><span>R</span><span class="badge-mid">Working</span></div>
           </div>
         </div>
 
@@ -270,9 +273,10 @@
           <h3 class="sg-title">AI / ML</h3>
           <div class="skill-rows">
             <div class="skill-row"><span>Supervised ML (Scikit-learn)</span><span class="badge-mid">Working</span></div>
-            <div class="skill-row"><span>OpenCV — Certified</span><span class="badge-mid">Working</span></div>
+            <div class="skill-row"><span>OpenCV (Certified)</span><span class="badge-mid">Working</span></div>
+            <div class="skill-row"><span>YOLOv8 / Object Detection</span><span class="badge-mid">Working</span></div>
             <div class="skill-row"><span>Neural Networks</span><span class="badge-mid">Working</span></div>
-            <div class="skill-row"><span>Edge Inference / TensorRT</span><span class="badge-dev">Developing</span></div>
+            <div class="skill-row"><span>TensorRT / Edge Inference</span><span class="badge-dev">Developing</span></div>
           </div>
         </div>
 
@@ -281,29 +285,34 @@
           <div class="skill-rows">
             <div class="skill-row"><span>Git / GitHub</span><span class="badge-strong">Strong</span></div>
             <div class="skill-row"><span>Linux</span><span class="badge-strong">Strong</span></div>
-            <div class="skill-row"><span>QEMU / Emulation</span><span class="badge-mid">Working</span></div>
-            <div class="skill-row"><span>Gowin EDA</span><span class="badge-mid">Working</span></div>
+            <div class="skill-row"><span>RISC-V / QEMU</span><span class="badge-mid">Working</span></div>
+            <div class="skill-row"><span>Icarus Verilog / Simulation</span><span class="badge-mid">Working</span></div>
+            <div class="skill-row"><span>LoRaWAN / IoT Protocols</span><span class="badge-mid">Working</span></div>
+            <div class="skill-row"><span>Raspberry Pi / Jetson Nano</span><span class="badge-mid">Working</span></div>
           </div>
         </div>
 
       </div>
 
-      <div class="certs-row">
+   <div class="certs-row">
         <div class="cert-card">
           <div class="cert-issuer">OpenCV University · Dec 2025</div>
           <div class="cert-name">Mastering OpenCV with Python</div>
         </div>
         <div class="cert-card">
-          <div class="cert-issuer">Udemy · Completed</div>
+          <div class="cert-issuer">Self-Authored · GitHub</div>
           <div class="cert-name">C Programming: Beginner to Intermediate</div>
+          <a href="https://github.com/NightCrawler9924/C" class="cert-link" target="_blank" rel="noopener">View on GitHub →</a>
         </div>
         <div class="cert-card">
-          <div class="cert-issuer">Udemy · Completed</div>
+          <div class="cert-issuer">Self-Authored · GitHub</div>
           <div class="cert-name">Java: Beginner to Intermediate</div>
+          <a href="https://github.com/NightCrawler9924/JAVA" class="cert-link" target="_blank" rel="noopener">View on GitHub →</a>
         </div>
         <div class="cert-card">
-          <div class="cert-issuer">Udemy · Completed</div>
+          <div class="cert-issuer">Self-Authored · GitHub</div>
           <div class="cert-name">Bash Scripting: Beginner to Intermediate</div>
+          <a href="https://github.com/NightCrawler9924/BASH-SCRIPTING" class="cert-link" target="_blank" rel="noopener">View on GitHub →</a>
         </div>
       </div>
     </div>
@@ -318,15 +327,15 @@
       </div>
       <div class="about-grid">
         <div class="about-text">
-          <p>Second-year Computer Engineering student at UBC Okanagan. My work spans the full hardware-software stack — writing Verilog state machines that run on physical FPGAs, building bare-metal RISC-V compilation pipelines, training ML models on real datasets, and designing circuits on physical prototypes with real wiring constraints.</p>
-          <p>I pursue co-op roles where the hardware layer is not optional — embedded systems, FPGA engineering, firmware, and edge AI. I work best under physical constraints: timing closure, silicon area, power budget, thermal limits.</p>
-          <p>Currently progressing toward physical FPGA implementation of the RISC-V pipeline on Tang Nano 20K, and developing a thermal-camera wildlife detection system as a UBC research proposal targeting BC Ministry of Transportation deployment.</p>
+          <p>Second-year Computer Engineering student at UBC. My work covers both sides of the hardware-software boundary: writing Verilog state machines on physical FPGAs, building bare-metal RISC-V compilation pipelines, training ML models on real datasets, and wiring circuits on physical prototypes.</p>
+          <p>I pursue co-op roles in embedded systems, FPGA engineering, firmware, and edge AI, where hardware is a real constraint, not an abstraction. Timing closure, silicon area, power budget, and thermal limits are the environment I work in.</p>
+          <p>Active research: a solar-powered thermal-camera wildlife detection system proposed to BC Ministry of Transportation, targeting the Hwy 97 Okanagan corridor. In parallel, progressing toward physical FPGA deployment of the RISC-V pipeline on Tang Nano 20K.</p>
         </div>
         <div class="about-sidebar">
           <div class="about-block">
             <div class="about-block-label">Education</div>
             <div class="about-block-val">B.A.Sc. Computer Engineering</div>
-            <div class="about-block-sub">UBC Okanagan · Second Year · In Progress</div>
+            <div class="about-block-sub">UBC · Second Year · In Progress</div>
           </div>
           <div class="about-block">
             <div class="about-block-label">Location</div>
@@ -381,7 +390,7 @@
   <footer class="footer">
     <div class="wrap footer-inner">
       <span>© 2026 Deepansh Sabharwal</span>
-      <span>Computer Engineering · UBC Okanagan</span>
+      <span>Computer Engineering · UBC</span>
     </div>
   </footer>
 
