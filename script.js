@@ -1,15 +1,6 @@
-/* ================================================================
-   DEEPANSH SABHARWAL — PORTFOLIO SCRIPT
-   - WebGL particle canvas (hero background)
-   - Mobile hamburger nav
-   - Smooth scroll
-   - Intersection observer fade-ins
-   ================================================================ */
-
 (function () {
   'use strict';
 
-  /* ── MOBILE NAV ── */
   var hamburger = document.getElementById('hamburger');
   var mobileNav = document.getElementById('mobile-nav');
 
@@ -24,7 +15,6 @@
     });
   }
 
-  /* ── SMOOTH SCROLL ── */
   document.querySelectorAll('a[href^="#"]').forEach(function (a) {
     a.addEventListener('click', function (e) {
       var id = a.getAttribute('href');
@@ -38,7 +28,6 @@
     });
   });
 
-  /* ── SCROLL FADE-IN ── */
   var fadeEls = document.querySelectorAll(
     '.proj-featured, .proj-card, .skill-group, .cert-card, .about-block, .intro-chips'
   );
@@ -66,7 +55,6 @@
     });
   }
 
-  /* ── WEBGL PARTICLE CANVAS ── */
   var canvas = document.getElementById('canvas');
   if (!canvas) return;
 
@@ -81,7 +69,6 @@
   resize();
   window.addEventListener('resize', resize, { passive: true });
 
-  /* Shaders */
   var VS = [
     'attribute vec2 aPos;',
     'attribute float aSize;',
@@ -126,7 +113,6 @@
   gl.linkProgram(prog);
   gl.useProgram(prog);
 
-  /* Particles */
   var N = 200;
   var pos    = new Float32Array(N * 2);
   var sizes  = new Float32Array(N);
