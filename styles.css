@@ -397,8 +397,8 @@ body {
 .tag-embedded { color: var(--purple);  border-color: rgba(167,139,250,0.25); background: var(--purple-dim); }
 .tag-ml       { color: var(--green);   border-color: rgba(52,211,153,0.25); background: var(--green-dim); }
 .tag-hw       { color: var(--amber);   border-color: rgba(251,191,36,0.25); background: var(--amber-dim); }
-.tag-sw       { color: var(--text-muted); border-color: var(--border); background: transparent; }
-.tag-research { color: var(--text-muted); border-color: var(--border); background: transparent; }
+.tag-sw       { color: #94a3b8; border-color: rgba(148,163,184,0.35); background: rgba(148,163,184,0.08); }
+.tag-research { color: #c4b5fd; border-color: rgba(196,181,253,0.35); background: rgba(196,181,253,0.1); }
 .tag-lead     { color: var(--amber);   border-color: rgba(251,191,36,0.3); background: var(--amber-dim); }
 
 .proj-featured-grid {
