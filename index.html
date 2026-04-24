@@ -2,398 +2,661 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deepansh Sabharwal - Computer Engineering</title>
-  <meta name="description" content="Deepansh Sabharwal - Computer Engineering at UBC. FPGA, embedded systems, edge AI, hardware-software integration.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Deepansh Sabharwal, Computer Engineering, UBC</title>
+  <meta name="description" content="Deepansh Sabharwal. Computer Engineering, UBC. FPGA, embedded systems, edge AI, hardware-software integration. Selected work, technical depth, and contact.">
+  <meta name="theme-color" content="#FAFAF7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0B0B0A" media="(prefers-color-scheme: dark)">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Source+Serif+4:wght@400;600&amp;display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- NAV -->
-  <header id="site-nav">
-    <div class="nav-wrap">
-      <a href="#" class="nav-brand">DS<span class="brand-dot">.</span></a>
-      <nav class="nav-links">
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+  <!-- ============================================================
+       NAV, appears after scroll past identity
+  ============================================================ -->
+  <header class="nav" id="nav" role="banner">
+    <div class="nav__inner">
+      <a href="#top" class="nav__mono" aria-label="Return to top">ds / index</a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#work" class="nav__link" data-section="work">work</a>
+        <span class="nav__sep" aria-hidden="true"></span>
+        <a href="#systems" class="nav__link" data-section="systems">systems</a>
+        <span class="nav__sep" aria-hidden="true"></span>
+        <a href="#archive" class="nav__link" data-section="archive">archive</a>
+        <span class="nav__sep" aria-hidden="true"></span>
+        <a href="#about" class="nav__link" data-section="about">about</a>
+        <span class="nav__sep" aria-hidden="true"></span>
+        <a href="#contact" class="nav__link" data-section="contact">contact</a>
       </nav>
-      <a href="Deepansh Sabharwal.docx" class="btn-nav" download>Resume</a>
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
-        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-          <rect y="4" width="22" height="2" rx="1" fill="currentColor"/>
-          <rect y="10" width="22" height="2" rx="1" fill="currentColor"/>
-          <rect y="16" width="22" height="2" rx="1" fill="currentColor"/>
-        </svg>
-      </button>
-    </div>
-    <div class="mobile-nav" id="mobile-nav">
-      <a href="#projects" class="mobile-link">Projects</a>
-      <a href="#skills" class="mobile-link">Skills</a>
-      <a href="#about" class="mobile-link">About</a>
-      <a href="#contact" class="mobile-link">Contact</a>
-      <a href="Deepansh Sabharwal.docx" class="mobile-link" download>Resume ↓</a>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <canvas id="canvas"></canvas>
-    <div class="hero-body">
-      <div class="avail-pill">
-        <span class="pill-dot"></span>
-        Available · September 2026 Co-op
-      </div>
-      <h1 class="hero-h1">Deepansh<br>Sabharwal</h1>
-      <p class="hero-sub">Seeking Fall 2026 Co-op - Embedded Systems, FPGA, Firmware, Edge AI<br>Computer Engineering @ UBC</p>
-      <div class="hero-btns">
-        <a href="#projects" class="btn-primary">See My Work</a>
-        <a href="#contact" class="btn-outline">Get in Touch</a>
-      </div>
-    </div>
-    <div class="hero-scroll">
-      <span>scroll</span>
-      <div class="scroll-bar"></div>
-    </div>
-  </section>
+  <main id="top">
 
-  <!-- INTRO STRIP -->
-  <div class="intro-strip">
-    <div class="wrap">
-      <p class="intro-text">I build systems where hardware and software meet - from RTL-level FPGA design and bare-metal RISC-V pipelines to thermal-camera CV inference running on embedded hardware in the field. Second-year Computer Engineering at UBC, pursuing co-op in <strong>embedded engineering</strong>, <strong>FPGA development</strong>, and <strong>applied AI</strong>.</p>
-      <div class="intro-chips">
-        <span>Verilog / HDL</span>
-        <span>FPGA Design</span>
-        <span>Embedded C</span>
-        <span>Python / ML</span>
-        <span>OpenCV</span>
-        <span>RISC-V</span>
-        <span>Arduino</span>
-        <span>Linux / Bash</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="section-eyebrow">Selected Work</span>
-        <h2 class="section-title">Projects</h2>
+    <!-- ============================================================
+         IDENTITY
+    ============================================================ -->
+    <section class="identity container" aria-labelledby="name">
+      <div class="identity__meta">
+        <span>Portfolio / 2026</span>
+        <span>v2.0 · Last updated 2026-04-23</span>
       </div>
 
-      <!-- 01: FaultLatchedPWM -->
-      <div class="proj-featured">
-        <div class="proj-meta-row">
-          <span class="proj-num">01</span>
-          <span class="proj-tag tag-fpga">FPGA · Verilog</span>
-          <span class="proj-tag tag-lead">Lead Project</span>
+      <h1 class="identity__name" id="name">Deepansh Sabharwal</h1>
+
+      <p class="identity__lede">
+        Computer Engineering at UBC. Working where hardware and software meet:
+        <strong>RTL-level FPGA design</strong>, <strong>bare-metal RISC-V</strong>,
+        and <strong>edge AI on embedded hardware</strong>.
+      </p>
+
+      <dl class="kv" aria-label="Identity details">
+        <dt class="kv__label">Status</dt>
+        <dd class="kv__value">Available, Fall 2026 co-op. Embedded, FPGA, firmware, edge AI.</dd>
+
+        <dt class="kv__label">Program</dt>
+        <dd class="kv__value">B.A.Sc. Computer Engineering, UBC. Second year.</dd>
+
+        <dt class="kv__label">Location</dt>
+        <dd class="kv__value">Kelowna, BC <span class="kv__value--mono" style="color:var(--ink-tertiary);">&nbsp;·&nbsp;UTC-7</span>. Open to relocation and remote.</dd>
+
+        <dt class="kv__label">Focus</dt>
+        <dd class="kv__value">HDL and FPGA, RISC-V pipelines, embedded vision, sensor systems.</dd>
+      </dl>
+
+      <div class="identity__links">
+        <a class="link" href="https://github.com/NightCrawler9924" rel="noopener">github</a>
+        <span class="link__sep" aria-hidden="true">·</span>
+        <a class="link" href="mailto:deepanshsabh.60@gmail.com">email</a>
+        <span class="link__sep" aria-hidden="true">·</span>
+        <a class="link" href="https://www.linkedin.com/in/deepansh-sabharwal-315033257/" rel="noopener">linkedin</a>
+        <span class="link__sep" aria-hidden="true">·</span>
+        <a class="link" href="Deepansh%20Sabharwal.docx" download>resume.docx</a>
+      </div>
+    </section>
+
+    <hr class="rule-bleed" />
+
+    <!-- ============================================================
+         SELECTED WORK
+    ============================================================ -->
+    <section class="section container" id="work" aria-labelledby="work-title">
+      <header>
+        <span class="section__eyebrow">01 / Selected Work</span>
+        <h2 class="section__title" id="work-title">Projects</h2>
+        <p class="section__lede">
+          Four projects across hardware, firmware, and applied ML. Each stated as problem,
+          approach, result, and stack. Measurable outcomes are cited where they exist.
+        </p>
+      </header>
+
+      <!-- CASE 01 -->
+      <article class="case" aria-labelledby="case-01-title">
+        <div class="case__head">
+          <span>Case 01 · FPGA, Verilog</span>
+          <span>2025 · Lead</span>
         </div>
-        <div class="proj-featured-grid">
-          <div class="proj-content">
-            <h3 class="proj-title">FaultLatchedPWM</h3>
-            <p class="proj-lead">A deterministic, hardware-enforced PWM controller implemented in Verilog on the GW2A-LV18 FPGA (Tang Nano 20K). Fault handling and safe-state enforcement at the RTL level - no software override path.</p>
-            <p class="proj-body">The system generates a 32-bit configurable PWM signal for motor control and embedded actuation. A guard module validates period and duty constraints directly in hardware before enabling output. Any violation drives the FSM into a latched FAULT state that requires an explicit recovery sequence to exit.</p>
-            <ul class="proj-bullets">
-              <li>FSM: INIT → IDLE → RUN → FAULT → SAFE</li>
-              <li>Hardware-level guard module - constraint violations caught pre-output</li>
-              <li>127 MHz Fmax achieved under a 100 MHz constraint</li>
-              <li>~2% LUT utilization, &lt;1% register utilization on GW2A-LV18</li>
-              <li>Verified: Icarus Verilog simulation + waveform-based fault injection</li>
-              <li>Synthesized and placed via Gowin EDA</li>
-            </ul>
-            <div class="proj-stack">
-              <span>Verilog</span><span>FPGA</span><span>FSM Design</span><span>Gowin EDA</span><span>Icarus Verilog</span><span>Tang Nano 20K</span>
-            </div>
-            <a href="https://github.com/NightCrawler9924/FaultLatchedPWM" class="proj-link" target="_blank" rel="noopener">View on GitHub →</a>
-          </div>
-          <div class="proj-aside">
-            <div class="aside-card">
-              <div class="aside-card-title">State Machine</div>
-              <div class="fsm-chain">
-                <div class="fsm-node fsm-init">INIT</div>
-                <div class="fsm-edge">↓</div>
-                <div class="fsm-node fsm-idle">IDLE</div>
-                <div class="fsm-edge">↓</div>
-                <div class="fsm-node fsm-run">RUN</div>
-                <div class="fsm-edge">↓ <em>fault detect</em></div>
-                <div class="fsm-node fsm-fault">FAULT</div>
-                <div class="fsm-edge">↓ <em>explicit reset</em></div>
-                <div class="fsm-node fsm-safe">SAFE</div>
-              </div>
-              <p class="aside-note">Output latched LOW in FAULT. No software recovery path.</p>
-            </div>
-            <div class="aside-card aside-metrics">
-              <div class="aside-card-title">Implementation Results</div>
-              <div class="metric-row"><span>Fmax</span><strong>127 MHz</strong></div>
-              <div class="metric-row"><span>LUT usage</span><strong>~2%</strong></div>
-              <div class="metric-row"><span>Registers</span><strong>&lt;1%</strong></div>
-              <div class="metric-row"><span>Target device</span><strong>GW2A-LV18</strong></div>
-            </div>
-          </div>
+        <h3 class="case__title" id="case-01-title">FaultLatchedPWM</h3>
+        <p class="case__problem">
+          A deterministic, hardware-enforced PWM controller that cannot be overridden in software.
+        </p>
+
+        <dl class="case__fields">
+          <dt class="case__field-label">Context</dt>
+          <dd class="case__field-value">
+            <p>
+              Motor-control and embedded-actuation loops routinely implement safety logic in firmware,
+              creating a software path that can be bypassed, corrupted, or starved. The project removes
+              the firmware layer from the safety envelope by enforcing period and duty constraints in
+              RTL on a Gowin GW2A-LV18 (Tang Nano 20K).
+            </p>
+          </dd>
+
+          <dt class="case__field-label">Approach</dt>
+          <dd class="case__field-value">
+            <p>
+              A 32-bit configurable PWM generator is gated by a hardware guard module that validates
+              constraints pre-output. Violations drive a five-state FSM
+              (<code>INIT</code> → <code>IDLE</code> → <code>RUN</code> → <code>FAULT</code> → <code>SAFE</code>)
+              into a latched fault state. Recovery requires an explicit externally-asserted sequence.
+              There is no firmware override path; the FSM is the single source of truth.
+            </p>
+          </dd>
+
+          <dt class="case__field-label">Result</dt>
+          <dd class="case__field-value">
+            <table class="metrics" aria-label="Implementation results">
+              <thead>
+                <tr><th>Metric</th><th>Constraint</th><th>Achieved</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>F<sub>max</sub></td><td>100 MHz</td><td>127 MHz</td></tr>
+                <tr><td>LUT utilization</td><td>n/a</td><td>~2%</td></tr>
+                <tr><td>Register utilization</td><td>n/a</td><td>&lt;1%</td></tr>
+                <tr><td>Target device</td><td>GW2A-LV18</td><td>Verified</td></tr>
+              </tbody>
+            </table>
+            <p style="margin-top: var(--space-4); color: var(--ink-secondary);">
+              Verified via Icarus Verilog simulation with waveform-based fault injection.
+              Synthesized and place-and-routed in Gowin EDA.
+            </p>
+          </dd>
+
+          <dt class="case__field-label">Stack</dt>
+          <dd class="case__field-value case__stack">
+            <span>Verilog</span><span>FSM design</span><span>Gowin EDA</span><span>Icarus Verilog</span><span>Tang Nano 20K</span>
+          </dd>
+        </dl>
+
+        <div class="case__actions">
+          <a class="link" href="https://github.com/NightCrawler9924/FaultLatchedPWM" rel="noopener">source →</a>
         </div>
+      </article>
+
+      <hr class="rule-centered" />
+
+      <!-- CASE 02 -->
+      <article class="case" aria-labelledby="case-02-title">
+        <div class="case__head">
+          <span>Case 02 · Embedded, Systems</span>
+          <span>2025 · Sole author</span>
+        </div>
+        <h3 class="case__title" id="case-02-title">RISC-V Toolchain to Hardware-Emulation Pipeline</h3>
+        <p class="case__problem">
+          End-to-end bare-metal pipeline from C source to a 64-bit RISC-V virtual machine, with no operating system in the path.
+        </p>
+
+        <dl class="case__fields">
+          <dt class="case__field-label">Context</dt>
+          <dd class="case__field-value">
+            <p>
+              Understanding an ISA in isolation does not produce working systems. The work targets the
+              full chain: source to ELF to boot to emulation, with privilege transitions managed
+              explicitly. The objective is ground-up fluency in how instructions become silicon behaviour,
+              as preparation for deploying the same flow to a physical FPGA.
+            </p>
+          </dd>
+
+          <dt class="case__field-label">Approach</dt>
+          <dd class="case__field-value">
+            <p>
+              C source is cross-compiled to RISC-V ELF via the GNU toolchain.
+              OpenSBI handles M-mode boot; riscv-pk manages privilege transitions.
+              The resulting binary runs on a 64-bit virtual RISC-V target in QEMU.
+              Each stage of the pipeline, from ELF section layout to boot sequence to emulation
+              memory model, is analysed rather than treated as opaque.
+            </p>
+          </dd>
+
+          <dt class="case__field-label">Result</dt>
+          <dd class="case__field-value">
+            <p>
+              Operational bare-metal pipeline. Next phase: physical deployment on Tang Nano 20K,
+              replacing the QEMU target with an in-fabric soft core.
+              <span class="case__placeholder">placeholder: benchmark latency and instruction throughput on target</span>
+            </p>
+          </dd>
+
+          <dt class="case__field-label">Stack</dt>
+          <dd class="case__field-value case__stack">
+            <span>RISC-V ISA</span><span>GCC</span><span>QEMU</span><span>OpenSBI</span><span>Bare-metal C</span><span>ELF</span>
+          </dd>
+        </dl>
+
+        <div class="case__actions">
+          <a class="link" href="https://github.com/NightCrawler9924/CMPE-246" rel="noopener">source →</a>
+        </div>
+      </article>
+
+      <hr class="rule-centered" />
+
+      <!-- CASE 03 -->
+      <article class="case" aria-labelledby="case-03-title">
+        <div class="case__head">
+          <span>Case 03 · Research, Edge AI</span>
+          <span>2026 · Author, UBC proposal</span>
+        </div>
+        <h3 class="case__title" id="case-03-title">Wildlife-Vehicle Collision Warning System</h3>
+        <p class="case__problem">
+          A solar-powered edge-AI node that detects and classifies large animals approaching a roadway, then triggers dynamic warning signs with no cloud dependency.
+        </p>
+
+        <dl class="case__fields">
+          <dt class="case__field-label">Context</dt>
+          <dd class="case__field-value">
+            <p>
+              Deployed North American Roadway Animal Detection Systems (RADS) trigger on motion signatures
+              and do not classify species. This produces false positives from wind, vegetation, and small
+              animals. The proposal addresses a documented gap: on-device computer vision to discriminate
+              target species (deer, moose, elk) from background events. Target corridor: Hwy 97 Okanagan.
+            </p>
+          </dd>
+
+          <dt class="case__field-label">Approach</dt>
+          <dd class="case__field-value">
+            <p>
+              A FLIR thermal camera feeds a YOLOv8-nano model accelerated via TensorRT on a Jetson Orin NX.
+              Inference runs entirely at the edge; only detection events transit the LoRaWAN uplink.
+              Power is solar with battery buffer, sized for 72-hour no-sun operation.
+              Warning sign actuation is on a local GPIO path with sub-second latency from detection to signal.
+            </p>
+          </dd>
+
+          <dt class="case__field-label">Result</dt>
+          <dd class="case__field-value">
+            <p>
+              Proposal submitted to BC Ministry of Transportation, April 2026.
+              Specification, power budget, and thermal analysis complete. Hardware bring-up pending funding.
+              <span class="case__placeholder">placeholder: target detection precision and recall once benchmarked</span>
+            </p>
+          </dd>
+
+          <dt class="case__field-label">Stack</dt>
+          <dd class="case__field-value case__stack">
+            <span>Jetson Orin NX</span><span>FLIR thermal</span><span>YOLOv8-nano</span><span>TensorRT</span><span>LoRaWAN</span><span>Solar power</span>
+          </dd>
+        </dl>
+      </article>
+
+      <hr class="rule-centered" />
+
+      <!-- CASE 04 -->
+      <article class="case" aria-labelledby="case-04-title">
+        <div class="case__head">
+          <span>Case 04 · Hardware, EV</span>
+          <span>2024 · Electrical lead</span>
+        </div>
+        <h3 class="case__title" id="case-04-title">CyberTrike</h3>
+        <p class="case__problem">
+          An RC-controlled three-wheeled electric vehicle prototype, from schematic to rolling chassis, as a UBC team project.
+        </p>
+
+        <dl class="case__fields">
+          <dt class="case__field-label">Context</dt>
+          <dd class="case__field-value">
+            <p>
+              First-year team project. Objective: a working drivable prototype inside one term,
+              with a small team and a protoboard-only electrical stack. The role owned the electrical path
+              end-to-end: motor control, power distribution, and the wireless control link.
+            </p>
+          </dd>
+
+          <dt class="case__field-label">Approach</dt>
+          <dd class="case__field-value">
+            <p>
+              Arduino-driven PWM motor control, hand-drawn circuit schematics translated to protoboard,
+              and an NRF24L01 radio link for the remote. Power routing was kept on a single rail to
+              simplify debugging; thermal and current margins sized conservatively given the prototyping medium.
+            </p>
+          </dd>
+
+          <dt class="case__field-label">Result</dt>
+          <dd class="case__field-value">
+            <p>
+              Rolling, remotely controlled prototype. Radio link reliable at project-scale distances.
+              Post-mortem: migration from protoboard to a proper PCB is the first improvement for a v2.
+            </p>
+          </dd>
+
+          <dt class="case__field-label">Stack</dt>
+          <dd class="case__field-value case__stack">
+            <span>Arduino</span><span>PWM</span><span>Circuit design</span><span>NRF24L01</span><span>SolidWorks</span>
+          </dd>
+        </dl>
+
+        <div class="case__actions">
+          <a class="link" href="https://www.linkedin.com/in/deepansh-sabharwal-315033257/" rel="noopener">team write-up →</a>
+        </div>
+      </article>
+    </section>
+
+    <hr class="rule-bleed" />
+
+    <!-- ============================================================
+         SYSTEMS / TECHNICAL DEEP-DIVE
+    ============================================================ -->
+    <section class="deepdive container container--wide" id="systems" aria-labelledby="systems-title">
+      <header class="container" style="padding: 0;">
+        <span class="section__eyebrow">02 / Systems</span>
+        <h2 class="section__title" id="systems-title">On hardware-enforced safety in FaultLatchedPWM</h2>
+        <p class="section__lede">
+          Why the safety envelope in this controller is in RTL rather than firmware, what the tradeoffs are, and how the FSM is structured to make recovery explicit rather than incidental.
+        </p>
+      </header>
+
+      <div class="deepdive__prose">
+        <p>
+          A PWM controller for motor actuation has two jobs. It must produce a clean, configurable
+          switching waveform, and it must not produce an unsafe one. The second job, in most
+          implementations, is delegated to firmware. A microcontroller compares the commanded duty
+          against a limit, and refuses to load the compare register if the limit is exceeded.
+          This is convenient and almost always adequate. It is also a path that can be bypassed,
+          corrupted by a stack overflow, starved by a priority inversion, or silently reverted by
+          a firmware update. The failure mode is invisible until it is not.
+        </p>
+        <p>
+          FaultLatchedPWM takes a different position. The safety envelope belongs in the fabric.
+          The PWM generator is subordinate to a hardware guard module that observes the commanded
+          period and duty values and a fault signal, and holds a single latched bit: is the system
+          permitted to drive output. The guard is combinational and registered; the latch is
+          explicit; the reset path is explicit. The firmware cannot override it because there is
+          no firmware path to the latch. The only way out of a fault state is an externally
+          asserted recovery sequence, which can itself be gated by whatever higher-level
+          supervision the integrator chooses.
+        </p>
+        <p>
+          The state machine has five states. <code>INIT</code> establishes known values on power-up
+          and releases to <code>IDLE</code> when the configuration registers are stable. <code>IDLE</code>
+          drives the output low and waits for an enable. <code>RUN</code> generates the waveform
+          under the guard module's continuous supervision. <code>FAULT</code> is the latched
+          state: output is driven low, the fault signal is asserted on an external pin, and no
+          further transitions are accepted except a specific recovery pattern. <code>SAFE</code>
+          is reached after recovery, and returns to <code>IDLE</code> only when the configuration
+          has been re-validated. The critical property is that the <code>RUN</code> to <code>FAULT</code>
+          transition is single-cycle and irreversible without external intervention, and that
+          <code>FAULT</code> never yields to <code>RUN</code> directly. This eliminates an entire
+          class of chattering failures where a marginally-valid configuration oscillates across
+          the guard boundary.
+        </p>
       </div>
 
-      <!-- 02: RISC-V -->
-      <div class="proj-featured">
-        <div class="proj-meta-row">
-          <span class="proj-num">02</span>
-          <span class="proj-tag tag-embedded">Embedded · Systems</span>
-        </div>
-        <div class="proj-featured-grid">
-          <div class="proj-content">
-            <h3 class="proj-title">RISC-V Toolchain to Hardware Emulation Pipeline</h3>
-            <p class="proj-lead">Full bare-metal compilation and emulation pipeline: C source → cross-compiled RISC-V ELF → 64-bit virtual RISC-V machine via QEMU, running without a conventional OS.</p>
-            <p class="proj-body">Used GCC cross-compiler to produce RISC-V ELF binaries, with OpenSBI and riscv-pk managing boot flow and privilege transitions. Analyzed the complete pipeline - ELF generation, ISA targeting, boot sequences, and hardware emulation - to build ground-up understanding of instruction set architecture and firmware-hardware interaction. Next phase targets physical deployment on Tang Nano 20K FPGA.</p>
-            <ul class="proj-bullets">
-              <li>Cross-compiled C → RISC-V ELF using GNU Compiler Collection</li>
-              <li>Integrated OpenSBI for M-mode boot and privilege management</li>
-              <li>Deployed on virtual 64-bit RISC-V machine via QEMU</li>
-              <li>Analyzed full ISA targeting, ELF structure, and emulation layer</li>
-            </ul>
-            <div class="proj-stack">
-              <span>RISC-V ISA</span><span>GCC</span><span>QEMU</span><span>OpenSBI</span><span>Bare-metal C</span><span>ELF</span>
-            </div>
-            <a href="https://github.com/NightCrawler9924/CMPE-246" class="proj-link" target="_blank" rel="noopener">View on GitHub →</a>
-          </div>
-          <div class="proj-aside">
-            <div class="aside-card">
-              <div class="aside-card-title">Compilation Pipeline</div>
-              <div class="pipeline-chain">
-                <div class="pipe-node">C Source</div>
-                <div class="pipe-edge">↓ GCC cross-compile</div>
-                <div class="pipe-node">RISC-V ELF</div>
-                <div class="pipe-edge">↓ OpenSBI + riscv-pk</div>
-                <div class="pipe-node">Boot &amp; Privilege Init</div>
-                <div class="pipe-edge">↓ QEMU emulation</div>
-                <div class="pipe-node pipe-end">64-bit RISC-V Execution</div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <!-- DIAGRAM -->
+      <figure class="diagram container container--wide" id="diagram" aria-label="FaultLatchedPWM state machine diagram">
+        <svg class="diagram__svg" viewBox="0 0 840 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="diagram-title">
+          <title id="diagram-title">FSM: INIT to IDLE to RUN, with fault and recovery branches to FAULT and SAFE</title>
+
+          <!-- edges: drawn before nodes so they sit underneath -->
+          <g fill="none" stroke-linecap="round">
+            <!-- INIT -> IDLE -->
+            <path class="edge" id="e-init-idle" data-edge="init-idle" d="M 115 140 L 195 140" />
+            <polygon class="edge-arrow" points="195,140 188,136 188,144" fill="var(--rule-strong)"/>
+            <!-- IDLE -> RUN -->
+            <path class="edge" id="e-idle-run" data-edge="idle-run" d="M 285 140 L 365 140" />
+            <polygon class="edge-arrow" points="365,140 358,136 358,144" fill="var(--rule-strong)"/>
+            <!-- RUN -> FAULT (fault detect) -->
+            <path class="edge" id="e-run-fault" data-edge="run-fault" d="M 455 140 L 535 140" />
+            <polygon class="edge-arrow" points="535,140 528,136 528,144" fill="var(--rule-strong)"/>
+            <!-- FAULT -> SAFE (explicit reset) -->
+            <path class="edge" id="e-fault-safe" data-edge="fault-safe" d="M 625 140 L 705 140" />
+            <polygon class="edge-arrow" points="705,140 698,136 698,144" fill="var(--rule-strong)"/>
+            <!-- SAFE -> IDLE (reconfig path, curved back) -->
+            <path class="edge" id="e-safe-idle" data-edge="safe-idle" d="M 750 115 Q 750 40 240 40 Q 240 40 240 115" />
+            <polygon class="edge-arrow" points="240,115 236,108 244,108" fill="var(--rule-strong)"/>
+          </g>
+
+          <!-- edge labels -->
+          <g font-family="JetBrains Mono, monospace" font-size="10" fill="var(--ink-tertiary)">
+            <text x="155" y="132" text-anchor="middle">config ok</text>
+            <text x="325" y="132" text-anchor="middle">enable</text>
+            <text x="495" y="132" text-anchor="middle">fault detect</text>
+            <text x="665" y="132" text-anchor="middle">reset seq.</text>
+            <text x="490" y="32" text-anchor="middle">re-validate</text>
+          </g>
+
+          <!-- nodes -->
+          <g class="node" data-node="init" tabindex="0" role="button" aria-label="INIT state">
+            <rect x="30" y="115" width="85" height="50" rx="2"/>
+            <text x="72.5" y="138" text-anchor="middle">INIT</text>
+            <text x="72.5" y="154" text-anchor="middle" class="sub">power-up</text>
+          </g>
+          <g class="node" data-node="idle" tabindex="0" role="button" aria-label="IDLE state">
+            <rect x="200" y="115" width="85" height="50" rx="2"/>
+            <text x="242.5" y="138" text-anchor="middle">IDLE</text>
+            <text x="242.5" y="154" text-anchor="middle" class="sub">output low</text>
+          </g>
+          <g class="node" data-node="run" tabindex="0" role="button" aria-label="RUN state">
+            <rect x="370" y="115" width="85" height="50" rx="2"/>
+            <text x="412.5" y="138" text-anchor="middle">RUN</text>
+            <text x="412.5" y="154" text-anchor="middle" class="sub">pwm active</text>
+          </g>
+          <g class="node" data-node="fault" tabindex="0" role="button" aria-label="FAULT state">
+            <rect x="540" y="115" width="85" height="50" rx="2"/>
+            <text x="582.5" y="138" text-anchor="middle">FAULT</text>
+            <text x="582.5" y="154" text-anchor="middle" class="sub">latched</text>
+          </g>
+          <g class="node" data-node="safe" tabindex="0" role="button" aria-label="SAFE state">
+            <rect x="710" y="115" width="85" height="50" rx="2"/>
+            <text x="752.5" y="138" text-anchor="middle">SAFE</text>
+            <text x="752.5" y="154" text-anchor="middle" class="sub">verified</text>
+          </g>
+        </svg>
+
+        <div class="diagram__panel" id="diagram-panel" aria-live="polite"></div>
+
+        <figcaption class="diagram__caption">
+          Click or focus a node. Connected edges highlight; siblings dim.
+        </figcaption>
+      </figure>
+
+      <!-- CODE EXCERPT -->
+      <div class="code container container--wide" role="region" aria-label="Verilog excerpt">
+        <span class="code__lang">verilog</span>
+<pre><span class="tok-com">// FaultLatchedPWM: guard-gated PWM generator, excerpt</span>
+<span class="tok-com">// The output is driven low unless guard_ok is asserted AND</span>
+<span class="tok-com">// the FSM is in the RUN state. There is no firmware path.</span>
+
+<span class="tok-kw">module</span> fault_latched_pwm <span class="tok-op">#(</span>
+    <span class="tok-kw">parameter</span> <span class="tok-kw">integer</span> WIDTH <span class="tok-op">=</span> <span class="tok-num">32</span>
+<span class="tok-op">)(</span>
+    <span class="tok-kw">input</span>  <span class="tok-kw">wire</span>                 clk,
+    <span class="tok-kw">input</span>  <span class="tok-kw">wire</span>                 rst_n,
+    <span class="tok-kw">input</span>  <span class="tok-kw">wire</span> <span class="tok-op">[</span>WIDTH<span class="tok-op">-</span><span class="tok-num">1</span>:<span class="tok-num">0</span><span class="tok-op">]</span>  period_i,
+    <span class="tok-kw">input</span>  <span class="tok-kw">wire</span> <span class="tok-op">[</span>WIDTH<span class="tok-op">-</span><span class="tok-num">1</span>:<span class="tok-num">0</span><span class="tok-op">]</span>  duty_i,
+    <span class="tok-kw">input</span>  <span class="tok-kw">wire</span>                 enable_i,
+    <span class="tok-kw">input</span>  <span class="tok-kw">wire</span>                 recover_i,
+    <span class="tok-kw">output</span> <span class="tok-kw">reg</span>                  pwm_o,
+    <span class="tok-kw">output</span> <span class="tok-kw">wire</span>                 fault_o
+<span class="tok-op">);</span>
+
+    <span class="tok-kw">localparam</span> <span class="tok-op">[</span><span class="tok-num">2</span>:<span class="tok-num">0</span><span class="tok-op">]</span>
+        S_INIT  <span class="tok-op">=</span> <span class="tok-num">3'd0</span>,
+        S_IDLE  <span class="tok-op">=</span> <span class="tok-num">3'd1</span>,
+        S_RUN   <span class="tok-op">=</span> <span class="tok-num">3'd2</span>,
+        S_FAULT <span class="tok-op">=</span> <span class="tok-num">3'd3</span>,
+        S_SAFE  <span class="tok-op">=</span> <span class="tok-num">3'd4</span>;
+
+    <span class="tok-kw">reg</span> <span class="tok-op">[</span><span class="tok-num">2</span>:<span class="tok-num">0</span><span class="tok-op">]</span> state, state_n;
+    <span class="tok-kw">wire</span> guard_ok <span class="tok-op">=</span> (duty_i <span class="tok-op">&lt;=</span> period_i) <span class="tok-op">&amp;&amp;</span> (period_i <span class="tok-op">!=</span> <span class="tok-num">0</span>);
+    <span class="tok-kw">assign</span> fault_o <span class="tok-op">=</span> (state <span class="tok-op">==</span> S_FAULT);
+
+    <span class="tok-kw">always</span> <span class="tok-op">@(*)</span> <span class="tok-kw">begin</span>
+        state_n <span class="tok-op">=</span> state;
+        <span class="tok-kw">case</span> (state)
+            S_INIT  : <span class="tok-kw">if</span> (guard_ok)            state_n <span class="tok-op">=</span> S_IDLE;
+            S_IDLE  : <span class="tok-kw">if</span> (enable_i <span class="tok-op">&amp;&amp;</span> guard_ok) state_n <span class="tok-op">=</span> S_RUN;
+            S_RUN   : <span class="tok-kw">if</span> (<span class="tok-op">!</span>guard_ok)           state_n <span class="tok-op">=</span> S_FAULT;  <span class="tok-com">// single-cycle, irreversible</span>
+            S_FAULT : <span class="tok-kw">if</span> (recover_i)           state_n <span class="tok-op">=</span> S_SAFE;
+            S_SAFE  : <span class="tok-kw">if</span> (guard_ok)            state_n <span class="tok-op">=</span> S_IDLE;
+            <span class="tok-kw">default</span> :                            state_n <span class="tok-op">=</span> S_INIT;
+        <span class="tok-kw">endcase</span>
+    <span class="tok-kw">end</span>
+
+<span class="tok-kw">endmodule</span></pre>
+      </div>
+    </section>
+
+    <hr class="rule-bleed" />
+
+    <!-- ============================================================
+         ARCHIVE (smaller projects, reference table)
+    ============================================================ -->
+    <section class="section container" id="archive" aria-labelledby="archive-title">
+      <header>
+        <span class="section__eyebrow">03 / Archive</span>
+        <h2 class="section__title" id="archive-title">Other work</h2>
+        <p class="section__lede">
+          Shorter projects and self-authored learning repositories. Listed for reference, not as headline work.
+        </p>
+      </header>
+
+      <table class="archive" aria-label="Archive of smaller projects and learning repositories">
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Kind</th>
+            <th>Title</th>
+            <th style="text-align:right;">Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="year">2025</td>
+            <td class="kind">ML, Python</td>
+            <td class="title">AI Soil Suitability Predictor, logistic regression with cross-validation over temperature, humidity, rainfall, wind speed, and soil moisture</td>
+            <td class="action"><a class="link" href="https://github.com/NightCrawler9924/AI-in-Farming" rel="noopener">github →</a></td>
+          </tr>
+          <tr>
+            <td class="year">2025</td>
+            <td class="kind">Python, API</td>
+            <td class="title">SkyCast Live, real-time weather dashboard over a REST integration</td>
+            <td class="action"><a class="link" href="https://www.linkedin.com/in/deepansh-sabharwal-315033257/" rel="noopener">write-up →</a></td>
+          </tr>
+          <tr>
+            <td class="year">2025</td>
+            <td class="kind">Learning repo</td>
+            <td class="title">C Programming, beginner to intermediate, self-authored</td>
+            <td class="action"><a class="link" href="https://github.com/NightCrawler9924/C" rel="noopener">github →</a></td>
+          </tr>
+          <tr>
+            <td class="year">2025</td>
+            <td class="kind">Learning repo</td>
+            <td class="title">Java, beginner to intermediate, self-authored</td>
+            <td class="action"><a class="link" href="https://github.com/NightCrawler9924/JAVA" rel="noopener">github →</a></td>
+          </tr>
+          <tr>
+            <td class="year">2025</td>
+            <td class="kind">Learning repo</td>
+            <td class="title">Bash Scripting, beginner to intermediate, self-authored</td>
+            <td class="action"><a class="link" href="https://github.com/NightCrawler9924/BASH-SCRIPTING" rel="noopener">github →</a></td>
+          </tr>
+          <tr>
+            <td class="year">2025</td>
+            <td class="kind">Certification</td>
+            <td class="title">Mastering OpenCV with Python, OpenCV University, December 2025</td>
+            <td class="action"><span style="color:var(--ink-tertiary);font-family:var(--font-mono);">certified</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr class="rule-bleed" />
+
+    <!-- ============================================================
+         ABOUT
+    ============================================================ -->
+    <section class="section container" id="about" aria-labelledby="about-title">
+      <header>
+        <span class="section__eyebrow">04 / Background</span>
+        <h2 class="section__title" id="about-title">About</h2>
+      </header>
+
+      <div style="font-size:17px;line-height:28px;color:var(--ink);max-width:64ch;">
+        <p>
+          Second-year Computer Engineering at UBC. My work spans the hardware-software boundary:
+          writing Verilog state machines for physical FPGAs, building bare-metal RISC-V compilation
+          pipelines, training ML models on real datasets, and wiring circuits on physical prototypes.
+        </p>
+        <p>
+          I pursue co-op roles where hardware is a real constraint, not an abstraction. Timing
+          closure, silicon area, power budget, and thermal limits are the environment I want to
+          work in. The attraction is not difficulty for its own sake. It is that the feedback loop
+          from design decision to observable behaviour is shorter and less mediated than in pure
+          software, and the reasoning discipline it demands is a better use of my attention.
+        </p>
+        <p>
+          Active research: a solar-powered thermal-camera wildlife-detection node proposed to the
+          BC Ministry of Transportation for the Hwy 97 Okanagan corridor. In parallel,
+          progressing the RISC-V pipeline toward physical deployment on the Tang Nano 20K.
+        </p>
       </div>
 
-      <!-- GRID -->
-      <div class="proj-grid">
+      <dl class="kv" style="margin-top: var(--space-8);">
+        <dt class="kv__label">Education</dt>
+        <dd class="kv__value">B.A.Sc. Computer Engineering, UBC. Second year, in progress.</dd>
 
-        <div class="proj-card">
-          <div class="proj-card-top">
-            <span class="proj-num-sm">03</span>
-            <span class="proj-tag tag-ml">ML · Python</span>
-          </div>
-          <h3 class="proj-card-title">AI Soil Suitability Predictor</h3>
-          <p class="proj-card-body">ML model predicting soil suitability for crop growth from environmental inputs - temperature, humidity, rainfall, wind speed, soil moisture. Logistic regression with cross-validation and an interactive decision interface for farmers.</p>
-          <div class="proj-stack">
-            <span>Python</span><span>Scikit-learn</span><span>Logistic Regression</span><span>Cross-validation</span>
-          </div>
-          <a href="https://github.com/NightCrawler9924/AI-in-Farming" class="proj-link-sm" target="_blank" rel="noopener">GitHub →</a>
+        <dt class="kv__label">Languages</dt>
+        <dd class="kv__value">English, Hindi, Punjabi.</dd>
+
+        <dt class="kv__label">Currently</dt>
+        <dd class="kv__value">Tang Nano 20K bring-up. Thermal-camera dataset labelling.</dd>
+
+        <dt class="kv__label">Reading</dt>
+        <dd class="kv__value">
+          <span class="case__placeholder">placeholder: current technical reading, one or two titles</span>
+        </dd>
+      </dl>
+    </section>
+
+    <hr class="rule-bleed" />
+
+    <!-- ============================================================
+         CONTACT
+    ============================================================ -->
+    <section class="section container" id="contact" aria-labelledby="contact-title">
+      <header>
+        <span class="section__eyebrow">05 / Contact</span>
+        <h2 class="section__title" id="contact-title">Direct</h2>
+        <p class="section__lede">
+          Open to co-op positions in embedded, FPGA, firmware, and edge AI, starting September 2026.
+        </p>
+      </header>
+
+      <div class="contact__rows">
+        <div class="contact__row">
+          <span class="contact__label">Email</span>
+          <span class="contact__value">deepanshsabh.60@gmail.com</span>
+          <button class="btn-copy" data-copy="deepanshsabh.60@gmail.com" aria-label="Copy email to clipboard">copy</button>
         </div>
-
-        <div class="proj-card">
-          <div class="proj-card-top">
-            <span class="proj-num-sm">04</span>
-            <span class="proj-tag tag-hw">Hardware · EV</span>
-          </div>
-          <h3 class="proj-card-title">CyberTrike™</h3>
-          <p class="proj-card-body">RC-controlled 3-wheeled EV prototype at UBC. Led the electrical sub-team: PWM motor control, circuit schematics, protoboard power routing, and NRF radio module integration for reliable remote control.</p>
-          <div class="proj-stack">
-            <span>Arduino</span><span>PWM</span><span>Circuit Design</span><span>NRF Radio</span><span>SolidWorks</span>
-          </div>
-          <a href="https://www.linkedin.com/in/deepansh-sabharwal-315033257/" class="proj-link-sm" target="_blank" rel="noopener">LinkedIn →</a>
+        <div class="contact__row">
+          <span class="contact__label">GitHub</span>
+          <a class="contact__value link" href="https://github.com/NightCrawler9924" rel="noopener" style="color:var(--signal);">github.com/NightCrawler9924</a>
+          <span style="font-family:var(--font-mono);font-size:13px;color:var(--ink-tertiary);">public</span>
         </div>
-
-        <div class="proj-card">
-          <div class="proj-card-top">
-            <span class="proj-num-sm">05</span>
-            <span class="proj-tag tag-sw">Python · API</span>
-          </div>
-          <h3 class="proj-card-title">SkyCast Live</h3>
-          <p class="proj-card-body">Real-time weather web app using Python and REST API integration. Displays live temperature, humidity, and pressure data from weather APIs with a clean user interface.</p>
-          <div class="proj-stack">
-            <span>Python</span><span>REST API</span><span>Web</span>
-          </div>
-          <a href="https://www.linkedin.com/in/deepansh-sabharwal-315033257/" class="proj-link-sm" target="_blank" rel="noopener">LinkedIn →</a>
+        <div class="contact__row">
+          <span class="contact__label">LinkedIn</span>
+          <a class="contact__value link" href="https://www.linkedin.com/in/deepansh-sabharwal-315033257/" rel="noopener" style="color:var(--signal);">linkedin.com/in/deepansh-sabharwal</a>
+          <span style="font-family:var(--font-mono);font-size:13px;color:var(--ink-tertiary);">public</span>
         </div>
-
-        <div class="proj-card">
-          <div class="proj-card-top">
-            <span class="proj-num-sm">06</span>
-            <span class="proj-tag tag-research">Research · Edge AI</span>
-          </div>
-          <h3 class="proj-card-title">Wildlife-Vehicle Collision Warning System</h3>
-          <p class="proj-card-body">Research proposal for a solar-powered edge AI node using a FLIR thermal camera and YOLOv8-nano on Jetson hardware to detect and classify large animals approaching a road in real time - triggering dynamic LED warning signs with no cloud dependency. Addresses a documented gap in North American RADS: no deployed system uses on-device CV to classify animals. Target corridor: Hwy 97, Okanagan.</p>
-          <div class="proj-stack">
-            <span>Jetson Orin NX</span><span>FLIR Thermal</span><span>YOLOv8-nano</span><span>TensorRT</span><span>LoRaWAN</span>
-          </div>
-          <span class="proj-tag-inline">UBC Research Proposal · April 2026</span>
+        <div class="contact__row">
+          <span class="contact__label">Resume</span>
+          <a class="contact__value link" href="Deepansh%20Sabharwal.docx" download style="color:var(--signal);">Deepansh Sabharwal.docx</a>
+          <span style="font-family:var(--font-mono);font-size:13px;color:var(--ink-tertiary);">download</span>
         </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="section section-alt">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="section-eyebrow">Capabilities</span>
-        <h2 class="section-title">Technical Skills</h2>
-      </div>
-
-      <div class="skills-categories">
-
-        <div class="skills-cat">
-          <div class="skills-cat-label">Hardware &amp; HDL</div>
-          <div class="skills-logo-grid">
-            <div class="skill-logo-item"><svg class="skill-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg><span>FPGA / Verilog</span></div>
-            <div class="skill-logo-item"><svg class="skill-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg><span>Circuit Design</span></div>
-            <div class="skill-logo-item"><svg class="skill-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg><span>Arduino</span></div>
-            <div class="skill-logo-item"><svg class="skill-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm2 2h10v2H7V7zm0 4h10v2H7v-2zm0 4h7v2H7v-2z"/></svg><span>SolidWorks</span></div>
-            <div class="skill-logo-item"><svg class="skill-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"/></svg><span>Gowin EDA</span></div>
-          </div>
-        </div>
-
-        <div class="skills-cat">
-          <div class="skills-cat-label">Languages</div>
-          <div class="skills-logo-grid">
-            <div class="skill-logo-item"><svg class="skill-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 15.5c-.28 0-.5.22-.5.5v2c0 .28.22.5.5.5h3c.28 0 .5-.22.5-.5V16c0-.28-.22-.5-.5-.5h-3zm0 1h3v1.5h-3V16.5zM4 6h16v2H4V6zm0 4h10v2H4v-2zm0 4h7v2H4v-2z"/></svg><span>C / C++</span></div>
-            <div class="skill-logo-item"><svg class="skill-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.23l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05L0 11.97l.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.26-.02h.02l.27-.04.28-.09.27-.14.24-.2.2-.26.14-.33.08-.41.02-.5v-1.5l.05-.64.13-.54.21-.46.26-.38.3-.31.33-.25.35-.19.35-.14.33-.1.3-.07.26-.04.21-.02h.02l.25-.02.27-.04.29-.09.29-.15.27-.21.23-.28.17-.36.1-.44.04-.53V3.3l.02-.21.04-.27.07-.3.1-.35.14-.37.2-.36.27-.35.33-.32.4-.27.5-.22.58-.14.68-.05h7.38l.66.05.57.14.48.22.39.27.31.32.26.35.19.36.14.37.09.35.06.32.03.27.01.21v.3l-.02.22-.04.27z"/></svg><span>Python</span></div>
-            <div class="skill-logo-item"><svg class="skill-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M8.851 18.56s-.917.534.653.714c1.902.218 2.874.187 4.969-.211 0 0 .552.346 1.321.646-4.699 2.013-10.633-.118-6.943-1.149M8.276 15.933s-1.028.761.542.924c2.032.209 3.636.227 6.413-.308 0 0 .384.389.987.602-5.679 1.661-12.007.13-7.942-1.218M13.116 11.475c1.158 1.333-.304 2.533-.304 2.533s2.939-1.518 1.589-3.418c-1.261-1.772-2.228-2.652 3.007-5.688 0-.001-8.216 2.051-4.292 6.573M19.33 20.504s.679.559-.747.991c-2.712.822-11.288 1.069-13.669.033-.856-.373.75-.89 1.254-.998.527-.114.828-.093.828-.093-.953-.671-6.156 1.317-2.643 1.887 9.58 1.553 17.462-.7 14.977-1.82M9.734 23.924c4.322.277 10.959-.153 11.116-2.198 0 0-.302.775-3.572 1.391-3.688.694-8.239.613-10.937.168 0-.001.553.457 3.393.639"/></svg><span>Java</span></div>
-            <div class="skill-logo-item"><svg class="skill-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4.285 11.159l-.88-1.595H2.15v1.595H1.11V8.24H3.51c.88 0 1.485.6 1.485 1.395 0 .63-.36 1.065-.87 1.26l.975 1.77H4.285v-.506zm-.81-2.04H2.15v.87h1.32c.345 0 .555-.195.555-.435 0-.255-.21-.435-.55-.435zM22.89 8.24v2.919h-1.035V8.24h1.035z"/></svg><span>Bash / Shell</span></div>
-            <div class="skill-logo-item"><svg class="skill-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M2 3h20v2H2V3zm0 8h20v2H2v-2zm0 8h20v2H2v-2z"/></svg><span>MATLAB</span></div>
-            <div class="skill-logo-item"><svg class="skill-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5.96 3.99l.02.01H18.1l.02-.01c1.14.03 2.06.95 2.06 2.1v11.82c0 1.15-.92 2.07-2.06 2.1l-.02-.01H5.98l-.02.01c-1.14-.03-2.06-.95-2.06-2.1V6.09c0-1.15.92-2.07 2.06-2.1zM8 8h8v1.5H8V8zm0 3.5h8V13H8v-1.5zm0 3.5h5v1.5H8V15z"/></svg><span>R</span></div>
-          </div>
-        </div>
-
-        <div class="skills-cat">
-          <div class="skills-cat-label">AI / ML</div>
-          <div class="skills-logo-grid">
-            <div class="skill-logo-item"><svg class="skill-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11.584 2.376a.5.5 0 01.832 0l9 13.5A.5.5 0 0121 16.5H3a.5.5 0 01-.416-.624l9-13.5z"/></svg><span>Scikit-learn</span></div>
-            <div class="skill-logo-item"><svg class="skill-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg><span>OpenCV</span></div>
-            <div class="skill-logo-item"><svg class="skill-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 8.5l3-3 3 3-3 3-3-3zm9-6l3-3 3 3-3 3-3-3zm9 6l3-3 3 3-3 3-3-3zm-9 6l3-3 3 3-3 3-3-3z"/></svg><span>YOLOv8</span></div>
-            <div class="skill-logo-item"><svg class="skill-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 2a8 8 0 110 16A8 8 0 0112 4zm0 3a5 5 0 100 10A5 5 0 0012 7zm0 2a3 3 0 110 6 3 3 0 010-6z"/></svg><span>TensorRT</span></div>
-            <div class="skill-logo-item"><svg class="skill-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg><span>Neural Nets</span></div>
-          </div>
-        </div>
-
-        <div class="skills-cat">
-          <div class="skills-cat-label">Tools &amp; Systems</div>
-          <div class="skills-logo-grid">
-            <div class="skill-logo-item"><svg class="skill-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg><span>Git / GitHub</span></div>
-            <div class="skill-logo-item"><svg class="skill-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.09 2H3.91A1.91 1.91 0 002 3.91v16.17A1.91 1.91 0 003.91 22h16.17A1.91 1.91 0 0022 20.09V3.91A1.91 1.91 0 0020.09 2zM12 17.23a5.23 5.23 0 110-10.46 5.23 5.23 0 010 10.46z"/></svg><span>Linux</span></div>
-            <div class="skill-logo-item"><svg class="skill-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 2c2.953 0 5.601 1.357 7.341 3.486L5.486 19.341A7.953 7.953 0 014 12c0-4.411 3.589-8 8-8zm0 16a7.953 7.953 0 01-5.341-2.059L18.514 5.659A7.953 7.953 0 0120 12c0 4.411-3.589 8-8 8z"/></svg><span>RISC-V / QEMU</span></div>
-            <div class="skill-logo-item"><svg class="skill-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg><span>Icarus Verilog</span></div>
-            <div class="skill-logo-item"><svg class="skill-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h4v4H3V3zm7 0h4v4h-4V3zm7 0h4v4h-4V3zM3 10h4v4H3v-4zm7 0h4v4h-4v-4zm7 0h4v4h-4v-4zM3 17h4v4H3v-4zm7 0h4v4h-4v-4zm7 0h4v4h-4v-4z"/></svg><span>LoRaWAN / IoT</span></div>
-            <div class="skill-logo-item"><svg class="skill-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm1 14H11V11h2v5zm0-7H11V7h2v2z"/></svg><span>Raspberry Pi</span></div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="certs-row">
-        <div class="cert-card">
-          <div class="cert-issuer">OpenCV University · Dec 2025</div>
-          <div class="cert-name">Mastering OpenCV with Python</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-issuer">Self-Authored · GitHub</div>
-          <div class="cert-name">C Programming: Beginner to Intermediate</div>
-          <a href="https://github.com/NightCrawler9924/C" class="cert-link" target="_blank" rel="noopener">View on GitHub →</a>
-        </div>
-        <div class="cert-card">
-          <div class="cert-issuer">Self-Authored · GitHub</div>
-          <div class="cert-name">Java: Beginner to Intermediate</div>
-          <a href="https://github.com/NightCrawler9924/JAVA" class="cert-link" target="_blank" rel="noopener">View on GitHub →</a>
-        </div>
-        <div class="cert-card">
-          <div class="cert-issuer">Self-Authored · GitHub</div>
-          <div class="cert-name">Bash Scripting: Beginner to Intermediate</div>
-          <a href="https://github.com/NightCrawler9924/BASH-SCRIPTING" class="cert-link" target="_blank" rel="noopener">View on GitHub →</a>
+        <div class="contact__row">
+          <span class="contact__label">Response</span>
+          <span class="contact__value" style="font-family:var(--font-sans);">Usually within 48 hours, weekdays, UTC-7.</span>
+          <span></span>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="section-eyebrow">Background</span>
-        <h2 class="section-title">About</h2>
-      </div>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>Second-year Computer Engineering student at UBC. My work covers both sides of the hardware-software boundary: writing Verilog state machines on physical FPGAs, building bare-metal RISC-V compilation pipelines, training ML models on real datasets, and wiring circuits on physical prototypes.</p>
-          <p>I pursue co-op roles in embedded systems, FPGA engineering, firmware, and edge AI, where hardware is a real constraint, not an abstraction. Timing closure, silicon area, power budget, and thermal limits are the environment I work in.</p>
-          <p>Active research: a solar-powered thermal-camera wildlife detection system proposed to BC Ministry of Transportation, targeting the Hwy 97 Okanagan corridor. In parallel, progressing toward physical FPGA deployment of the RISC-V pipeline on Tang Nano 20K.</p>
-        </div>
-        <div class="about-sidebar">
-          <div class="about-block">
-            <div class="about-block-label">Education</div>
-            <div class="about-block-val">B.A.Sc. Computer Engineering</div>
-            <div class="about-block-sub">UBC · Second Year · In Progress</div>
-          </div>
-          <div class="about-block">
-            <div class="about-block-label">Location</div>
-            <div class="about-block-val">Kelowna, BC</div>
-            <div class="about-block-sub">Open to remote and relocation for co-op</div>
-          </div>
-          <div class="about-block">
-            <div class="about-block-label">Target Roles</div>
-            <div class="about-block-val">Embedded · FPGA · Firmware · Edge AI</div>
-            <div class="about-block-sub">Available September 2026</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section section-alt">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="section-eyebrow">Reach Out</span>
-        <h2 class="section-title">Let's Work Together</h2>
-      </div>
-      <div class="contact-grid">
-        <p class="contact-blurb">Open to co-op positions in embedded systems, FPGA engineering, edge AI, and software development starting September 2026.</p>
-        <div class="contact-links">
-          <a href="mailto:deepanshsabh.60@gmail.com" class="contact-row">
-            <span class="c-label">Email</span>
-            <span class="c-val">deepanshsabh.60@gmail.com</span>
-            <span class="c-arr">→</span>
-          </a>
-          <a href="https://www.linkedin.com/in/deepansh-sabharwal-315033257/" class="contact-row" target="_blank" rel="noopener">
-            <span class="c-label">LinkedIn</span>
-            <span class="c-val">deepansh-sabharwal-315033257</span>
-            <span class="c-arr">→</span>
-          </a>
-          <a href="https://github.com/NightCrawler9924" class="contact-row" target="_blank" rel="noopener">
-            <span class="c-label">GitHub</span>
-            <span class="c-val">NightCrawler9924</span>
-            <span class="c-arr">→</span>
-          </a>
-          <a href="Deepansh Sabharwal.docx" class="contact-row" download>
-            <span class="c-label">Resume</span>
-            <span class="c-val">Download .docx</span>
-            <span class="c-arr">↓</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+  </main>
 
   <footer class="footer">
-    <div class="wrap footer-inner">
-      <span>© 2026 Deepansh Sabharwal</span>
-      <span>Computer Engineering · UBC</span>
+    <div class="container container--wide footer__inner">
+      <span>© 2026 Deepansh Sabharwal · CC BY 4.0</span>
+      <span>press <strong style="color:var(--ink-secondary);">g</strong> to toggle grid</span>
+      <span>Built as a static site · no framework</span>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Grid overlay (toggled with keyboard) -->
+  <div class="grid-overlay" id="grid-overlay" aria-hidden="true">
+    <div class="grid-overlay__inner">
+      <div class="grid-overlay__col"></div><div class="grid-overlay__col"></div>
+      <div class="grid-overlay__col"></div><div class="grid-overlay__col"></div>
+      <div class="grid-overlay__col"></div><div class="grid-overlay__col"></div>
+      <div class="grid-overlay__col"></div><div class="grid-overlay__col"></div>
+      <div class="grid-overlay__col"></div><div class="grid-overlay__col"></div>
+      <div class="grid-overlay__col"></div><div class="grid-overlay__col"></div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
