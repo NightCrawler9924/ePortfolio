@@ -1,684 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Deepansh Sabharwal, Computer Engineering, UBC</title>
-  <meta name="description" content="Deepansh Sabharwal. Computer Engineering, UBC. FPGA, embedded systems, edge AI, hardware-software integration.">
-  <meta name="theme-color" content="#FAFAF7" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0B0B0A" media="(prefers-color-scheme: dark)">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Source+Serif+4:wght@400;600&amp;display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deepansh Sabharwal — Computer Engineer, UBC</title>
+<meta name="description" content="Deepansh Sabharwal. Computer Engineering, UBC. FPGA, embedded systems, edge AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&amp;family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,500&amp;family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- ============================================================
-       NAV
-  ============================================================ -->
-  <header class="nav" id="nav" role="banner">
-    <div class="nav__inner">
-      <a href="#top" class="nav__mono" aria-label="Return to top">
-        <span class="nav__dot" aria-hidden="true"></span>
-        DS<strong>/</strong>SABHARWAL
-      </a>
-      <nav class="nav__links" aria-label="Primary">
-        <a href="#work" class="nav__link" data-section="work"><span class="nav__num">01</span>work</a>
-        <span class="nav__sep" aria-hidden="true"></span>
-        <a href="#systems" class="nav__link" data-section="systems"><span class="nav__num">02</span>systems</a>
-        <span class="nav__sep" aria-hidden="true"></span>
-        <a href="#archive" class="nav__link" data-section="archive"><span class="nav__num">03</span>archive</a>
-        <span class="nav__sep" aria-hidden="true"></span>
-        <a href="#about" class="nav__link" data-section="about"><span class="nav__num">04</span>about</a>
-        <span class="nav__sep" aria-hidden="true"></span>
-        <a href="#contact" class="nav__link" data-section="contact"><span class="nav__num">05</span>contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="top">
-
-    <!-- ============================================================
-         IDENTITY
-    ============================================================ -->
-    <section class="frame" aria-labelledby="name">
-      <div class="identity">
-        <div class="identity__top-meta">
-          <span>Portfolio · 2026 · Edition <strong>00</strong></span>
-          <span>v2.0 · Updated 2026-04-23 · Kelowna, BC</span>
-        </div>
-
-        <div class="identity__layout">
-          <aside class="identity__rail" aria-label="Identity sidebar">
-            <div>Index<strong>00</strong></div>
-            <div>Status<strong style="color:var(--signal);">Available</strong></div>
-            <div>Cohort<strong>2027</strong></div>
-            <div>Domain<strong>HW/SW</strong></div>
-          </aside>
-
-          <div class="identity__main">
-            <div class="identity__callsign">Callsign · <strong>NIGHTCRAWLER9924</strong></div>
-
-            <h1 class="identity__name" id="name">Deepansh Sabharwal</h1>
-
-            <p class="identity__lede">
-              Computer Engineering at UBC. I work where hardware and software meet, in
-              <strong>RTL-level FPGA design</strong>, <strong>bare-metal RISC-V</strong>,
-              and <strong>edge AI on embedded hardware</strong>.
-            </p>
-
-            <dl class="spec">
-              <dt>Status</dt>
-              <dd>Available, Fall 2026 co-op. Embedded, FPGA, firmware, edge AI.</dd>
-
-              <dt>Program</dt>
-              <dd>B.A.Sc. Computer Engineering, UBC. Second year.</dd>
-
-              <dt>Location</dt>
-              <dd>Kelowna, BC <span class="mono">· UTC-7</span>. Open to relocation and remote.</dd>
-
-              <dt>Focus</dt>
-              <dd>HDL and FPGA, RISC-V pipelines, embedded vision, sensor systems.</dd>
-            </dl>
-
-            <div class="identity__links">
-              <a class="link" href="https://github.com/NightCrawler9924" rel="noopener">github</a>
-              <span class="link__sep">/</span>
-              <a class="link" href="mailto:deepanshsabh.60@gmail.com">email</a>
-              <span class="link__sep">/</span>
-              <a class="link" href="https://www.linkedin.com/in/deepansh-sabharwal-315033257/" rel="noopener">linkedin</a>
-              <span class="link__sep">/</span>
-              <a class="link" href="Deepansh%20Sabharwal.docx" download>resume.docx</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         01 SELECTED WORK
-    ============================================================ -->
-    <section class="frame" id="work" aria-labelledby="work-title">
-      <div class="frame__inner">
-        <span class="frame__num">§ 01 <span>Selected Work</span></span>
-        <span class="frame__num frame__num--right">04 cases / pp. 01-04</span>
-
-        <aside class="rail-meta">
-          <span class="rail-meta__num">01</span>
-          <span class="rail-meta__row">Selected<strong>Work</strong></span>
-          <span class="rail-meta__row">Span<strong>2024–2026</strong></span>
-          <span class="rail-meta__row">Count<strong>04</strong></span>
-        </aside>
-
-        <div>
-          <header class="sec-head">
-            <div class="sec-head__kicker">
-              <em>Index</em> <span class="sec-head__rule">/</span> Hardware, firmware, applied ML
-            </div>
-            <h2 class="sec-head__title" id="work-title">Selected projects.</h2>
-            <p class="sec-head__lede">
-              Four projects, each presented as problem, approach, result, stack. Measurable outcomes are stated where they exist; placeholders are marked where they do not.
-            </p>
-          </header>
-
-          <!-- CASE 01 -->
-          <article class="case" aria-labelledby="case-01-title">
-            <span class="case__num" aria-hidden="true">01<small>FPGA · 2025</small></span>
-            <div class="case__head">
-              <span><em>Case 01</em> · Verilog · Tang Nano 20K</span>
-              <span>Lead · 2025</span>
-            </div>
-            <h3 class="case__title" id="case-01-title">FaultLatchedPWM</h3>
-            <p class="case__problem">
-              A deterministic, hardware-enforced PWM controller that cannot be overridden in software.
-            </p>
-
-            <dl class="case__fields">
-              <dt class="case__field-label">Context</dt>
-              <dd class="case__field-value">
-                <p>Motor-control and embedded-actuation loops routinely implement safety logic in firmware, creating a software path that can be bypassed, corrupted, or starved. The project removes the firmware layer from the safety envelope by enforcing period and duty constraints in RTL on a Gowin GW2A-LV18 (Tang Nano 20K).</p>
-              </dd>
-
-              <dt class="case__field-label">Approach</dt>
-              <dd class="case__field-value">
-                <p>A 32-bit configurable PWM generator is gated by a hardware guard module that validates constraints pre-output. Violations drive a five-state FSM (<code>INIT</code> → <code>IDLE</code> → <code>RUN</code> → <code>FAULT</code> → <code>SAFE</code>) into a latched fault state. Recovery requires an explicit externally-asserted sequence. There is no firmware override path; the FSM is the single source of truth.</p>
-              </dd>
-
-              <dt class="case__field-label">Result</dt>
-              <dd class="case__field-value">
-                <table class="metrics" aria-label="Implementation results">
-                  <thead>
-                    <tr><th>Metric</th><th>Constraint</th><th>Achieved</th></tr>
-                  </thead>
-                  <tbody>
-                    <tr><td>F<sub>max</sub></td><td>100 MHz</td><td>127 MHz</td></tr>
-                    <tr><td>LUT utilization</td><td>—</td><td>~2%</td></tr>
-                    <tr><td>Register utilization</td><td>—</td><td>&lt;1%</td></tr>
-                    <tr><td>Target device</td><td>GW2A-LV18</td><td>Verified</td></tr>
-                  </tbody>
-                </table>
-                <p style="margin-top: var(--space-4); color: var(--ink-secondary); font-size: 14px; line-height: 22px;">Verified via Icarus Verilog simulation with waveform-based fault injection. Synthesized and place-and-routed in Gowin EDA.</p>
-              </dd>
-
-              <dt class="case__field-label">Stack</dt>
-              <dd class="case__field-value case__stack">
-                <span>Verilog</span><span>FSM design</span><span>Gowin EDA</span><span>Icarus Verilog</span><span>Tang Nano 20K</span>
-              </dd>
-            </dl>
-
-            <div class="case__actions">
-              <a class="link" href="https://github.com/NightCrawler9924/FaultLatchedPWM" rel="noopener">github.com/NightCrawler9924/FaultLatchedPWM →</a>
-            </div>
-          </article>
-
-          <!-- CASE 02 -->
-          <article class="case" aria-labelledby="case-02-title">
-            <span class="case__num" aria-hidden="true">02<small>RISC-V · 2025</small></span>
-            <div class="case__head">
-              <span><em>Case 02</em> · Embedded · QEMU</span>
-              <span>Sole · 2025</span>
-            </div>
-            <h3 class="case__title" id="case-02-title">RISC-V Toolchain to Hardware-Emulation Pipeline</h3>
-            <p class="case__problem">
-              End-to-end bare-metal pipeline from C source to a 64-bit RISC-V virtual machine, with no operating system in the path.
-            </p>
-
-            <dl class="case__fields">
-              <dt class="case__field-label">Context</dt>
-              <dd class="case__field-value">
-                <p>Understanding an ISA in isolation does not produce working systems. The work targets the full chain, source to ELF to boot to emulation, with privilege transitions managed explicitly. The objective is ground-up fluency in how instructions become silicon behaviour, as preparation for deploying the same flow to a physical FPGA.</p>
-              </dd>
-
-              <dt class="case__field-label">Approach</dt>
-              <dd class="case__field-value">
-                <p>C source is cross-compiled to RISC-V ELF via the GNU toolchain. OpenSBI handles M-mode boot; riscv-pk manages privilege transitions. The resulting binary runs on a 64-bit virtual RISC-V target in QEMU. Each stage of the pipeline, from ELF section layout to boot sequence to emulation memory model, is analysed rather than treated as opaque.</p>
-              </dd>
-
-              <dt class="case__field-label">Result</dt>
-              <dd class="case__field-value">
-                <p>Operational bare-metal pipeline. Next phase: physical deployment on Tang Nano 20K, replacing the QEMU target with an in-fabric soft core. <span class="case__placeholder">// pending: latency and throughput on target</span></p>
-              </dd>
-
-              <dt class="case__field-label">Stack</dt>
-              <dd class="case__field-value case__stack">
-                <span>RISC-V ISA</span><span>GCC</span><span>QEMU</span><span>OpenSBI</span><span>Bare-metal C</span><span>ELF</span>
-              </dd>
-            </dl>
-
-            <div class="case__actions">
-              <a class="link" href="https://github.com/NightCrawler9924/CMPE-246" rel="noopener">github.com/NightCrawler9924/CMPE-246 →</a>
-            </div>
-          </article>
-
-          <!-- CASE 03 -->
-          <article class="case" aria-labelledby="case-03-title">
-            <span class="case__num" aria-hidden="true">03<small>Edge AI · 2026</small></span>
-            <div class="case__head">
-              <span><em>Case 03</em> · Research · UBC proposal</span>
-              <span>Author · 2026</span>
-            </div>
-            <h3 class="case__title" id="case-03-title">Wildlife-Vehicle Collision Warning System</h3>
-            <p class="case__problem">
-              A solar-powered edge-AI node that detects and classifies large animals approaching a roadway, then triggers dynamic warning signs with no cloud dependency.
-            </p>
-
-            <dl class="case__fields">
-              <dt class="case__field-label">Context</dt>
-              <dd class="case__field-value">
-                <p>Deployed North American Roadway Animal Detection Systems (RADS) trigger on motion signatures and do not classify species. This produces false positives from wind, vegetation, and small animals. The proposal addresses a documented gap: on-device computer vision to discriminate target species (deer, moose, elk) from background events. Target corridor: Hwy 97 Okanagan.</p>
-              </dd>
-
-              <dt class="case__field-label">Approach</dt>
-              <dd class="case__field-value">
-                <p>A FLIR thermal camera feeds a YOLOv8-nano model accelerated via TensorRT on a Jetson Orin NX. Inference runs entirely at the edge; only detection events transit the LoRaWAN uplink. Power is solar with battery buffer, sized for 72-hour no-sun operation. Warning sign actuation is on a local GPIO path with sub-second latency from detection to signal.</p>
-              </dd>
-
-              <dt class="case__field-label">Result</dt>
-              <dd class="case__field-value">
-                <p>Proposal submitted to BC Ministry of Transportation, April 2026. Specification, power budget, and thermal analysis complete. Hardware bring-up pending funding. <span class="case__placeholder">// pending: precision and recall on labelled set</span></p>
-              </dd>
-
-              <dt class="case__field-label">Stack</dt>
-              <dd class="case__field-value case__stack">
-                <span>Jetson Orin NX</span><span>FLIR thermal</span><span>YOLOv8-nano</span><span>TensorRT</span><span>LoRaWAN</span><span>Solar</span>
-              </dd>
-            </dl>
-          </article>
-
-          <!-- CASE 04 -->
-          <article class="case" aria-labelledby="case-04-title">
-            <span class="case__num" aria-hidden="true">04<small>EV · 2024</small></span>
-            <div class="case__head">
-              <span><em>Case 04</em> · Hardware · UBC team</span>
-              <span>Electrical lead · 2024</span>
-            </div>
-            <h3 class="case__title" id="case-04-title">CyberTrike</h3>
-            <p class="case__problem">
-              An RC-controlled three-wheeled electric vehicle prototype, from schematic to rolling chassis, as a UBC team project.
-            </p>
-
-            <dl class="case__fields">
-              <dt class="case__field-label">Context</dt>
-              <dd class="case__field-value">
-                <p>First-year team project. Objective: a working drivable prototype inside one term, with a small team and a protoboard-only electrical stack. The role owned the electrical path end-to-end, motor control, power distribution, and the wireless control link.</p>
-              </dd>
-
-              <dt class="case__field-label">Approach</dt>
-              <dd class="case__field-value">
-                <p>Arduino-driven PWM motor control, hand-drawn circuit schematics translated to protoboard, and an NRF24L01 radio link for the remote. Power routing was kept on a single rail to simplify debugging; thermal and current margins sized conservatively given the prototyping medium.</p>
-              </dd>
-
-              <dt class="case__field-label">Result</dt>
-              <dd class="case__field-value">
-                <p>Rolling, remotely controlled prototype. Radio link reliable at project-scale distances. Post-mortem: migration from protoboard to a proper PCB is the first improvement for a v2.</p>
-              </dd>
-
-              <dt class="case__field-label">Stack</dt>
-              <dd class="case__field-value case__stack">
-                <span>Arduino</span><span>PWM</span><span>Circuit design</span><span>NRF24L01</span><span>SolidWorks</span>
-              </dd>
-            </dl>
-
-            <div class="case__actions">
-              <a class="link" href="https://www.linkedin.com/in/deepansh-sabharwal-315033257/" rel="noopener">team write-up on linkedin →</a>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         02 SYSTEMS
-    ============================================================ -->
-    <section class="frame frame--wide" id="systems" aria-labelledby="systems-title">
-      <div class="frame__inner">
-        <span class="frame__num">§ 02 <span>Systems</span></span>
-        <span class="frame__num frame__num--right">essay · figure · code</span>
-
-        <aside class="rail-meta">
-          <span class="rail-meta__num">02</span>
-          <span class="rail-meta__row">Systems<strong>Essay</strong></span>
-          <span class="rail-meta__row">Read time<strong>~5 min</strong></span>
-          <span class="rail-meta__row">Words<strong>~720</strong></span>
-          <span class="rail-meta__row">Figure<strong>FIG. 01</strong></span>
-          <span class="rail-meta__row">Listing<strong>LST. 01</strong></span>
-        </aside>
-
-        <div>
-          <header class="sec-head">
-            <div class="sec-head__kicker">
-              <em>Essay</em> <span class="sec-head__rule">/</span> Single subject, technical depth
-            </div>
-            <h2 class="sec-head__title" id="systems-title">On hardware-enforced safety in FaultLatchedPWM.</h2>
-            <p class="sec-head__lede">
-              Why the safety envelope sits in RTL rather than firmware, what the tradeoffs are, and how the FSM is structured to make recovery explicit rather than incidental.
-            </p>
-          </header>
-
-          <div class="dd-prose">
-            <p class="dropcap">A PWM controller for motor actuation has two jobs. It must produce a clean, configurable switching waveform, and it must not produce an unsafe one. The second job, in most implementations, is delegated to firmware. A microcontroller compares the commanded duty against a limit, and refuses to load the compare register if the limit is exceeded. This is convenient and almost always adequate. It is also a path that can be bypassed, corrupted by a stack overflow, starved by a priority inversion, or silently reverted by a firmware update. The failure mode is invisible until it is not.</p>
-
-            <p>FaultLatchedPWM takes a different position. The safety envelope belongs in the fabric. The PWM generator is subordinate to a hardware guard module that observes the commanded period and duty values and a fault signal, and holds a single latched bit, is the system permitted to drive output. The guard is combinational and registered; the latch is explicit; the reset path is explicit. The firmware cannot override it because there is no firmware path to the latch. The only way out of a fault state is an externally asserted recovery sequence, which can itself be gated by whatever higher-level supervision the integrator chooses.</p>
-
-            <p>The state machine has five states. <code style="font-family:var(--font-mono);font-size:16px;color:var(--ink);background:var(--paper);padding:1px 6px;border:1px solid var(--rule);border-radius:2px;">INIT</code> establishes known values on power-up and releases to <code style="font-family:var(--font-mono);font-size:16px;color:var(--ink);background:var(--paper);padding:1px 6px;border:1px solid var(--rule);border-radius:2px;">IDLE</code> when the configuration registers are stable. <code style="font-family:var(--font-mono);font-size:16px;color:var(--ink);background:var(--paper);padding:1px 6px;border:1px solid var(--rule);border-radius:2px;">IDLE</code> drives the output low and waits for an enable. <code style="font-family:var(--font-mono);font-size:16px;color:var(--ink);background:var(--paper);padding:1px 6px;border:1px solid var(--rule);border-radius:2px;">RUN</code> generates the waveform under the guard module's continuous supervision. <code style="font-family:var(--font-mono);font-size:16px;color:var(--ink);background:var(--paper);padding:1px 6px;border:1px solid var(--rule);border-radius:2px;">FAULT</code> is the latched state: output is driven low, the fault signal is asserted on an external pin, and no further transitions are accepted except a specific recovery pattern. <code style="font-family:var(--font-mono);font-size:16px;color:var(--ink);background:var(--paper);padding:1px 6px;border:1px solid var(--rule);border-radius:2px;">SAFE</code> is reached after recovery, and returns to <code style="font-family:var(--font-mono);font-size:16px;color:var(--ink);background:var(--paper);padding:1px 6px;border:1px solid var(--rule);border-radius:2px;">IDLE</code> only when the configuration has been re-validated. The critical property is that the <code style="font-family:var(--font-mono);font-size:16px;color:var(--ink);background:var(--paper);padding:1px 6px;border:1px solid var(--rule);border-radius:2px;">RUN</code> to <code style="font-family:var(--font-mono);font-size:16px;color:var(--ink);background:var(--paper);padding:1px 6px;border:1px solid var(--rule);border-radius:2px;">FAULT</code> transition is single-cycle and irreversible without external intervention, and that <code style="font-family:var(--font-mono);font-size:16px;color:var(--ink);background:var(--paper);padding:1px 6px;border:1px solid var(--rule);border-radius:2px;">FAULT</code> never yields to <code style="font-family:var(--font-mono);font-size:16px;color:var(--ink);background:var(--paper);padding:1px 6px;border:1px solid var(--rule);border-radius:2px;">RUN</code> directly. This eliminates an entire class of chattering failures where a marginally-valid configuration oscillates across the guard boundary.</p>
-          </div>
-
-          <!-- FIGURE -->
-          <figure class="figure diagram" id="diagram" aria-labelledby="fig-01-cap">
-            <svg class="diagram-svg" viewBox="0 0 840 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-01-title">
-              <title id="fig-01-title">FSM: INIT → IDLE → RUN, with fault and recovery branches to FAULT and SAFE</title>
-
-              <g fill="none" stroke-linecap="round">
-                <path class="edge" data-edge="init-idle" d="M 115 130 L 195 130" />
-                <polygon points="195,130 188,126 188,134" fill="var(--rule-strong)"/>
-                <path class="edge" data-edge="idle-run" d="M 285 130 L 365 130" />
-                <polygon points="365,130 358,126 358,134" fill="var(--rule-strong)"/>
-                <path class="edge" data-edge="run-fault" d="M 455 130 L 535 130" />
-                <polygon points="535,130 528,126 528,134" fill="var(--rule-strong)"/>
-                <path class="edge" data-edge="fault-safe" d="M 625 130 L 705 130" />
-                <polygon points="705,130 698,126 698,134" fill="var(--rule-strong)"/>
-                <path class="edge" data-edge="safe-idle" d="M 750 105 Q 750 35 240 35 Q 240 35 240 105" />
-                <polygon points="240,105 236,98 244,98" fill="var(--rule-strong)"/>
-              </g>
-
-              <g class="edge-label">
-                <text x="155" y="122" text-anchor="middle">config ok</text>
-                <text x="325" y="122" text-anchor="middle">enable</text>
-                <text x="495" y="122" text-anchor="middle">fault</text>
-                <text x="665" y="122" text-anchor="middle">recover</text>
-                <text x="490" y="28" text-anchor="middle">re-validate</text>
-              </g>
-
-              <g class="node" data-node="init" tabindex="0" role="button" aria-label="INIT state">
-                <rect x="30" y="105" width="85" height="50" rx="2"/>
-                <text x="38" y="118" class="idx">S0</text>
-                <text x="72.5" y="135" text-anchor="middle">INIT</text>
-                <text x="72.5" y="148" text-anchor="middle" class="sub">power-up</text>
-              </g>
-              <g class="node" data-node="idle" tabindex="0" role="button" aria-label="IDLE state">
-                <rect x="200" y="105" width="85" height="50" rx="2"/>
-                <text x="208" y="118" class="idx">S1</text>
-                <text x="242.5" y="135" text-anchor="middle">IDLE</text>
-                <text x="242.5" y="148" text-anchor="middle" class="sub">output low</text>
-              </g>
-              <g class="node" data-node="run" tabindex="0" role="button" aria-label="RUN state">
-                <rect x="370" y="105" width="85" height="50" rx="2"/>
-                <text x="378" y="118" class="idx">S2</text>
-                <text x="412.5" y="135" text-anchor="middle">RUN</text>
-                <text x="412.5" y="148" text-anchor="middle" class="sub">pwm active</text>
-              </g>
-              <g class="node" data-node="fault" tabindex="0" role="button" aria-label="FAULT state">
-                <rect x="540" y="105" width="85" height="50" rx="2"/>
-                <text x="548" y="118" class="idx">S3</text>
-                <text x="582.5" y="135" text-anchor="middle">FAULT</text>
-                <text x="582.5" y="148" text-anchor="middle" class="sub">latched</text>
-              </g>
-              <g class="node" data-node="safe" tabindex="0" role="button" aria-label="SAFE state">
-                <rect x="710" y="105" width="85" height="50" rx="2"/>
-                <text x="718" y="118" class="idx">S4</text>
-                <text x="752.5" y="135" text-anchor="middle">SAFE</text>
-                <text x="752.5" y="148" text-anchor="middle" class="sub">verified</text>
-              </g>
-            </svg>
-
-            <div class="dd-panel" id="diagram-panel" data-label="Annotation" aria-live="polite"></div>
-
-            <figcaption class="figure__caption" id="fig-01-cap">
-              <strong>FIG. 01</strong>
-              <span>Five-state FSM. RUN to FAULT is single-cycle and irreversible without external intervention. Click or focus a node for the annotation.</span>
-            </figcaption>
-          </figure>
-
-          <!-- CODE -->
-          <div class="code" role="region" aria-label="Verilog excerpt, fault_latched_pwm.v">
-            <div class="code__bar">
-              <span><strong>LST. 01</strong> · fault_latched_pwm.v · excerpt</span>
-              <span class="code__file">verilog</span>
-            </div>
-            <div class="code__body">
-              <div class="code__nums" aria-hidden="true">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34</div>
-<pre><span class="tok-com">// FaultLatchedPWM: guard-gated PWM generator, excerpt</span>
-<span class="tok-com">// Output is driven low unless guard_ok is asserted AND</span>
-<span class="tok-com">// the FSM is in RUN. There is no firmware path.</span>
-
-<span class="tok-kw">module</span> fault_latched_pwm <span class="tok-op">#(</span>
-    <span class="tok-kw">parameter</span> <span class="tok-kw">integer</span> WIDTH <span class="tok-op">=</span> <span class="tok-num">32</span>
-<span class="tok-op">)(</span>
-    <span class="tok-kw">input</span>  <span class="tok-kw">wire</span>                 clk,
-    <span class="tok-kw">input</span>  <span class="tok-kw">wire</span>                 rst_n,
-    <span class="tok-kw">input</span>  <span class="tok-kw">wire</span> <span class="tok-op">[</span>WIDTH<span class="tok-op">-</span><span class="tok-num">1</span>:<span class="tok-num">0</span><span class="tok-op">]</span>  period_i,
-    <span class="tok-kw">input</span>  <span class="tok-kw">wire</span> <span class="tok-op">[</span>WIDTH<span class="tok-op">-</span><span class="tok-num">1</span>:<span class="tok-num">0</span><span class="tok-op">]</span>  duty_i,
-    <span class="tok-kw">input</span>  <span class="tok-kw">wire</span>                 enable_i,
-    <span class="tok-kw">input</span>  <span class="tok-kw">wire</span>                 recover_i,
-    <span class="tok-kw">output</span> <span class="tok-kw">reg</span>                  pwm_o,
-    <span class="tok-kw">output</span> <span class="tok-kw">wire</span>                 fault_o
-<span class="tok-op">);</span>
-
-    <span class="tok-kw">localparam</span> <span class="tok-op">[</span><span class="tok-num">2</span>:<span class="tok-num">0</span><span class="tok-op">]</span>
-        S_INIT  <span class="tok-op">=</span> <span class="tok-num">3'd0</span>, S_IDLE  <span class="tok-op">=</span> <span class="tok-num">3'd1</span>,
-        S_RUN   <span class="tok-op">=</span> <span class="tok-num">3'd2</span>, S_FAULT <span class="tok-op">=</span> <span class="tok-num">3'd3</span>,
-        S_SAFE  <span class="tok-op">=</span> <span class="tok-num">3'd4</span>;
-
-    <span class="tok-kw">reg</span> <span class="tok-op">[</span><span class="tok-num">2</span>:<span class="tok-num">0</span><span class="tok-op">]</span> state, state_n;
-    <span class="tok-kw">wire</span> guard_ok <span class="tok-op">=</span> (duty_i <span class="tok-op">&lt;=</span> period_i) <span class="tok-op">&amp;&amp;</span> (period_i <span class="tok-op">!=</span> <span class="tok-num">0</span>);
-    <span class="tok-kw">assign</span> fault_o <span class="tok-op">=</span> (state <span class="tok-op">==</span> S_FAULT);
-
-    <span class="tok-kw">always</span> <span class="tok-op">@(*)</span> <span class="tok-kw">begin</span>
-        state_n <span class="tok-op">=</span> state;
-        <span class="tok-kw">case</span> (state)
-            S_INIT  : <span class="tok-kw">if</span> (guard_ok)            state_n <span class="tok-op">=</span> S_IDLE;
-            S_IDLE  : <span class="tok-kw">if</span> (enable_i <span class="tok-op">&amp;&amp;</span> guard_ok) state_n <span class="tok-op">=</span> S_RUN;
-            S_RUN   : <span class="tok-kw">if</span> (<span class="tok-op">!</span>guard_ok)           state_n <span class="tok-op">=</span> S_FAULT;
-            S_FAULT : <span class="tok-kw">if</span> (recover_i)           state_n <span class="tok-op">=</span> S_SAFE;
-            S_SAFE  : <span class="tok-kw">if</span> (guard_ok)            state_n <span class="tok-op">=</span> S_IDLE;
-        <span class="tok-kw">endcase</span>
-    <span class="tok-kw">end</span></pre>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         03 ARCHIVE
-    ============================================================ -->
-    <section class="frame" id="archive" aria-labelledby="archive-title">
-      <div class="frame__inner">
-        <span class="frame__num">§ 03 <span>Archive</span></span>
-        <span class="frame__num frame__num--right">06 entries</span>
-
-        <aside class="rail-meta">
-          <span class="rail-meta__num">03</span>
-          <span class="rail-meta__row">Archive<strong>Reference</strong></span>
-          <span class="rail-meta__row">Entries<strong>06</strong></span>
-        </aside>
-
-        <div>
-          <header class="sec-head">
-            <div class="sec-head__kicker">
-              <em>Reference</em> <span class="sec-head__rule">/</span> Smaller projects, learning repositories
-            </div>
-            <h2 class="sec-head__title" id="archive-title">Other work.</h2>
-            <p class="sec-head__lede">
-              Not headline work. Listed for completeness, with direct links to source.
-            </p>
-          </header>
-
-          <table class="archive" aria-label="Archive of smaller projects and learning repositories">
-            <thead>
-              <tr>
-                <th>#</th><th>Year</th><th>Kind</th><th>Title</th><th style="text-align:right;">Link</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="idx">A.01</td>
-                <td class="year">2025</td>
-                <td class="kind">ML / Python</td>
-                <td class="title">AI Soil Suitability Predictor, logistic regression with cross-validation over temperature, humidity, rainfall, wind speed, and soil moisture</td>
-                <td class="action"><a class="link" href="https://github.com/NightCrawler9924/AI-in-Farming" rel="noopener">github →</a></td>
-              </tr>
-              <tr>
-                <td class="idx">A.02</td>
-                <td class="year">2025</td>
-                <td class="kind">Python / API</td>
-                <td class="title">SkyCast Live, real-time weather dashboard over a REST integration</td>
-                <td class="action"><a class="link" href="https://www.linkedin.com/in/deepansh-sabharwal-315033257/" rel="noopener">write-up →</a></td>
-              </tr>
-              <tr>
-                <td class="idx">A.03</td>
-                <td class="year">2025</td>
-                <td class="kind">Learning repo</td>
-                <td class="title">C Programming, beginner to intermediate, self-authored</td>
-                <td class="action"><a class="link" href="https://github.com/NightCrawler9924/C" rel="noopener">github →</a></td>
-              </tr>
-              <tr>
-                <td class="idx">A.04</td>
-                <td class="year">2025</td>
-                <td class="kind">Learning repo</td>
-                <td class="title">Java, beginner to intermediate, self-authored</td>
-                <td class="action"><a class="link" href="https://github.com/NightCrawler9924/JAVA" rel="noopener">github →</a></td>
-              </tr>
-              <tr>
-                <td class="idx">A.05</td>
-                <td class="year">2025</td>
-                <td class="kind">Learning repo</td>
-                <td class="title">Bash Scripting, beginner to intermediate, self-authored</td>
-                <td class="action"><a class="link" href="https://github.com/NightCrawler9924/BASH-SCRIPTING" rel="noopener">github →</a></td>
-              </tr>
-              <tr>
-                <td class="idx">A.06</td>
-                <td class="year">2025</td>
-                <td class="kind">Certification</td>
-                <td class="title">Mastering OpenCV with Python, OpenCV University, December 2025</td>
-                <td class="action"><span style="color:var(--ink-tertiary);">certified</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         04 ABOUT
-    ============================================================ -->
-    <section class="frame" id="about" aria-labelledby="about-title">
-      <div class="frame__inner">
-        <span class="frame__num">§ 04 <span>About</span></span>
-        <span class="frame__num frame__num--right">background</span>
-
-        <aside class="rail-meta">
-          <span class="rail-meta__num">04</span>
-          <span class="rail-meta__row">Background<strong>Profile</strong></span>
-          <span class="rail-meta__row">Year<strong>2 of 4</strong></span>
-        </aside>
-
-        <div>
-          <header class="sec-head">
-            <div class="sec-head__kicker">
-              <em>Profile</em> <span class="sec-head__rule">/</span> Background and current focus
-            </div>
-            <h2 class="sec-head__title" id="about-title">About.</h2>
-          </header>
-
-          <div class="about-prose">
-            <p>Second-year Computer Engineering at UBC. My work spans the hardware-software boundary: writing Verilog state machines for physical FPGAs, building bare-metal RISC-V compilation pipelines, training ML models on real datasets, and wiring circuits on physical prototypes.</p>
-
-            <p>I pursue co-op roles where hardware is a real constraint, not an abstraction. Timing closure, silicon area, power budget, and thermal limits are the environment I want to work in. The attraction is not difficulty for its own sake. It is that the feedback loop from design decision to observable behaviour is shorter and less mediated than in pure software, and the reasoning discipline it demands is a better use of my attention.</p>
-
-            <p>Active research: a solar-powered thermal-camera wildlife-detection node proposed to the BC Ministry of Transportation for the Hwy 97 Okanagan corridor. In parallel, progressing the RISC-V pipeline toward physical deployment on the Tang Nano 20K.</p>
-          </div>
-
-          <dl class="spec" style="margin-top: var(--space-8);">
-            <dt>Education</dt>
-            <dd>B.A.Sc. Computer Engineering, UBC. Second year, in progress.</dd>
-            <dt>Languages</dt>
-            <dd>English, Hindi, Punjabi.</dd>
-            <dt>Currently</dt>
-            <dd>Tang Nano 20K bring-up. Thermal-camera dataset labelling.</dd>
-            <dt>Reading</dt>
-            <dd><span class="case__placeholder">// pending: 1–2 current titles</span></dd>
-          </dl>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         05 CONTACT
-    ============================================================ -->
-    <section class="frame" id="contact" aria-labelledby="contact-title">
-      <div class="frame__inner">
-        <span class="frame__num">§ 05 <span>Contact</span></span>
-        <span class="frame__num frame__num--right">direct</span>
-
-        <aside class="rail-meta">
-          <span class="rail-meta__num">05</span>
-          <span class="rail-meta__row">Contact<strong>Direct</strong></span>
-          <span class="rail-meta__row">Reply<strong>≤48 h</strong></span>
-        </aside>
-
-        <div>
-          <header class="sec-head">
-            <div class="sec-head__kicker">
-              <em>Direct</em> <span class="sec-head__rule">/</span> No form, no calendar embed
-            </div>
-            <h2 class="sec-head__title" id="contact-title">Reach me.</h2>
-            <p class="sec-head__lede">
-              Open to co-op positions in embedded, FPGA, firmware, and edge AI, starting September 2026.
-            </p>
-          </header>
-
-          <div class="contact">
-            <div class="contact__row">
-              <span class="contact__label">Email</span>
-              <span class="contact__value">deepanshsabh.60@gmail.com</span>
-              <button class="btn-copy" data-copy="deepanshsabh.60@gmail.com" aria-label="Copy email to clipboard">copy</button>
-            </div>
-            <div class="contact__row">
-              <span class="contact__label">GitHub</span>
-              <a class="contact__value link" href="https://github.com/NightCrawler9924" rel="noopener">github.com/NightCrawler9924</a>
-              <span class="contact__tag">public</span>
-            </div>
-            <div class="contact__row">
-              <span class="contact__label">LinkedIn</span>
-              <a class="contact__value link" href="https://www.linkedin.com/in/deepansh-sabharwal-315033257/" rel="noopener">linkedin.com/in/deepansh-sabharwal</a>
-              <span class="contact__tag">public</span>
-            </div>
-            <div class="contact__row">
-              <span class="contact__label">Resume</span>
-              <a class="contact__value link" href="Deepansh%20Sabharwal.docx" download>Deepansh Sabharwal.docx</a>
-              <span class="contact__tag">.docx</span>
-            </div>
-            <div class="contact__row">
-              <span class="contact__label">Response</span>
-              <span class="contact__value contact__value--prose">Usually within 48 hours, weekdays, UTC-7.</span>
-              <span></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <div class="footer__inner">
-      <span><strong>© 2026 Deepansh Sabharwal</strong> · <span class="signal">CC BY 4.0</span></span>
-      <span>press <strong>g</strong> to toggle grid · <strong>v2.0</strong> · 2026-04-23</span>
-      <span>Static site · <strong>no framework</strong> · <strong>15 KB gz</strong></span>
-    </div>
-  </footer>
-
-  <!-- Grid overlay -->
-  <div class="grid-overlay" id="grid-overlay" aria-hidden="true">
-    <div class="grid-overlay__inner">
-      <div class="grid-overlay__col"></div><div class="grid-overlay__col"></div>
-      <div class="grid-overlay__col"></div><div class="grid-overlay__col"></div>
-      <div class="grid-overlay__col"></div><div class="grid-overlay__col"></div>
-      <div class="grid-overlay__col"></div><div class="grid-overlay__col"></div>
-      <div class="grid-overlay__col"></div><div class="grid-overlay__col"></div>
-      <div class="grid-overlay__col"></div><div class="grid-overlay__col"></div>
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo">DS</a>
+    <div class="nav-links">
+      <a href="#work" class="nav-link">Work</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </div>
   </div>
+</nav>
 
-  <script src="script.js" defer></script>
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <canvas id="fpga-canvas" aria-hidden="true"></canvas>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Available · Fall 2026 Co-op
+      </div>
+      <h1 class="hero-name">Deepansh<br><em>Sabharwal</em></h1>
+      <p class="hero-tagline">Computer Engineering, UBC.<br>I build things with clock signals.</p>
+      <p class="hero-desc">RTL-level FPGA design, bare-metal RISC-V, hardware-software integration, and edge AI on embedded hardware. If it runs on silicon, I want to understand it from the ground up.</p>
+      <div class="hero-cta">
+        <a href="#work" class="btn-primary">See my work</a>
+        <a href="mailto:deepanshsabh.60@gmail.com" class="btn-ghost">Get in touch</a>
+      </div>
+      <div class="hero-meta-row">
+        <a href="https://github.com/NightCrawler9924" rel="noopener" class="hero-meta-link">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/deepansh-sabharwal-315033257/" rel="noopener" class="hero-meta-link">LinkedIn ↗</a>
+        <a href="Deepansh%20Sabharwal.docx" download class="hero-meta-link">Resume ↓</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="fpga-card" id="fpga-card">
+        <div class="fpga-card-header">
+          <span class="fpga-card-label">FPGA · Gowin GW2A-LV18</span>
+          <span class="fpga-status" id="fpga-status">IDLE</span>
+        </div>
+        <div class="fpga-viz" id="fpga-viz">
+          <svg class="fpga-svg" id="fpga-svg" viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg" aria-label="FPGA logic diagram">
+            <!-- LUT blocks -->
+            <g class="lut-group">
+              <rect class="lut" id="lut-0" x="20" y="30" width="52" height="36" rx="3"/>
+              <text class="lut-lbl" x="46" y="52">LUT</text>
+              <rect class="lut" id="lut-1" x="20" y="90" width="52" height="36" rx="3"/>
+              <text class="lut-lbl" x="46" y="112">LUT</text>
+              <rect class="lut" id="lut-2" x="20" y="150" width="52" height="36" rx="3"/>
+              <text class="lut-lbl" x="46" y="172">LUT</text>
+              <rect class="lut" id="lut-3" x="20" y="210" width="52" height="36" rx="3"/>
+              <text class="lut-lbl" x="46" y="232">LUT</text>
+            </g>
+            <!-- Routing fabric -->
+            <g class="fabric-group">
+              <rect class="fabric" id="fab-0" x="100" y="20" width="120" height="220" rx="4"/>
+              <text class="fabric-lbl" x="160" y="134">ROUTING</text>
+              <text class="fabric-lbl2" x="160" y="150">FABRIC</text>
+            </g>
+            <!-- Output blocks -->
+            <g class="out-group">
+              <rect class="out-blk" id="out-0" x="248" y="30" width="52" height="36" rx="3"/>
+              <text class="out-lbl" x="274" y="52">FF</text>
+              <rect class="out-blk" id="out-1" x="248" y="90" width="52" height="36" rx="3"/>
+              <text class="out-lbl" x="274" y="112">FF</text>
+              <rect class="out-blk" id="out-2" x="248" y="150" width="52" height="36" rx="3"/>
+              <text class="out-lbl" x="274" y="172">DSP</text>
+              <rect class="out-blk" id="out-3" x="248" y="210" width="52" height="36" rx="3"/>
+              <text class="out-lbl" x="274" y="232">IO</text>
+            </g>
+            <!-- Signal paths -->
+            <g class="paths" fill="none">
+              <path class="sig-path" id="path-0" d="M 72 48 L 100 48"/>
+              <path class="sig-path" id="path-1" d="M 72 108 L 100 108"/>
+              <path class="sig-path" id="path-2" d="M 72 168 L 100 168"/>
+              <path class="sig-path" id="path-3" d="M 72 228 L 100 228"/>
+              <path class="sig-path" id="path-4" d="M 220 48 L 248 48"/>
+              <path class="sig-path" id="path-5" d="M 220 108 L 248 108"/>
+              <path class="sig-path" id="path-6" d="M 220 168 L 248 168"/>
+              <path class="sig-path" id="path-7" d="M 220 228 L 248 228"/>
+              <!-- Internal fabric routes -->
+              <path class="sig-path sig-path--internal" id="ipath-0" d="M 110 48 L 110 108 L 130 108"/>
+              <path class="sig-path sig-path--internal" id="ipath-1" d="M 130 168 L 110 168 L 110 228 L 200 228 L 200 108"/>
+              <path class="sig-path sig-path--internal" id="ipath-2" d="M 160 48 L 160 168"/>
+            </g>
+            <!-- Clock signal input -->
+            <g>
+              <line class="clk-line" id="clk-line" x1="0" y1="130" x2="20" y2="130"/>
+              <text class="clk-lbl" x="2" y="124">CLK</text>
+            </g>
+          </svg>
+        </div>
+        <div class="fpga-controls">
+          <button class="fpga-btn" id="fpga-run-btn">
+            <span class="fpga-btn-dot" id="fpga-btn-dot"></span>
+            Run simulation
+          </button>
+          <div class="fpga-readout">
+            <span class="fpga-readout-label">Fmax</span>
+            <span class="fpga-readout-val" id="fmax-val">—</span>
+          </div>
+          <div class="fpga-readout">
+            <span class="fpga-readout-label">Util</span>
+            <span class="fpga-readout-val" id="util-val">—</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPS STRIP -->
+<div class="caps-strip">
+  <div class="caps-inner">
+    <div class="cap">RTL / Verilog</div>
+    <div class="cap-sep">·</div>
+    <div class="cap">RISC-V</div>
+    <div class="cap-sep">·</div>
+    <div class="cap">Embedded C</div>
+    <div class="cap-sep">·</div>
+    <div class="cap">Edge AI</div>
+    <div class="cap-sep">·</div>
+    <div class="cap">HW–SW Integration</div>
+    <div class="cap-sep">·</div>
+    <div class="cap">Computer Vision</div>
+    <div class="cap-sep">·</div>
+    <div class="cap">Flask / REST</div>
+    <div class="cap-sep">·</div>
+    <div class="cap">OpenCV</div>
+  </div>
+</div>
+
+<!-- WORK -->
+<section class="section" id="work">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="section-label-row">
+        <span class="section-label">Selected Work</span>
+        <span class="section-count">05 projects</span>
+      </div>
+      <h2 class="section-title">What I've built.</h2>
+      <p class="section-lede">Real problems, real hardware. Five projects across RTL design, embedded systems, hardware-software integration, and applied ML.</p>
+    </div>
+
+    <!-- FaultLatchedPWM: FEATURED -->
+    <article class="proj-featured" aria-labelledby="proj-flpwm">
+      <div class="proj-featured-body">
+        <div class="proj-tags">
+          <span class="tag tag--hw">Verilog</span>
+          <span class="tag tag--hw">FPGA</span>
+          <span class="tag">Tang Nano 20K</span>
+          <span class="tag">2025</span>
+        </div>
+        <h3 class="proj-featured-title" id="proj-flpwm">FaultLatchedPWM</h3>
+        <p class="proj-featured-problem">A PWM safety controller whose fault latch lives in RTL — not firmware. Software cannot override what software cannot reach.</p>
+        <p class="proj-featured-prose">Most motor-control safety systems implement their fault logic in a microcontroller: check the duty, refuse if invalid, drive safe. Clean, fast, almost always adequate — until a stack overflow corrupts the check, a priority inversion starves it, or a firmware update reverts it quietly. FaultLatchedPWM moves the safety envelope into the Gowin GW2A-LV18 fabric. A combinational guard module validates period and duty every single clock cycle. Any violation drives output low and latches a five-state FSM into <code>FAULT</code>. The FSM cannot exit <code>FAULT</code> without an externally-asserted recovery sequence. There is no software path to the latch — not because it was removed, but because it was never created.</p>
+        <div class="proj-metrics">
+          <div class="metric">
+            <span class="metric-val">127 MHz</span>
+            <span class="metric-lbl">F<sub>max</sub></span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">~2%</span>
+            <span class="metric-lbl">LUT util.</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">&lt;1%</span>
+            <span class="metric-lbl">Register util.</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">1 cycle</span>
+            <span class="metric-lbl">RUN→FAULT</span>
+          </div>
+        </div>
+        <div class="proj-featured-stack">Verilog · FSM design · Gowin EDA · Icarus Verilog · Tang Nano 20K</div>
+        <a href="https://github.com/NightCrawler9924/FaultLatchedPWM" rel="noopener" class="proj-featured-link">View source on GitHub →</a>
+      </div>
+      <div class="proj-featured-aside">
+        <div class="fsm-card">
+          <div class="fsm-title">State machine · FaultLatchedPWM</div>
+          <div class="fsm-diagram" id="fsm-diagram">
+            <div class="fsm-row">
+              <button class="fsm-state fsm-state--init" data-node="init" tabindex="0">INIT<span>S0 · power-up</span></button>
+              <span class="fsm-edge" aria-hidden="true">→</span>
+              <button class="fsm-state fsm-state--idle" data-node="idle" tabindex="0">IDLE<span>S1 · output low</span></button>
+              <span class="fsm-edge" aria-hidden="true">→</span>
+              <button class="fsm-state fsm-state--run" data-node="run" tabindex="0">RUN<span>S2 · active</span></button>
+            </div>
+            <div class="fsm-fault-branch">
+              <span class="fsm-fault-arrow" aria-hidden="true">fault ↓</span>
+            </div>
+            <div class="fsm-row fsm-row--fault">
+              <button class="fsm-state fsm-state--fault" data-node="fault" tabindex="0">FAULT<span>S3 · latched</span></button>
+              <span class="fsm-edge" aria-hidden="true">→</span>
+              <button class="fsm-state fsm-state--safe" data-node="safe" tabindex="0">SAFE<span>S4 · verified</span></button>
+            </div>
+          </div>
+          <div class="fsm-note">Click a state for annotation</div>
+          <div class="fsm-panel" id="fsm-panel" aria-live="polite"></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- PROJECT GRID -->
+    <div class="proj-grid">
+
+      <article class="proj-card" aria-labelledby="proj-tg">
+        <div class="proj-card-head">
+          <div class="proj-tags">
+            <span class="tag tag--hw">Hardware</span>
+            <span class="tag">Flask</span>
+            <span class="tag">2025</span>
+          </div>
+          <a href="https://github.com/NightCrawler9924/CMPE-246" rel="noopener" class="proj-ext-link" aria-label="ThermoGuard on GitHub">↗</a>
+        </div>
+        <h3 class="proj-card-title" id="proj-tg">ThermoGuard Safety System</h3>
+        <p class="proj-card-body">Hardware-software integration across four layers: Arduino reads a thermal sensor, communicates over UART to a Raspberry Pi, which runs a Flask REST API surfacing live data to a web frontend. Temperature threshold breach triggers real hardware alerts. A single unbroken data path from sensor to screen.</p>
+        <div class="proj-card-footer">
+          <span class="proj-stack">Arduino · Raspberry Pi · UART · Flask · Python</span>
+          <a href="https://github.com/NightCrawler9924/CMPE-246" rel="noopener" class="proj-card-cta">GitHub →</a>
+        </div>
+      </article>
+
+      <article class="proj-card" aria-labelledby="proj-wv">
+        <div class="proj-card-head">
+          <div class="proj-tags">
+            <span class="tag tag--ai">Edge AI</span>
+            <span class="tag">Research</span>
+            <span class="tag">2026</span>
+          </div>
+          <span class="proj-ext-link proj-ext-link--pending" title="Proposal stage — hardware pending funding">◎</span>
+        </div>
+        <h3 class="proj-card-title" id="proj-wv">Wildlife Collision Warning System</h3>
+        <p class="proj-card-body">Solar-powered roadside node: FLIR thermal camera → YOLOv8-nano on Jetson Orin NX via TensorRT, no cloud dependency. Detection events route over LoRaWAN to dynamic warning signs via GPIO — sub-second from animal to alert. Submitted to BC Ministry of Transportation for Hwy 97 Okanagan, April 2026.</p>
+        <div class="proj-card-footer">
+          <span class="proj-stack">Jetson Orin NX · FLIR · YOLOv8-nano · TensorRT · LoRaWAN</span>
+          <span class="proj-card-cta proj-card-cta--muted">Proposal stage</span>
+        </div>
+      </article>
+
+      <article class="proj-card" aria-labelledby="proj-rv">
+        <div class="proj-card-head">
+          <div class="proj-tags">
+            <span class="tag tag--hw">RISC-V</span>
+            <span class="tag">Bare-metal</span>
+            <span class="tag">2025</span>
+          </div>
+          <a href="https://www.linkedin.com/in/deepansh-sabharwal-315033257/details/projects/" rel="noopener" class="proj-ext-link" aria-label="RISC-V project details">↗</a>
+        </div>
+        <h3 class="proj-card-title" id="proj-rv">RISC-V Toolchain to Emulation</h3>
+        <p class="proj-card-body">End-to-end bare-metal pipeline: C → cross-compiled RISC-V ELF → OpenSBI M-mode boot → privilege transitions via riscv-pk → 64-bit QEMU. Every layer understood, not black-boxed. Next phase: Tang Nano 20K physical deployment as a soft core.</p>
+        <div class="proj-card-footer">
+          <span class="proj-stack">RISC-V ISA · GCC · QEMU · OpenSBI · Bare-metal C</span>
+          <a href="https://www.linkedin.com/in/deepansh-sabharwal-315033257/details/projects/" rel="noopener" class="proj-card-cta">LinkedIn →</a>
+        </div>
+      </article>
+
+      <article class="proj-card" aria-labelledby="proj-ct">
+        <div class="proj-card-head">
+          <div class="proj-tags">
+            <span class="tag tag--hw">Hardware</span>
+            <span class="tag">EV</span>
+            <span class="tag">2024</span>
+          </div>
+          <a href="https://www.linkedin.com/in/deepansh-sabharwal-315033257/details/projects/" rel="noopener" class="proj-ext-link" aria-label="CyberTrike project details">↗</a>
+        </div>
+        <h3 class="proj-card-title" id="proj-ct">CyberTrike</h3>
+        <p class="proj-card-body">RC three-wheeled EV prototype, schematic to rolling chassis in one term. Owned the full electrical path: Arduino PWM motor control, hand-drawn circuit schematics on protoboard, NRF24L01 wireless remote. Single-rail power routing, conservatively margined. Prototype drove. Lesson learned: start with a PCB.</p>
+        <div class="proj-card-footer">
+          <span class="proj-stack">Arduino · PWM · NRF24L01 · Circuit Design · SolidWorks</span>
+          <a href="https://www.linkedin.com/in/deepansh-sabharwal-315033257/details/projects/" rel="noopener" class="proj-card-cta">LinkedIn →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section section--about" id="about">
+  <div class="section-inner">
+    <div class="about-layout">
+      <div class="about-text">
+        <span class="section-label">About</span>
+        <h2 class="section-title">The short version.</h2>
+        <p class="about-p">Second-year Computer Engineering at UBC. I build things that run at the metal level — FPGA state machines, RISC-V pipelines, edge AI nodes on thermal cameras. Not for the difficulty, but because the feedback loop between a design decision and observable silicon behaviour is the most honest form of engineering I know.</p>
+        <p class="about-p">Active research: a solar-powered thermal-camera wildlife detection node for BC highways. Ongoing: deploying the RISC-V pipeline as a physical soft core on a Tang Nano 20K. When I'm not in the lab, I'm reading about what I don't understand yet.</p>
+        <div class="about-links">
+          <a href="https://github.com/NightCrawler9924" rel="noopener" class="about-link">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/deepansh-sabharwal-315033257/" rel="noopener" class="about-link">LinkedIn ↗</a>
+          <a href="Deepansh%20Sabharwal.docx" download class="about-link">Resume ↓</a>
+        </div>
+      </div>
+      <div class="profile-panel">
+        <div class="profile-row">
+          <span class="profile-key">Status</span>
+          <span class="profile-val profile-val--avail">Available · Fall 2026 co-op</span>
+        </div>
+        <div class="profile-row">
+          <span class="profile-key">Program</span>
+          <span class="profile-val">B.A.Sc. Computer Engineering, UBC</span>
+        </div>
+        <div class="profile-row">
+          <span class="profile-key">Location</span>
+          <span class="profile-val">Kelowna, BC · UTC-7 · Open to relocation</span>
+        </div>
+        <div class="profile-row">
+          <span class="profile-key">Languages</span>
+          <span class="profile-val">English · Hindi · Punjabi</span>
+        </div>
+        <div class="profile-divider"></div>
+        <div class="skills-grid">
+          <div class="skill-item"><span class="skill-bar skill-bar--5"></span>RTL / Verilog / FPGA</div>
+          <div class="skill-item"><span class="skill-bar skill-bar--5"></span>RISC-V / ISA</div>
+          <div class="skill-item"><span class="skill-bar skill-bar--4"></span>Embedded C / Firmware</div>
+          <div class="skill-item"><span class="skill-bar skill-bar--4"></span>HW–SW Integration</div>
+          <div class="skill-item"><span class="skill-bar skill-bar--4"></span>Edge AI / TensorRT</div>
+          <div class="skill-item"><span class="skill-bar skill-bar--3"></span>Python / Flask / REST</div>
+          <div class="skill-item"><span class="skill-bar skill-bar--3"></span>OpenCV / Computer Vision</div>
+        </div>
+        <div class="profile-divider"></div>
+        <div class="profile-cert-row">
+          <span class="profile-key">Cert.</span>
+          <span class="profile-val">Mastering OpenCV with Python — OpenCV University, Dec 2025</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section section--contact" id="contact">
+  <div class="section-inner section-inner--narrow">
+    <span class="section-label">Contact</span>
+    <h2 class="section-title">Let's talk hardware.</h2>
+    <p class="contact-lede">Actively looking for co-op positions in embedded systems, FPGA design, firmware, and edge AI — starting September 2026. If you're building something real on silicon, reach out.</p>
+    <div class="contact-table">
+      <div class="contact-row">
+        <span class="contact-key">Email</span>
+        <a href="mailto:deepanshsabh.60@gmail.com" class="contact-val">deepanshsabh.60@gmail.com</a>
+        <button class="copy-btn" data-copy="deepanshsabh.60@gmail.com">Copy</button>
+      </div>
+      <div class="contact-row">
+        <span class="contact-key">GitHub</span>
+        <a href="https://github.com/NightCrawler9924" rel="noopener" class="contact-val">github.com/NightCrawler9924</a>
+        <span></span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-key">LinkedIn</span>
+        <a href="https://www.linkedin.com/in/deepansh-sabharwal-315033257/" rel="noopener" class="contact-val">in/deepansh-sabharwal</a>
+        <span></span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-key">Response</span>
+        <span class="contact-val contact-val--muted">Within 48 hours, weekdays, UTC-7</span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>© 2026 Deepansh Sabharwal</span>
+    <span>UBC Computer Engineering · Kelowna, BC</span>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
 </body>
 </html>
