@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FBFAF7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#151618" media="(prefers-color-scheme: dark)">
 <title>Deepansh Sabharwal</title>
 <meta name="description" content="Deepansh Sabharwal, Computer Engineering at UBC Okanagan. Embedded systems, edge ML, RTL, analog signal correction. Co-op terms from January 2027.">
 <meta property="og:title" content="Deepansh Sabharwal">
@@ -29,7 +31,7 @@
   --fg:#1C1C1E; --fg-2:#4A4B50; --fg-3:#7C7E86;
   --acc:#1F3A5F; --acc-2:#E6ECF4; --warn:#8A5A00;
   --sans:'Inter',system-ui,-apple-system,sans-serif; --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
-  --gutter:clamp(20px,5vw,48px); --t:180ms;
+  --gutter:clamp(20px,5vw,48px); --t:180ms; --sal:env(safe-area-inset-left,0px); --sar:env(safe-area-inset-right,0px);
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#151618; --bg-2:#1B1D20; --bg-3:#222428; --line:#2A2D32; --line-2:#3A3E45;
@@ -39,7 +41,7 @@
   --bg:#151618; --bg-2:#1B1D20; --bg-3:#222428; --line:#2A2D32; --line-2:#3A3E45;
   --fg:#F2F0EA; --fg-2:#CFCDC6; --fg-3:#9C9EA6;
   --acc:#A9C3E3; --acc-2:#1E2A3A; --warn:#E0B054;}
-*{box-sizing:border-box}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{scroll-behavior:smooth;scroll-padding-top:24px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 body{margin:0;background:var(--bg);color:var(--fg-2);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
@@ -52,7 +54,7 @@ h1,h2,h3{color:var(--fg);margin:0;letter-spacing:-.01em}
 .skip:focus{left:8px}
 
 /* frame */
-.frame{max-width:1200px;margin:0 auto;padding:0 var(--gutter);display:grid;grid-template-columns:minmax(0,1fr);gap:0 64px}
+.frame{max-width:1200px;margin:0 auto;padding:0 calc(var(--gutter) + var(--sar)) 0 calc(var(--gutter) + var(--sal));display:grid;grid-template-columns:minmax(0,1fr);gap:0 64px}
 @media (min-width:1024px){.frame{grid-template-columns:400px minmax(0,1fr)}}
 aside{padding:clamp(40px,8vh,96px) 0 32px}
 @media (min-width:1024px){aside{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding:96px 0}}
@@ -85,6 +87,39 @@ main{padding-left:12px;padding-right:12px;margin:0 -12px}
 .links .res{color:var(--acc)}
 .theme{margin-left:auto;background:none;border:1px solid var(--line-2);color:var(--fg-2);font-family:var(--mono);font-size:12px;padding:5px 10px;border-radius:4px;cursor:pointer;transition:border-color var(--t) ease-out,color var(--t) ease-out}
 .theme:hover{color:var(--acc);border-color:var(--acc)}
+
+
+/* mobile */
+@media (max-width:1023px){
+  #bg{display:none}
+  aside>div,main{background:transparent}
+  aside{padding-top:max(28px,env(safe-area-inset-top,0px))}
+  .links{gap:4px 8px;margin-top:16px}
+  .refs a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;margin:0 8px 0 0;border:1px solid var(--line);border-radius:6px}
+  .entry h3 a{display:inline-block;padding:10px 0;margin:-10px 0}
+  .links a,.theme{min-height:44px;display:inline-flex;align-items:center;padding:0 12px;border:1px solid var(--line);border-radius:6px;font-size:13px}
+  .links .res{border-color:var(--acc)}
+  .theme{margin-left:0}
+  .thesis{font-size:16px}
+  table.spec{font-size:13px}
+  table.spec th{width:34%;padding-right:12px}
+  table.spec th,table.spec td{padding-top:8px;padding-bottom:8px}
+  figure{padding:12px 0 8px;position:relative}
+  figure svg{min-width:600px;padding:0 10px}
+  figure::after{content:"";position:absolute;top:0;right:0;bottom:0;width:36px;pointer-events:none;background:linear-gradient(90deg,transparent,var(--bg-2))}
+  figcaption{flex-direction:column;align-items:flex-start;gap:8px;padding:0 10px}
+  figcaption::before{content:"swipe to see the full diagram";color:var(--fg-3)}
+  .dissect,.btn{min-height:44px;display:inline-flex;align-items:center;padding:0 14px;font-size:13px}
+  .steps{font-size:13px}
+  .steps li{padding:8px 0 8px 12px}
+  .log{font-size:13px}
+  .log li{grid-template-columns:1fr;gap:2px}
+  section{padding-bottom:56px}
+  .entry{padding:16px 12px;margin:0 -12px 4px}
+  .entry h3{font-size:18px}
+  .tk .k{padding-top:16px}
+}
+@media (hover:none){#bg{display:none}}
 
 /* sections */
 section{padding:0 0 80px;scroll-margin-top:24px}
@@ -168,6 +203,24 @@ figure.playing [data-step].on .box{stroke:var(--acc);stroke-width:1.6}
 .btn.pri{background:var(--acc);color:var(--bg-2);font-weight:500}
 .btn.pri:hover{background:color-mix(in srgb,var(--acc) 85%,black);color:var(--bg-2)}
 footer{font-family:var(--mono);font-size:12px;color:var(--fg-3);padding:0 0 48px;max-width:60ch;line-height:1.7}
+
+@media print{
+  #bg,.side-nav,.theme,.dissect,.skip{display:none!important}
+  body{background:#fff;color:#222;font-size:12px}
+  .frame{display:block;padding:0}
+  aside{position:static;height:auto;padding:0 0 16px}
+  aside>div,main{background:none;padding:0;margin:0}
+  main{padding:0}
+  section{padding:0 0 18px;break-inside:avoid-page}
+  .entry{break-inside:avoid;padding:8px 0;margin:0}
+  figure{break-inside:avoid;overflow:visible;border-color:#ccc}
+  figure svg{min-width:0}
+  figcaption::before{content:none}
+  .steps{max-height:none;display:block}
+  .steps li{display:block;border-left-color:#ccc}
+  a{color:#222}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:10px;color:#666}
+}
 </style>
 </head>
 <body>
