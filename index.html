@@ -14,6 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Deepansh Sabharwal","url":"https://deepanshsabharwal.com","email":"deepanshsabh.60@gmail.com","telephone":"+1-647-618-5973","jobTitle":"Computer Engineering student","affiliation":{"@type":"CollegeOrUniversity","name":"University of British Columbia, Okanagan"},"sameAs":["https://github.com/NightCrawler9924","https://www.linkedin.com/in/deepanshsabharwal/"],"address":{"@type":"PostalAddress","addressLocality":"Kelowna","addressRegion":"BC","addressCountry":"CA"}}
 </script>
@@ -29,6 +30,10 @@
   --bg:#151618; --bg-2:#1B1D20; --bg-3:#222428; --line:#2A2D32; --line-2:#3A3E45;
   --fg:#F2F0EA; --fg-2:#CFCDC6; --fg-3:#9C9EA6;
   --acc:#A9C3E3; --acc-2:#1E2A3A; --warn:#E0B054;}}
+:root[data-theme="dark"]{
+  --bg:#151618; --bg-2:#1B1D20; --bg-3:#222428; --line:#2A2D32; --line-2:#3A3E45;
+  --fg:#F2F0EA; --fg-2:#CFCDC6; --fg-3:#9C9EA6;
+  --acc:#A9C3E3; --acc-2:#1E2A3A; --warn:#E0B054;}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:24px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
@@ -73,6 +78,8 @@ main{padding-left:12px;padding-right:12px;margin:0 -12px}
 .links a:hover{color:var(--acc)}
 .links svg{width:16px;height:16px;fill:currentColor}
 .links .res{color:var(--acc)}
+.theme{margin-left:auto;background:none;border:1px solid var(--line-2);color:var(--fg-2);font-family:var(--mono);font-size:12px;padding:5px 10px;border-radius:4px;cursor:pointer;transition:border-color var(--t) ease-out,color var(--t) ease-out}
+.theme:hover{color:var(--acc);border-color:var(--acc)}
 
 /* sections */
 section{padding:0 0 80px;scroll-margin-top:24px}
@@ -160,6 +167,7 @@ footer{font-family:var(--mono);font-size:12px;color:var(--fg-3);padding:0 0 48px
     <a href="https://www.linkedin.com/in/deepanshsabharwal/" aria-label="LinkedIn"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13.6 0H2.4A2.4 2.4 0 0 0 0 2.4v11.2A2.4 2.4 0 0 0 2.4 16h11.2a2.4 2.4 0 0 0 2.4-2.4V2.4A2.4 2.4 0 0 0 13.6 0zM5 13H2.7V6H5v7zM3.85 5a1.35 1.35 0 1 1 0-2.7 1.35 1.35 0 0 1 0 2.7zM13.3 13H11V9.6c0-.81-.02-1.86-1.13-1.86-1.14 0-1.31.89-1.31 1.8V13H6.3V6h2.2v.96h.03c.31-.58 1.06-1.2 2.18-1.2 2.33 0 2.76 1.54 2.76 3.54V13z"/></svg>LinkedIn</a>
     <a href="mailto:deepanshsabh.60@gmail.com">deepanshsabh.60@gmail.com</a>
     <a class="res" href="Deepansh-Sabharwal-Resume.pdf">Resume (PDF)</a>
+    <button class="theme" id="theme" type="button" aria-label="Toggle colour theme">dark</button>
   </div>
 </aside>
 
@@ -393,7 +401,7 @@ footer{font-family:var(--mono);font-size:12px;color:var(--fg-3);padding:0 0 48px
   function draw(now){
     if(now-last<33){requestAnimationFrame(draw);return}last=now;t+=1;
     ctx.clearRect(0,0,W,H);
-    var fg=col('--fg',.22),acc=col('--acc',.7),dim=col('--fg-3',.5);
+    var fg=col('--fg',.17),acc=col('--acc',.55),dim=col('--fg-3',.45);
     var cell=Math.max(28,W/40),speed=0.9,off=(t*speed)%cell,shift=Math.floor(t*speed/cell);
     var rows=Math.max(6,Math.floor(H/64)),gap=H/(rows+1);
     ctx.lineWidth=1;ctx.font='10px JetBrains Mono, monospace';
@@ -414,6 +422,13 @@ footer{font-family:var(--mono);font-size:12px;color:var(--fg-3);padding:0 0 48px
     if(t%Math.round(cell/speed)===0){var r=[];for(var k=0;k<12;k++)r.push(Math.random()<.5);bits.push(r);bits.shift()}
     requestAnimationFrame(draw)}
   requestAnimationFrame(draw);
+})();
+(function(){
+  var b=document.getElementById('theme'),h=document.documentElement;
+  function cur(){return h.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
+  function label(){b.textContent=cur()==='dark'?'light':'dark'}
+  b.addEventListener('click',function(){var n=cur()==='dark'?'light':'dark';h.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}label()});
+  label();
 })();
 (function(){
   var links=document.querySelectorAll('.side-nav a');if(!links.length||!('IntersectionObserver' in window))return;
