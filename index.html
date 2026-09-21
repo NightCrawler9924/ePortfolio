@@ -10,7 +10,7 @@
 <meta property="og:url" content="https://deepanshsabharwal.com">
 <meta property="og:type" content="profile">
 <link rel="canonical" href="https://deepanshsabharwal.com">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230F172A'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' font-weight='700' fill='%235EEAD4' text-anchor='middle'%3EDS%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231F3A5F'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' font-weight='700' fill='%23FBFAF7' text-anchor='middle'%3EDS%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -19,15 +19,16 @@
 </script>
 <style>
 :root{
-  --bg:#0B1120; --bg-2:#0F172A; --bg-3:#172033; --line:#1E293B; --line-2:#263247;
-  --fg:#E2E8F0; --fg-2:#94A3B8; --fg-3:#64748B;
-  --acc:#5EEAD4; --acc-2:#0F2E2B; --warn:#FBBF24; --ok:#4ADE80;
+  --bg:#FBFAF7; --bg-2:#FFFFFF; --bg-3:#F1EFE9; --line:#E4E1DA; --line-2:#CFCBC1;
+  --fg:#1C1C1E; --fg-2:#4A4B50; --fg-3:#7C7E86;
+  --acc:#1F3A5F; --acc-2:#E6ECF4; --warn:#8A5A00;
   --sans:'Inter',system-ui,-apple-system,sans-serif; --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
   --gutter:clamp(20px,5vw,48px); --t:180ms;
 }
-@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){
-  --bg:#F8FAFC; --bg-2:#FFFFFF; --bg-3:#F1F5F9; --line:#E2E8F0; --line-2:#CBD5E1;
-  --fg:#0F172A; --fg-2:#475569; --fg-3:#64748B; --acc:#0F766E; --acc-2:#CCFBF1; --warn:#B45309; --ok:#15803D;}}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#151618; --bg-2:#1B1D20; --bg-3:#222428; --line:#2A2D32; --line-2:#3A3E45;
+  --fg:#ECEAE4; --fg-2:#B3B1AA; --fg-3:#7F8189;
+  --acc:#9DB8DA; --acc-2:#1E2A3A; --warn:#D9A441;}}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:24px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
@@ -52,8 +53,7 @@ main{padding:0 0 96px}
 aside h1{font-size:clamp(34px,4.5vw,46px);font-weight:600;line-height:1.05;letter-spacing:-.025em}
 aside .role{font-size:19px;font-weight:500;color:var(--fg);margin:12px 0 10px;line-height:1.35}
 aside .lede{max-width:34ch;margin:0}
-aside .status{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-family:var(--mono);font-size:12.5px;color:var(--fg)}
-aside .status i{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px color-mix(in srgb,var(--ok) 20%,transparent)}
+aside .status{display:block;margin-top:22px;font-family:var(--mono);font-size:12.5px;color:var(--fg)}
 .side-nav{margin:52px 0 0;display:none}
 @media (min-width:1024px){.side-nav{display:block}}
 .side-nav ol{list-style:none;margin:0;padding:0}
@@ -121,8 +121,8 @@ figcaption{font-family:var(--mono);font-size:11px;color:var(--fg-3);margin-top:8
 /* contact */
 .btn{display:inline-block;font-family:var(--mono);font-size:13px;padding:11px 18px;border:1px solid var(--acc);color:var(--acc);border-radius:4px;margin:6px 8px 0 0;transition:background var(--t) ease-out,color var(--t) ease-out;cursor:pointer}
 .btn:hover{background:var(--acc-2);color:var(--acc)}
-.btn.pri{background:var(--acc);color:var(--bg);font-weight:500}
-.btn.pri:hover{background:color-mix(in srgb,var(--acc) 85%,white);color:var(--bg)}
+.btn.pri{background:var(--acc);color:var(--bg-2);font-weight:500}
+.btn.pri:hover{background:color-mix(in srgb,var(--acc) 85%,black);color:var(--bg-2)}
 footer{font-family:var(--mono);font-size:12px;color:var(--fg-3);padding:0 0 48px;max-width:60ch;line-height:1.7}
 </style>
 </head>
@@ -135,7 +135,7 @@ footer{font-family:var(--mono);font-size:12px;color:var(--fg-3);padding:0 0 48px
     <h1>Deepansh Sabharwal</h1>
     <p class="role">Computer Engineering, UBC Okanagan</p>
     <p class="lede">Embedded systems, edge ML, RTL, and analog signal correction. I build downward and measure everything.</p>
-    <p class="status"><i></i>Available Jan 2027 &middot; 4 to 16 months &middot; Canada</p>
+    <p class="status">Available Jan 2027 &middot; 4 to 16 months &middot; Canada</p>
     <nav class="side-nav" aria-label="Sections">
       <ol>
         <li><a href="#work">Work</a></li>
