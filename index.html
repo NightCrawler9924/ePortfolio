@@ -122,7 +122,21 @@ figure .box{fill:var(--bg);stroke:var(--fg-3)}
 figure .hi{stroke:var(--acc);stroke-width:1.4}
 figure .line{stroke:var(--fg-3);fill:none;stroke-width:1.1}
 figure .acc{stroke:var(--acc);fill:none;stroke-width:1.2;stroke-dasharray:3 2}
-figcaption{font-family:var(--mono);font-size:11px;color:var(--fg-3);margin-top:8px;padding:0 4px}
+figcaption{font-family:var(--mono);font-size:11px;color:var(--fg-3);margin-top:8px;padding:0 4px;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.dissect{font-family:var(--mono);font-size:11px;background:none;border:1px solid var(--line-2);color:var(--acc);padding:4px 9px;border-radius:3px;cursor:pointer;white-space:nowrap;transition:border-color var(--t) ease-out,background var(--t) ease-out}
+.dissect:hover{border-color:var(--acc);background:var(--acc-2)}
+figure [data-step]{transition:opacity 320ms ease-out}
+figure.playing [data-step]{opacity:.18}
+figure.playing [data-step].done{opacity:.55}
+figure.playing [data-step].on{opacity:1}
+figure.playing [data-step].on .box{stroke:var(--acc);stroke-width:1.6}
+.steps{list-style:none;margin:0 0 16px;padding:0;font-family:var(--mono);font-size:12px;line-height:1.55;max-height:0;overflow:hidden;transition:max-height 400ms ease-out}
+.steps.open{max-height:600px}
+.steps li{display:none;padding:6px 0 6px 14px;border-left:2px solid var(--line);color:var(--fg-2)}
+.steps li.done{display:block}
+.steps li.on{display:block;border-left-color:var(--acc);color:var(--fg)}
+.steps li b{color:var(--fg);font-weight:500}
+.steps li b::after{content:" ";}
 
 /* experience */
 .xp .when{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-3);padding-top:5px}
@@ -184,21 +198,17 @@ footer{font-family:var(--mono);font-size:12px;color:var(--fg-3);padding:0 0 48px
   <div class="sh">Work</div>
   <figure class="map">
     <svg viewBox="0 0 720 300" role="img" aria-label="System map: six layers from analog signal path up to production application, with one project at each layer">
-      <g class="dim" font-size="10">
-        <text x="12" y="34">application</text><text x="12" y="80">model</text><text x="12" y="126">embedded</text><text x="12" y="172">architecture</text><text x="12" y="218">RTL</text><text x="12" y="264">analog</text>
-      </g>
       <path class="line" d="M110 20 V280"/>
-      <g class="box"><rect x="130" y="16" width="250" height="34" rx="2"/><rect x="130" y="62" width="250" height="34" rx="2"/><rect class="hi" x="130" y="108" width="250" height="34" rx="2"/><rect x="130" y="154" width="250" height="34" rx="2"/><rect x="130" y="200" width="250" height="34" rx="2"/><rect class="hi" x="130" y="246" width="250" height="34" rx="2"/></g>
-      <g class="lbl" font-size="11">
-        <text x="142" y="37">06 Janvani</text><text x="142" y="83">05 Crop disease classifier</text><text x="142" y="129">04 Wildlife detection node</text><text x="142" y="175">03 RISC-V pipeline + compiler</text><text x="142" y="221">02 FaultLatchedPWM</text><text x="142" y="267">01 Amplifier linearization</text>
-      </g>
-      <g class="dim" font-size="10">
-        <text x="400" y="37">TypeScript, PostgreSQL, CI, security review</text><text x="400" y="83">TensorFlow, evaluation, 92% test acc.</text><text x="400" y="129">YOLOv8 INT8 on Hailo NPU, systemd, 47 tests</text><text x="400" y="175">cycle-accurate C model, gdb, 25-program suite</text><text x="400" y="221">Verilog FSM, synthesis, board bring-up</text><text x="400" y="267">LTspice, Python fit, SDR loop, in progress</text>
-      </g>
-      <g class="acc"><path d="M255 246 V234"/><path d="M255 200 V188"/><path d="M255 154 V142"/><path d="M255 108 V96"/><path d="M255 62 V50"/></g>
-    </svg>
-    <figcaption>Where each project sits. The two highlighted entries are current research at UBC.</figcaption>
+      <g data-step="6"><text class="dim" font-size="10" x="12" y="34">application</text><rect class="box" x="130" y="16" width="250" height="34" rx="2"/><text class="lbl" font-size="11" x="142" y="37">06 Janvani</text><text class="dim" font-size="10" x="400" y="37">TypeScript, PostgreSQL, CI, security review</text></g>
+      <g data-step="5"><text class="dim" font-size="10" x="12" y="80">model</text><rect class="box" x="130" y="62" width="250" height="34" rx="2"/><text class="lbl" font-size="11" x="142" y="83">05 Crop disease classifier</text><text class="dim" font-size="10" x="400" y="83">TensorFlow, evaluation, 92% test acc.</text><path class="acc" d="M255 62 V50"/></g>
+      <g data-step="4"><text class="dim" font-size="10" x="12" y="126">embedded</text><rect class="box hi" x="130" y="108" width="250" height="34" rx="2"/><text class="lbl" font-size="11" x="142" y="129">04 Wildlife detection node</text><text class="dim" font-size="10" x="400" y="129">YOLOv8 INT8 on Hailo NPU, systemd, 47 tests</text><path class="acc" d="M255 108 V96"/></g>
+      <g data-step="3"><text class="dim" font-size="10" x="12" y="172">architecture</text><rect class="box" x="130" y="154" width="250" height="34" rx="2"/><text class="lbl" font-size="11" x="142" y="175">03 RISC-V pipeline + compiler</text><text class="dim" font-size="10" x="400" y="175">cycle-accurate C model, gdb, 25-program suite</text><path class="acc" d="M255 154 V142"/></g>
+      <g data-step="2"><text class="dim" font-size="10" x="12" y="218">RTL</text><rect class="box" x="130" y="200" width="250" height="34" rx="2"/><text class="lbl" font-size="11" x="142" y="221">02 FaultLatchedPWM</text><text class="dim" font-size="10" x="400" y="221">Verilog FSM, synthesis, board bring-up</text><path class="acc" d="M255 200 V188"/></g>
+      <g data-step="1"><text class="dim" font-size="10" x="12" y="264">analog</text><rect class="box hi" x="130" y="246" width="250" height="34" rx="2"/><text class="lbl" font-size="11" x="142" y="267">01 Amplifier linearization</text><text class="dim" font-size="10" x="400" y="267">LTspice, Python fit, SDR loop, in progress</text><path class="acc" d="M255 246 V234"/></g>
+      </svg>
+    <figcaption><span>Where each project sits. The two highlighted entries are current research at UBC.</span><button class="dissect" type="button">Dissect &rarr;</button></figcaption>
   </figure>
+  <ol class="steps"><li><b>Analog.</b>The bottom of the stack: a real amplifier with a real nonlinearity. Current research. The correction is modelled in LTspice and fit in Python, with an SDR closing the loop.</li><li><b>RTL.</b>One level up, logic described in Verilog and synthesized onto an FPGA. FaultLatchedPWM puts the safety envelope here, where firmware cannot reach it.</li><li><b>Architecture.</b>How instructions flow through a processor. A cycle-accurate five-stage RISC-V model in C, with the cross-compiler that feeds it, debugged in gdb against 25 programs.</li><li><b>Embedded.</b>Linux on a small board with an accelerator. The detection node: a quantized YOLOv8 model on a Hailo NPU, a self-recovering systemd service, and tests that run without the hardware.</li><li><b>Model.</b>The machine learning itself. A TensorFlow classifier taken to 92% test accuracy by reading the confusion matrix instead of guessing at hyperparameters.</li><li><b>Application.</b>The top: software people use. Janvani, a publishing platform on Next.js and PostgreSQL, run alone in production behind a 16-point security review.</li></ol>
 
   <article class="entry" id="p1">
     <div class="idx">01<b>Analog signal path</b></div>
@@ -215,19 +225,16 @@ footer{font-family:var(--mono);font-size:12px;color:var(--fg-3);padding:0 0 48px
       </table>
       <figure>
         <svg viewBox="0 0 720 96" role="img" aria-label="Predistortion loop: input through inverse polynomial into amplifier, output captured by SDR, coefficients re-fit">
-          <rect class="box hi" x="70" y="28" width="130" height="40" rx="2"/><text class="lbl" x="135" y="46" text-anchor="middle">predistorter</text><text class="dim" x="135" y="60" text-anchor="middle">a1x + a3x&#179;</text>
-          <rect class="box" x="260" y="28" width="110" height="40" rx="2"/><text class="lbl" x="315" y="46" text-anchor="middle">amplifier</text><text class="dim" x="315" y="60" text-anchor="middle">LTC6078, clips</text>
-          <rect class="box" x="430" y="28" width="90" height="40" rx="2"/><text class="lbl" x="475" y="52" text-anchor="middle">load</text>
-          <rect class="box hi" x="260" y="2" width="110" height="20" rx="2"/><text class="lbl" x="315" y="16" text-anchor="middle">SDR capture</text>
-          <rect class="box hi" x="70" y="2" width="130" height="20" rx="2"/><text class="lbl" x="135" y="16" text-anchor="middle">re-fit coefficients</text>
-          <text class="dim" x="10" y="52">x(t)</text><path class="line" d="M38 48 H70"/>
-          <path class="line" d="M200 48 H260"/><path class="line" d="M370 48 H430"/>
-          <text class="dim" x="530" y="52">y(t)</text>
-          <path class="acc" d="M400 48 V12 H370"/><path class="acc" d="M260 12 H200"/><path class="acc" d="M135 22 V28"/>
-          <text class="dim" x="710" y="86" text-anchor="end">goal: y &asymp; G&middot;x further past the knee</text>
+          <g data-step="1"><text class="dim" x="10" y="52">x(t)</text><path class="line" d="M38 48 H70"/></g>
+          <g data-step="2"><rect class="box hi" x="70" y="28" width="130" height="40" rx="2"/><text class="lbl" x="135" y="46" text-anchor="middle">predistorter</text><text class="dim" x="135" y="60" text-anchor="middle">a1x + a3x&#179;</text><path class="line" d="M200 48 H260"/></g>
+          <g data-step="3"><rect class="box" x="260" y="28" width="110" height="40" rx="2"/><text class="lbl" x="315" y="46" text-anchor="middle">amplifier</text><text class="dim" x="315" y="60" text-anchor="middle">LTC6078, clips</text><path class="line" d="M370 48 H430"/></g>
+          <g data-step="4"><rect class="box" x="430" y="28" width="90" height="40" rx="2"/><text class="lbl" x="475" y="52" text-anchor="middle">load</text><text class="dim" x="530" y="52">y(t)</text><text class="dim" x="710" y="86" text-anchor="end">goal: y &asymp; G&middot;x further past the knee</text></g>
+          <g data-step="5"><path class="acc" d="M400 48 V12 H370"/><rect class="box hi" x="260" y="2" width="110" height="20" rx="2"/><text class="lbl" x="315" y="16" text-anchor="middle">SDR capture</text></g>
+          <g data-step="6"><path class="acc" d="M260 12 H200"/><rect class="box hi" x="70" y="2" width="130" height="20" rx="2"/><text class="lbl" x="135" y="16" text-anchor="middle">re-fit coefficients</text><path class="acc" d="M135 22 V28"/></g>
         </svg>
-        <figcaption>Fig. 1. Feed-forward inverse with a slow feedback re-fit. Dashed path is the adaptation loop.</figcaption>
+        <figcaption><span>Fig. 1. Feed-forward inverse with a slow feedback re-fit. Dashed path is the adaptation loop.</span><button class="dissect" type="button">Dissect &rarr;</button></figcaption>
       </figure>
+      <ol class="steps"><li><b>Input.</b>The test signal, x(t). The amplifier's curve is measured first from DC sweep data, point by point, which is what the correction is fit against.</li><li><b>Predistorter.</b>A polynomial, a1x + a3x&#179;, chosen to be the inverse of the amplifier's own curve. The coefficients are not derived by hand; they are fit in Python to the sweep data.</li><li><b>Amplifier.</b>An LTC6078 stage at 10 V/V, diode clipped at &plusmn;1 V. Past the knee it compresses, and the dominant error is the cubic term. The predistorter has already bent the input the other way.</li><li><b>Output.</b>y(t) should track G&middot;x further into the knee than it would without correction. The design target is 10 dB less third harmonic. No measured number yet.</li><li><b>SDR capture.</b>A software-defined radio samples the real output, not the LTspice model. This is what makes the loop honest about temperature and load drift.</li><li><b>Re-fit.</b>The captured output goes back into the fitter, the coefficients update, and the predistorter tracks the amplifier as it drifts. This is the learned part.</li></ol>
       <div class="prose">
         <p><b>What this is.</b> An amplifier is only linear up to a point. Push the input past that knee and the output no longer follows it, and the error shows up as harmonics, mostly the third. Predistortion means bending the input the opposite way first, so the amplifier's own curve straightens it back out. The interesting part is that the right bend changes as the amplifier warms up, so the correction has to be measured and re-fit rather than set once.</p>
         <p>A diode-clipped op amp stage distorts once it passes its compression knee, and the dominant term is cubic. I am designing a polynomial predistortion stage that applies the inverse of that curve ahead of the amplifier so the chain stays linear further into the knee. The model lives in LTspice; the coefficients are fit in Python from DC sweep data rather than derived by hand.</p>
@@ -250,15 +257,15 @@ footer{font-family:var(--mono);font-size:12px;color:var(--fg-3);padding:0 0 48px
       </table>
       <figure>
         <svg viewBox="0 0 720 60" role="img" aria-label="State machine: INIT to IDLE to RUN; RUN to FAULT on fault; FAULT to SAFE only on operator reset">
-          <g class="box"><rect x="10" y="18" width="80" height="26" rx="2"/><rect x="150" y="18" width="80" height="26" rx="2"/><rect x="290" y="18" width="80" height="26" rx="2"/><rect class="hi" x="430" y="18" width="80" height="26" rx="2"/><rect x="600" y="18" width="80" height="26" rx="2"/></g>
-          <g class="lbl" text-anchor="middle"><text x="50" y="35">INIT</text><text x="190" y="35">IDLE</text><text x="330" y="35">RUN</text><text x="470" y="35">FAULT</text><text x="640" y="35">SAFE</text></g>
-          <path class="line" d="M90 31 H150"/><path class="line" d="M230 31 H290"/><path class="line" d="M370 31 H430"/><path class="line" d="M510 31 H600"/>
-          <text class="dim" x="400" y="14" text-anchor="middle">any fault, 1 clk</text>
-          <text class="dim" x="555" y="14" text-anchor="middle">operator reset only</text>
-          <text class="dim" x="470" y="56" text-anchor="middle">output held low, latched</text>
+          <g data-step="1"><rect class="box" x="10" y="18" width="80" height="26" rx="2"/><text class="lbl" x="50" y="35" text-anchor="middle">INIT</text><path class="line" d="M90 31 H150"/></g>
+          <g data-step="2"><rect class="box" x="150" y="18" width="80" height="26" rx="2"/><text class="lbl" x="190" y="35" text-anchor="middle">IDLE</text><path class="line" d="M230 31 H290"/></g>
+          <g data-step="3"><rect class="box" x="290" y="18" width="80" height="26" rx="2"/><text class="lbl" x="330" y="35" text-anchor="middle">RUN</text><path class="line" d="M370 31 H430"/><text class="dim" x="400" y="14" text-anchor="middle">any fault, 1 clk</text></g>
+          <g data-step="4"><rect class="box hi" x="430" y="18" width="80" height="26" rx="2"/><text class="lbl" x="470" y="35" text-anchor="middle">FAULT</text><text class="dim" x="470" y="56" text-anchor="middle">output held low, latched</text></g>
+          <g data-step="5"><path class="line" d="M510 31 H600"/><text class="dim" x="555" y="14" text-anchor="middle">operator reset only</text><rect class="box" x="600" y="18" width="80" height="26" rx="2"/><text class="lbl" x="640" y="35" text-anchor="middle">SAFE</text></g>
         </svg>
-        <figcaption>Fig. 2. No path returns from FAULT without an external reset; a transient cannot re-enable the drive.</figcaption>
+        <figcaption><span>Fig. 2. No path returns from FAULT without an external reset; a transient cannot re-enable the drive.</span><button class="dissect" type="button">Dissect &rarr;</button></figcaption>
       </figure>
+      <ol class="steps"><li><b>INIT.</b>Power-up state. Registers load their defaults and the output is forced low before anything else runs.</li><li><b>IDLE.</b>Waiting for a valid configuration. A separate validation module checks period and duty against their ranges and refuses anything out of bounds, so bad settings never reach the driver.</li><li><b>RUN.</b>PWM is driving the motor. A combinational guard re-checks the parameters every clock cycle; this is the only state where the output can be high.</li><li><b>FAULT.</b>Any violation moves here on the next clock edge, one cycle. The output drops low and the state latches. There is no transition out of FAULT that firmware can trigger, because none was built.</li><li><b>SAFE.</b>Reached only after an external operator reset sequence. Verified in simulation, then in synthesis and place-and-route, then on the Tang Nano 20K board.</li></ol>
       <div class="prose">
         <p><b>What this is.</b> A PWM signal sets how hard a motor is driven. Most controllers check for faults in firmware, which is fine until the firmware itself is the thing that has gone wrong. Here the fault logic is in the FPGA fabric, one clock cycle from the output, and once it latches there is no software path to unlatch it. The point was to build the safety envelope in a place a bug cannot reach.</p>
         <p>When a fault asserts, the output drops to a safe state and stays there until an operator resets it, so a transient glitch cannot quietly put the drive back in motion. A separate configuration-validation module rejects out-of-range parameters at load time rather than letting bad settings reach the driver stage. Carried through the complete flow, from simulation to a physical board.</p>
@@ -303,15 +310,15 @@ footer{font-family:var(--mono);font-size:12px;color:var(--fg-3);padding:0 0 48px
       </table>
       <figure>
         <svg viewBox="0 0 720 60" role="img" aria-label="Pipeline: camera, YOLOv8n INT8 on Hailo-8L, range estimate, alert, running as a systemd service">
-          <g class="box"><rect x="10" y="18" width="90" height="26" rx="2"/><rect class="hi" x="150" y="18" width="150" height="26" rx="2"/><rect x="350" y="18" width="130" height="26" rx="2"/><rect x="530" y="18" width="80" height="26" rx="2"/></g>
-          <g class="lbl" text-anchor="middle"><text x="55" y="35">camera</text><text x="225" y="35">YOLOv8n INT8 / Hailo-8L</text><text x="415" y="35">range estimate</text><text x="570" y="35">alert</text></g>
-          <path class="line" d="M100 31 H150"/><path class="line" d="M300 31 H350"/><path class="line" d="M480 31 H530"/>
-          <text class="dim" x="55" y="56" text-anchor="middle">OpenCV calibrated</text>
-          <text class="dim" x="415" y="56" text-anchor="middle">thin lens + time to contact</text>
-          <text class="dim" x="570" y="56" text-anchor="middle">GPIO / display</text>
+          <g data-step="1"><rect class="box" x="10" y="18" width="90" height="26" rx="2"/><text class="lbl" x="55" y="35" text-anchor="middle">camera</text><text class="dim" x="55" y="56" text-anchor="middle">OpenCV calibrated</text><path class="line" d="M100 31 H150"/></g>
+          <g data-step="2"><rect class="box hi" x="150" y="18" width="150" height="26" rx="2"/><text class="lbl" x="225" y="35" text-anchor="middle">YOLOv8n INT8 / Hailo-8L</text><path class="line" d="M300 31 H350"/></g>
+          <g data-step="3"><rect class="box" x="350" y="18" width="130" height="26" rx="2"/><text class="lbl" x="415" y="35" text-anchor="middle">range estimate</text><text class="dim" x="415" y="56" text-anchor="middle">thin lens + time to contact</text><path class="line" d="M480 31 H530"/></g>
+          <g data-step="4"><rect class="box" x="530" y="18" width="80" height="26" rx="2"/><text class="lbl" x="570" y="35" text-anchor="middle">alert</text><text class="dim" x="570" y="56" text-anchor="middle">GPIO / display</text></g>
+          <g data-step="5"><rect class="box" x="630" y="18" width="80" height="26" rx="2" stroke-dasharray="3 2"/><text class="lbl" x="670" y="35" text-anchor="middle">systemd</text><text class="dim" x="670" y="56" text-anchor="middle">self-recovering</text></g>
         </svg>
-        <figcaption>Fig. 3. Everything runs on the Pi. No cloud dependency.</figcaption>
+        <figcaption><span>Fig. 3. Everything runs on the Pi. No cloud dependency.</span><button class="dissect" type="button">Dissect &rarr;</button></figcaption>
       </figure>
+      <ol class="steps"><li><b>Camera.</b>Mounted on the unit and calibrated in place with an OpenCV checkerboard: 1.34 px reprojection error. This replaced a placeholder focal length that every earlier distance number had silently depended on.</li><li><b>Detector.</b>YOLOv8n fine-tuned on a 7-class dataset I built (2,860 images after filtering), then quantized to INT8 with a 2,001-image calibration set and quantization-aware fine-tuning. The Hailo compiler refused the first export; the fix was explicit end-node parsing and a custom NMS config.</li><li><b>Range.</b>Two estimates fused conservatively: thin-lens geometry from the calibrated focal length, and time-to-contact from how fast the box grows frame to frame.</li><li><b>Alert.</b>Drives the warning output over GPIO and the I2C display. The display driver got retry and graceful degradation after the connector proved flaky.</li><li><b>Service.</b>The whole pipeline runs as a systemd unit that restarts itself. Verified by cold boot, detecting about 45 s after power-on with no manual steps. 47 unit tests run without the hardware through a simulation backend.</li></ol>
       <div class="prose">
         <p><b>What this is.</b> A camera on a roadside unit watches for animals and warns drivers. It has to run on a small board with no network, so the detection model is shrunk from floating point to 8-bit integers and moved onto a dedicated accelerator. Shrinking a model loses accuracy unless it is done carefully, which is what the calibration set and the quantization-aware fine-tuning are for. The rest of the work was making it survive real hardware: a service that comes back on its own after a power cut, and tests that run without the board attached.</p>
         <p>The Hailo compiler refused the model. I traced it to an incompatible automatic postprocess-extraction step and rebuilt the export path with explicit end-node parsing and a custom NMS configuration rather than working around it. The camera calibration replaced a placeholder focal length that every prior distance measurement had silently depended on.</p>
@@ -437,6 +444,18 @@ footer{font-family:var(--mono);font-size:12px;color:var(--fg-3);padding:0 0 48px
     f.addEventListener('pointermove',function(e){var r=f.getBoundingClientRect();var x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
       f.style.transform='perspective(900px) rotateX('+(-y*4)+'deg) rotateY('+(x*5)+'deg) translateZ(4px)'});
     f.addEventListener('pointerleave',function(){f.style.transform=''})});
+})();
+(function(){
+  document.querySelectorAll('figure').forEach(function(f){
+    var btn=f.querySelector('.dissect'),list=f.nextElementSibling;if(!btn||!list||!list.classList.contains('steps'))return;
+    var groups=Array.prototype.slice.call(f.querySelectorAll('[data-step]')).sort(function(a,b){return a.dataset.step-b.dataset.step});
+    var items=list.querySelectorAll('li'),n=groups.length,i=0;
+    function paint(){groups.forEach(function(g,k){g.classList.toggle('on',k===i-1);g.classList.toggle('done',k<i-1)});
+      items.forEach(function(li,k){li.classList.toggle('on',k===i-1);li.classList.toggle('done',k<i-1)});
+      f.classList.toggle('playing',i>0);list.classList.toggle('open',i>0);
+      btn.textContent=i===0?'Dissect \u2192':i<n?'Next ('+i+'/'+n+') \u2192':'Reset'}
+    btn.addEventListener('click',function(){i=i>=n?0:i+1;paint()});
+    paint()})
 })();
 (function(){
   var b=document.getElementById('theme'),h=document.documentElement;
