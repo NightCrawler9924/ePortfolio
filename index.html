@@ -10,374 +10,347 @@
 <meta property="og:url" content="https://deepanshsabharwal.com">
 <meta property="og:type" content="profile">
 <link rel="canonical" href="https://deepanshsabharwal.com">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2309090B'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' font-weight='700' fill='%23FAFAFA' text-anchor='middle'%3EDS%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230F172A'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' font-weight='700' fill='%235EEAD4' text-anchor='middle'%3EDS%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Deepansh Sabharwal","url":"https://deepanshsabharwal.com","email":"deepanshsabh.60@gmail.com","telephone":"+1-647-618-5973","jobTitle":"Computer Engineering student","affiliation":{"@type":"CollegeOrUniversity","name":"University of British Columbia, Okanagan"},"sameAs":["https://github.com/NightCrawler9924","https://www.linkedin.com/in/deepanshsabharwal/"],"address":{"@type":"PostalAddress","addressLocality":"Kelowna","addressRegion":"BC","addressCountry":"CA"}}
 </script>
 <style>
 :root{
-  --bg:#FAFAFA; --fg:#09090B; --fg-2:#3F3F46; --fg-3:#71717A; --muted:#F0F1F3; --line:#D4D4D8; --line-2:#E4E4E7;
-  --acc:#1D4ED8; --acc-2:#DBEAFE; --ok:#15803D;
-  --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace; --sans:'IBM Plex Sans',system-ui,sans-serif;
-  --gutter:clamp(16px,4vw,40px); --max:920px; --t:150ms;
+  --bg:#0B1120; --bg-2:#0F172A; --bg-3:#172033; --line:#1E293B; --line-2:#263247;
+  --fg:#E2E8F0; --fg-2:#94A3B8; --fg-3:#64748B;
+  --acc:#5EEAD4; --acc-2:#0F2E2B; --warn:#FBBF24; --ok:#4ADE80;
+  --sans:'Inter',system-ui,-apple-system,sans-serif; --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --gutter:clamp(20px,5vw,48px); --t:180ms;
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#09090B; --fg:#F4F4F5; --fg-2:#A1A1AA; --fg-3:#71717A; --muted:#121215; --line:#3F3F46; --line-2:#27272A;
-  --acc:#60A5FA; --acc-2:#172554; --ok:#4ADE80;}}
-:root[data-theme="dark"]{
-  --bg:#09090B; --fg:#F4F4F5; --fg-2:#A1A1AA; --fg-3:#71717A; --muted:#121215; --line:#3F3F46; --line-2:#27272A;
-  --acc:#60A5FA; --acc-2:#172554; --ok:#4ADE80;}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){
+  --bg:#F8FAFC; --bg-2:#FFFFFF; --bg-3:#F1F5F9; --line:#E2E8F0; --line-2:#CBD5E1;
+  --fg:#0F172A; --fg-2:#475569; --fg-3:#64748B; --acc:#0F766E; --acc-2:#CCFBF1; --warn:#B45309; --ok:#15803D;}}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:56px}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--mono);font-size:14px;line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:var(--acc);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;transition:color var(--t) ease-out}
-a:hover{color:var(--fg)}
-:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
-.prose{font-family:var(--sans);font-size:16px;line-height:1.6;color:var(--fg-2);max-width:68ch}
-.prose b{color:var(--fg);font-weight:500}
-.prose p{margin:0 0 12px}
-h1,h2,h3{font-family:var(--mono);font-weight:600;letter-spacing:0;margin:0}
-
-/* skip + nav */
-.skip{position:absolute;left:-999px;top:8px;background:var(--fg);color:var(--bg);padding:8px 12px;z-index:20}
+body{margin:0;background:var(--bg);color:var(--fg-2);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none;transition:color var(--t) ease-out}
+a:hover{color:var(--acc)}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:2px}
+h1,h2,h3{color:var(--fg);margin:0;letter-spacing:-.01em}
+.mono{font-family:var(--mono)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--acc);color:var(--bg);padding:8px 12px;z-index:20;font-weight:500}
 .skip:focus{left:8px}
-.nav{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:44px;gap:16px}
-.nav a{text-decoration:none;color:var(--fg-2);font-size:12.5px;padding:12px 0;display:inline-block}
-.nav a:hover{color:var(--acc)}
-.nav .brand{color:var(--fg);font-weight:500}
-.nav ol{list-style:none;margin:0;padding:0;display:flex;gap:20px}
-.nav ol a::before{content:attr(data-n) " ";color:var(--fg-3)}
-.nav .res{color:var(--acc)}
-@media (max-width:560px){.nav ol li:not(:last-child){display:none}}
 
-/* title block */
-.title{padding:clamp(32px,6vw,64px) 0 0}
-.title h1{font-size:clamp(28px,5vw,44px);line-height:1.1;letter-spacing:-.02em;margin:0 0 8px}
-.title .sub{color:var(--fg-2);font-size:14px;margin:0 0 28px}
-.block{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-bottom:0}
-.block>div{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:8px 12px;min-width:0}
-.block .w2{grid-column:span 2}
-.block>div:nth-child(4),.block>div:nth-child(7){border-right:0}
-.block .k{display:block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-3);margin-bottom:2px}
-.block .v{font-size:13px;color:var(--fg)}
-.block .v a{text-decoration:none}
-.block .v a:hover{text-decoration:underline}
-.block .ok::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ok);margin-right:6px;vertical-align:0}
-@media (max-width:720px){.block{grid-template-columns:repeat(2,1fr)}.block>div{border-right:1px solid var(--line)}.block>div:nth-child(2n),.block .w2,.block>div:nth-child(7){border-right:0}}
-.thesis{padding:28px 0 8px}
+/* frame */
+.frame{max-width:1200px;margin:0 auto;padding:0 var(--gutter);display:grid;grid-template-columns:minmax(0,1fr);gap:0 64px}
+@media (min-width:1024px){.frame{grid-template-columns:400px minmax(0,1fr)}}
+aside{padding:clamp(40px,8vh,96px) 0 32px}
+@media (min-width:1024px){aside{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding:96px 0}}
+main{padding:0 0 96px}
+@media (min-width:1024px){main{padding:96px 0}}
 
-/* toc */
-.toc{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:28px 0 0;padding:14px 0}
-.toc ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:4px 24px;font-size:13px}
-.toc a{text-decoration:none;color:var(--fg-2);display:flex;gap:10px}
-.toc a:hover{color:var(--acc)}
-.toc .n{color:var(--fg-3);min-width:2ch}
+/* aside */
+aside h1{font-size:clamp(34px,4.5vw,46px);font-weight:600;line-height:1.05;letter-spacing:-.025em}
+aside .role{font-size:19px;font-weight:500;color:var(--fg);margin:12px 0 10px;line-height:1.35}
+aside .lede{max-width:34ch;margin:0}
+aside .status{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-family:var(--mono);font-size:12.5px;color:var(--fg)}
+aside .status i{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px color-mix(in srgb,var(--ok) 20%,transparent)}
+.side-nav{margin:52px 0 0;display:none}
+@media (min-width:1024px){.side-nav{display:block}}
+.side-nav ol{list-style:none;margin:0;padding:0}
+.side-nav a{display:flex;align-items:center;gap:16px;padding:9px 0;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-3)}
+.side-nav a::before{content:"";width:32px;height:1px;background:var(--fg-3);transition:width var(--t) ease-out,background var(--t) ease-out}
+.side-nav a:hover,.side-nav a.on{color:var(--fg)}
+.side-nav a:hover::before,.side-nav a.on::before{width:64px;background:var(--fg)}
+.links{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:40px;font-family:var(--mono);font-size:13px}
+.links a{color:var(--fg-2);display:inline-flex;align-items:center;gap:6px;padding:4px 0}
+.links a:hover{color:var(--acc)}
+.links svg{width:16px;height:16px;fill:currentColor}
+.links .res{color:var(--acc)}
 
 /* sections */
-section{padding:clamp(32px,5vw,52px) 0 8px}
-.sec-h{display:flex;align-items:baseline;gap:14px;border-bottom:2px solid var(--fg);padding-bottom:8px;margin-bottom:24px}
-.sec-h h2{font-size:18px}
-.sec-h .n{color:var(--fg-3);font-size:13px}
-.sec-h .r{margin-left:auto;font-size:11.5px;color:var(--fg-3);letter-spacing:.06em;text-transform:uppercase}
+section{padding:0 0 80px;scroll-margin-top:24px}
+.sh{display:none}
+@media (max-width:1023px){.sh{display:block;position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);padding:14px 0;margin:0 0 20px;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg)}}
+.prose{max-width:66ch}
+.prose p{margin:0 0 14px}
+.prose b{color:var(--fg);font-weight:500}
+.thesis{font-size:17px;line-height:1.65;max-width:62ch}
 
-/* project entry */
-.entry{display:grid;grid-template-columns:132px 1fr;gap:0 24px;padding:22px 0 26px;border-bottom:1px solid var(--line-2)}
-.entry:last-child{border-bottom:0}
-.entry>div{min-width:0}
-@media (max-width:640px){.entry{grid-template-columns:1fr;gap:6px}}
-.entry .idx{color:var(--fg-3);font-size:12px;line-height:1.5;padding-top:3px}
-.entry .idx b{display:block;color:var(--fg);font-weight:500;font-size:12px}
-.entry h3{font-size:16px;line-height:1.35;margin:0 0 2px}
-.entry .meta{color:var(--fg-3);font-size:12px;margin:0 0 14px}
-.entry .status{color:var(--acc)}
-table.spec{border-collapse:collapse;width:100%;max-width:640px;margin:0 0 14px;font-size:12.5px}
-table.spec th,table.spec td{text-align:left;padding:5px 10px 5px 0;border-bottom:1px solid var(--line-2);vertical-align:top}
-table.spec th{font-weight:400;color:var(--fg-3);width:38%;letter-spacing:.02em}
+/* entries (projects, experience) */
+.entry{display:grid;grid-template-columns:minmax(0,1fr);gap:8px 24px;padding:20px 20px;margin:0 -20px 4px;border-radius:6px;transition:background var(--t) ease-out,box-shadow var(--t) ease-out}
+@media (min-width:640px){.entry{grid-template-columns:120px minmax(0,1fr)}}
+@media (hover:hover){.entry:hover{background:color-mix(in srgb,var(--bg-3) 60%,transparent);box-shadow:inset 0 1px 0 0 color-mix(in srgb,var(--fg) 6%,transparent)}}
+.entry .idx{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-3);line-height:1.5;padding-top:5px}
+.entry .idx b{display:block;color:var(--fg-2);font-weight:500;text-transform:none;letter-spacing:0;font-size:12px;margin-top:2px}
+.entry h3{font-size:17px;font-weight:600;line-height:1.35}
+.entry h3 a:hover{color:var(--acc)}
+.entry .meta{font-family:var(--mono);font-size:12px;color:var(--fg-3);margin:4px 0 14px}
+.entry .status{color:var(--warn)}
+table.spec{border-collapse:collapse;width:100%;margin:0 0 14px;font-family:var(--mono);font-size:12.5px;line-height:1.5}
+table.spec th,table.spec td{text-align:left;padding:6px 10px 6px 0;border-bottom:1px solid var(--line);vertical-align:top}
+table.spec th{font-weight:400;color:var(--fg-3);width:36%}
 table.spec td{color:var(--fg);font-variant-numeric:tabular-nums}
-table.spec tr:first-child th,table.spec tr:first-child td{border-top:1px solid var(--line)}
-.entry .refs{font-size:12.5px;margin:6px 0 0;color:var(--fg-3)}
-.entry .refs a{margin-right:16px}
-figure{margin:4px 0 16px;padding:12px 8px 6px;border:1px solid var(--line-2);background:var(--muted);overflow-x:auto}
+table.spec tr:first-child th,table.spec tr:first-child td{border-top:1px solid var(--line-2)}
+.refs{font-family:var(--mono);font-size:12.5px;margin:10px 0 0}
+.refs a{color:var(--acc);margin-right:18px}
+.refs a:hover{text-decoration:underline;text-underline-offset:3px}
+figure{margin:4px 0 16px;padding:14px 10px 8px;border:1px solid var(--line);border-radius:4px;background:var(--bg-2);overflow-x:auto}
 figure svg{width:100%;min-width:560px;height:auto;display:block;font-family:var(--mono);font-size:11px}
 figure .lbl{fill:var(--fg)}
 figure .dim{fill:var(--fg-3)}
-figure .box{fill:var(--bg);stroke:var(--fg-2)}
+figure .box{fill:var(--bg);stroke:var(--fg-3)}
 figure .hi{stroke:var(--acc);stroke-width:1.4}
-figure .line{stroke:var(--fg-2);fill:none;stroke-width:1.1}
+figure .line{stroke:var(--fg-3);fill:none;stroke-width:1.1}
 figure .acc{stroke:var(--acc);fill:none;stroke-width:1.2;stroke-dasharray:3 2}
-figcaption{font-size:11px;color:var(--fg-3);margin-top:8px;padding:0 4px}
+figcaption{font-family:var(--mono);font-size:11px;color:var(--fg-3);margin-top:8px;padding:0 4px}
 
-/* experience, toolkit */
-table.list{border-collapse:collapse;width:100%;font-size:13px}
-table.list th,table.list td{text-align:left;vertical-align:top;padding:12px 16px 12px 0;border-bottom:1px solid var(--line-2)}
-table.list tr:first-child th,table.list tr:first-child td{border-top:1px solid var(--line)}
-table.list th{font-weight:400;color:var(--fg-3);white-space:nowrap;width:150px}
-table.list td b{display:block;color:var(--fg);font-weight:500}
-table.list td i{display:block;font-style:normal;color:var(--fg-3);font-size:12px;margin:1px 0 6px}
-table.list td p{margin:0;font-family:var(--sans);font-size:15px;line-height:1.55;color:var(--fg-2);max-width:66ch}
-table.list.tk td{font-family:var(--sans);font-size:15px;color:var(--fg-2);line-height:1.55}
-table.list.tk td b{display:inline}
-@media (max-width:560px){table.list th,table.list td{display:block;padding:8px 0}table.list th{border-bottom:0;padding-bottom:0;width:auto}table.list tr:first-child td{border-top:0}}
+/* experience */
+.xp .when{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-3);padding-top:5px}
+.xp h3{font-size:16px}
+.xp .org{font-family:var(--mono);font-size:12px;color:var(--fg-3);margin:2px 0 8px}
+.xp p{margin:0;max-width:62ch}
+
+/* toolkit */
+.tk{display:grid;grid-template-columns:minmax(0,1fr);gap:0}
+@media (min-width:640px){.tk{grid-template-columns:150px minmax(0,1fr)}}
+.tk>div{padding:12px 0;border-bottom:1px solid var(--line)}
+.tk .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-3);padding-top:14px}
+@media (max-width:639px){.tk .k{border-bottom:0;padding-bottom:0}}
+.tk .v b{color:var(--fg);font-weight:500}
 
 /* contact */
-.contact .prose{margin-bottom:18px}
-.btn{display:inline-block;font-family:var(--mono);font-size:13px;text-decoration:none;padding:10px 16px;border:1px solid var(--fg);color:var(--fg);margin:0 8px 8px 0;transition:background var(--t) ease-out,color var(--t) ease-out;cursor:pointer}
-.btn:hover{background:var(--fg);color:var(--bg)}
-.btn.pri{background:var(--fg);color:var(--bg)}
-.btn.pri:hover{background:var(--acc);border-color:var(--acc);color:#fff}
-footer{border-top:1px solid var(--line);margin-top:40px;padding:18px 0 48px;font-size:11.5px;color:var(--fg-3);display:flex;flex-wrap:wrap;gap:6px 28px;justify-content:space-between}
+.btn{display:inline-block;font-family:var(--mono);font-size:13px;padding:11px 18px;border:1px solid var(--acc);color:var(--acc);border-radius:4px;margin:6px 8px 0 0;transition:background var(--t) ease-out,color var(--t) ease-out;cursor:pointer}
+.btn:hover{background:var(--acc-2);color:var(--acc)}
+.btn.pri{background:var(--acc);color:var(--bg);font-weight:500}
+.btn.pri:hover{background:color-mix(in srgb,var(--acc) 85%,white);color:var(--bg)}
+footer{font-family:var(--mono);font-size:12px;color:var(--fg-3);padding:0 0 48px;max-width:60ch;line-height:1.7}
 </style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="#work">Skip to content</a>
+<div class="frame">
 
-<nav class="nav" aria-label="Sections">
-  <div class="wrap">
-    <a class="brand" href="#top">deepanshsabharwal.com</a>
-    <ol>
-      <li><a data-n="1" href="#work">Work</a></li>
-      <li><a data-n="2" href="#experience">Experience</a></li>
-      <li><a data-n="3" href="#toolkit">Toolkit</a></li>
-      <li><a data-n="4" href="#contact">Contact</a></li>
-      <li><a class="res" href="Deepansh-Sabharwal-Resume.pdf">resume.pdf &darr;</a></li>
-    </ol>
-  </div>
-</nav>
-
-<main id="main">
-<header class="title" id="top">
-  <div class="wrap">
+<aside>
+  <div>
     <h1>Deepansh Sabharwal</h1>
-    <p class="sub">Computer Engineering, University of British Columbia, Okanagan. Embedded systems, edge ML, RTL, analog signal correction.</p>
-    <div class="block" role="table" aria-label="Summary">
-      <div><span class="k">Status</span><span class="v ok">Available Jan 2027</span></div>
-      <div><span class="k">Terms</span><span class="v">4 to 16 months, anywhere in Canada</span></div>
-      <div><span class="k">Program</span><span class="v">B.A.Sc. CompE, 3rd year, May 2029</span></div>
-      <div><span class="k">Work auth.</span><span class="v">Canadian permanent resident</span></div>
-      <div class="w2"><span class="k">Email</span><span class="v"><a href="mailto:deepanshsabh.60@gmail.com">deepanshsabh.60@gmail.com</a></span></div>
-      <div><span class="k">GitHub</span><span class="v"><a href="https://github.com/NightCrawler9924">NightCrawler9924</a></span></div>
-      <div><span class="k">LinkedIn</span><span class="v"><a href="https://www.linkedin.com/in/deepanshsabharwal/">deepanshsabharwal</a></span></div>
-    </div>
-    <div class="thesis prose">
-      <p>I build downward. A <b>CPU and its compiler</b> from scratch, a <b>fault controller taken to physical silicon</b>, a neural network <b>quantized onto an NPU</b> and running on the mounted unit, an <b>analog amplifier being linearized</b> with a learned predistorter, and a web platform I run alone in production. Every figure on this page is measured, not estimated.</p>
-    </div>
-    <nav class="toc" aria-label="Contents">
+    <p class="role">Computer Engineering, UBC Okanagan</p>
+    <p class="lede">Embedded systems, edge ML, RTL, and analog signal correction. I build downward and measure everything.</p>
+    <p class="status"><i></i>Available Jan 2027 &middot; 4 to 16 months &middot; Canada</p>
+    <nav class="side-nav" aria-label="Sections">
       <ol>
-        <li><a href="#p1"><span class="n">1.1</span>Amplifier linearization</a></li>
-        <li><a href="#p2"><span class="n">1.2</span>FaultLatchedPWM</a></li>
-        <li><a href="#p3"><span class="n">1.3</span>RISC-V pipeline</a></li>
-        <li><a href="#p4"><span class="n">1.4</span>Wildlife detection node</a></li>
-        <li><a href="#p5"><span class="n">1.5</span>Crop disease classifier</a></li>
-        <li><a href="#p6"><span class="n">1.6</span>Janvani</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#toolkit">Toolkit</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ol>
     </nav>
   </div>
-</header>
+  <div class="links">
+    <a href="https://github.com/NightCrawler9924" aria-label="GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>GitHub</a>
+    <a href="https://www.linkedin.com/in/deepanshsabharwal/" aria-label="LinkedIn"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13.6 0H2.4A2.4 2.4 0 0 0 0 2.4v11.2A2.4 2.4 0 0 0 2.4 16h11.2a2.4 2.4 0 0 0 2.4-2.4V2.4A2.4 2.4 0 0 0 13.6 0zM5 13H2.7V6H5v7zM3.85 5a1.35 1.35 0 1 1 0-2.7 1.35 1.35 0 0 1 0 2.7zM13.3 13H11V9.6c0-.81-.02-1.86-1.13-1.86-1.14 0-1.31.89-1.31 1.8V13H6.3V6h2.2v.96h.03c.31-.58 1.06-1.2 2.18-1.2 2.33 0 2.76 1.54 2.76 3.54V13z"/></svg>LinkedIn</a>
+    <a href="mailto:deepanshsabh.60@gmail.com">deepanshsabh.60@gmail.com</a>
+    <a class="res" href="Deepansh-Sabharwal-Resume.pdf">Resume (PDF)</a>
+  </div>
+</aside>
+
+<main>
+  <div class="prose thesis" id="top">
+    <p>A <b>CPU and its compiler</b> from scratch, a <b>fault controller taken to physical silicon</b>, a neural network <b>quantized onto an NPU</b> and running on the mounted unit, an <b>analog amplifier being linearized</b> with a learned predistorter, and a web platform I run alone in production. Every figure on this page is measured, not estimated.</p>
+  </div>
 
 <section id="work">
-  <div class="wrap">
-    <div class="sec-h"><span class="n">1</span><h2>Work</h2><span class="r">ordered by layer, analog to application</span></div>
+  <div class="sh">Work</div>
 
-    <article class="entry" id="p1">
-      <div class="idx">1.1<b>Analog signal path</b></div>
-      <div>
-        <h3>Amplifier Linearization with Learned Predistortion</h3>
-        <p class="meta">UBC undergraduate research &middot; Sept 2026 to present &middot; <span class="status">in progress, no measured results yet</span></p>
-        <table class="spec">
-          <tr><th>Stage under test</th><td>LTC6078 op amp, 10 V/V, diode clipped at &plusmn;1 V</td></tr>
-          <tr><th>Dominant distortion</th><td>cubic (third harmonic)</td></tr>
-          <tr><th>Correction</th><td>polynomial predistorter, coefficients fit in Python from DC sweeps</td></tr>
-          <tr><th>Adaptation</th><td>SDR captures output, re-fits inverse model as temperature and load drift</td></tr>
-          <tr><th>Design target</th><td>third-harmonic reduction of 10 dB</td></tr>
-          <tr><th>Tools</th><td>LTspice, Python, software-defined radio</td></tr>
-        </table>
-        <figure>
-          <svg viewBox="0 0 720 96" role="img" aria-label="Predistortion loop: input through inverse polynomial into amplifier, output captured by SDR, coefficients re-fit">
-            <rect class="box hi" x="70" y="28" width="130" height="40"/><text class="lbl" x="135" y="46" text-anchor="middle">predistorter</text><text class="dim" x="135" y="60" text-anchor="middle">a1x + a3x&#179;</text>
-            <rect class="box" x="260" y="28" width="110" height="40"/><text class="lbl" x="315" y="46" text-anchor="middle">amplifier</text><text class="dim" x="315" y="60" text-anchor="middle">LTC6078, clips</text>
-            <rect class="box" x="430" y="28" width="90" height="40"/><text class="lbl" x="475" y="52" text-anchor="middle">load</text>
-            <rect class="box hi" x="260" y="2" width="110" height="20"/><text class="lbl" x="315" y="16" text-anchor="middle">SDR capture</text>
-            <rect class="box hi" x="70" y="2" width="130" height="20"/><text class="lbl" x="135" y="16" text-anchor="middle">re-fit coefficients</text>
-            <text class="dim" x="10" y="52">x(t)</text><path class="line" d="M38 48 H70"/>
-            <path class="line" d="M200 48 H260"/><path class="line" d="M370 48 H430"/>
-            <text class="dim" x="530" y="52">y(t)</text>
-            <path class="acc" d="M400 48 V12 H370"/><path class="acc" d="M260 12 H200"/><path class="acc" d="M135 22 V28"/>
-            <text class="dim" x="430" y="86">goal: y &asymp; G&middot;x further past the knee</text>
-          </svg>
-          <figcaption>Fig. 1. Feed-forward inverse with a slow feedback re-fit. Dashed path is the adaptation loop.</figcaption>
-        </figure>
-        <div class="prose">
-          <p>A diode-clipped op amp stage distorts once it passes its compression knee, and the dominant term is cubic. I am designing a polynomial predistortion stage that applies the inverse of that curve ahead of the amplifier so the chain stays linear further into the knee. The model lives in LTspice; the coefficients are fit in Python from DC sweep data rather than derived by hand.</p>
-          <p>Fixed coefficients drift with temperature and load, so the second half is an SDR feedback loop that captures the amplifier's actual output and re-fits the inverse with a learned predistorter. This entry gets numbers when the loop closes.</p>
-        </div>
+  <article class="entry" id="p1">
+    <div class="idx">01<b>Analog signal path</b></div>
+    <div>
+      <h3>Amplifier Linearization with Learned Predistortion</h3>
+      <p class="meta">UBC undergraduate research &middot; Sept 2026 to present &middot; <span class="status">in progress, no measured results yet</span></p>
+      <table class="spec">
+        <tr><th>Stage under test</th><td>LTC6078 op amp, 10 V/V, diode clipped at &plusmn;1 V</td></tr>
+        <tr><th>Dominant distortion</th><td>cubic (third harmonic)</td></tr>
+        <tr><th>Correction</th><td>polynomial predistorter, coefficients fit in Python from DC sweeps</td></tr>
+        <tr><th>Adaptation</th><td>SDR captures output, re-fits inverse model as temperature and load drift</td></tr>
+        <tr><th>Design target</th><td>third-harmonic reduction of 10 dB</td></tr>
+        <tr><th>Tools</th><td>LTspice, Python, software-defined radio</td></tr>
+      </table>
+      <figure>
+        <svg viewBox="0 0 720 96" role="img" aria-label="Predistortion loop: input through inverse polynomial into amplifier, output captured by SDR, coefficients re-fit">
+          <rect class="box hi" x="70" y="28" width="130" height="40" rx="2"/><text class="lbl" x="135" y="46" text-anchor="middle">predistorter</text><text class="dim" x="135" y="60" text-anchor="middle">a1x + a3x&#179;</text>
+          <rect class="box" x="260" y="28" width="110" height="40" rx="2"/><text class="lbl" x="315" y="46" text-anchor="middle">amplifier</text><text class="dim" x="315" y="60" text-anchor="middle">LTC6078, clips</text>
+          <rect class="box" x="430" y="28" width="90" height="40" rx="2"/><text class="lbl" x="475" y="52" text-anchor="middle">load</text>
+          <rect class="box hi" x="260" y="2" width="110" height="20" rx="2"/><text class="lbl" x="315" y="16" text-anchor="middle">SDR capture</text>
+          <rect class="box hi" x="70" y="2" width="130" height="20" rx="2"/><text class="lbl" x="135" y="16" text-anchor="middle">re-fit coefficients</text>
+          <text class="dim" x="10" y="52">x(t)</text><path class="line" d="M38 48 H70"/>
+          <path class="line" d="M200 48 H260"/><path class="line" d="M370 48 H430"/>
+          <text class="dim" x="530" y="52">y(t)</text>
+          <path class="acc" d="M400 48 V12 H370"/><path class="acc" d="M260 12 H200"/><path class="acc" d="M135 22 V28"/>
+          <text class="dim" x="710" y="86" text-anchor="end">goal: y &asymp; G&middot;x further past the knee</text>
+        </svg>
+        <figcaption>Fig. 1. Feed-forward inverse with a slow feedback re-fit. Dashed path is the adaptation loop.</figcaption>
+      </figure>
+      <div class="prose">
+        <p>A diode-clipped op amp stage distorts once it passes its compression knee, and the dominant term is cubic. I am designing a polynomial predistortion stage that applies the inverse of that curve ahead of the amplifier so the chain stays linear further into the knee. The model lives in LTspice; the coefficients are fit in Python from DC sweep data rather than derived by hand.</p>
+        <p>Fixed coefficients drift with temperature and load, so the second half is an SDR feedback loop that captures the amplifier's actual output and re-fits the inverse with a learned predistorter. This entry gets numbers when the loop closes.</p>
       </div>
-    </article>
+    </div>
+  </article>
 
-    <article class="entry" id="p2">
-      <div class="idx">1.2<b>Register transfer level</b></div>
-      <div>
-        <h3>FaultLatchedPWM</h3>
-        <p class="meta">Solo &middot; 2026 &middot; Verilog HDL on Tang Nano 20K FPGA</p>
-        <table class="spec">
-          <tr><th>Function</th><td>deterministic PWM motor controller with latched fault handling</td></tr>
-          <tr><th>State machine</th><td>INIT, IDLE, RUN, FAULT, SAFE</td></tr>
-          <tr><th>Fault response</th><td>output held low, latched until operator reset</td></tr>
-          <tr><th>Config guard</th><td>separate module rejects out-of-range parameters at load</td></tr>
-          <tr><th>Flow completed</th><td>simulation, synthesis, place-and-route, physical board</td></tr>
-        </table>
-        <figure>
-          <svg viewBox="0 0 720 60" role="img" aria-label="State machine: INIT to IDLE to RUN; RUN to FAULT on fault; FAULT to SAFE only on operator reset">
-            <g class="box"><rect x="10" y="18" width="80" height="26"/><rect x="150" y="18" width="80" height="26"/><rect x="290" y="18" width="80" height="26"/><rect class="hi" x="430" y="18" width="80" height="26"/><rect x="600" y="18" width="80" height="26"/></g>
-            <g class="lbl" text-anchor="middle"><text x="50" y="35">INIT</text><text x="190" y="35">IDLE</text><text x="330" y="35">RUN</text><text x="470" y="35">FAULT</text><text x="640" y="35">SAFE</text></g>
-            <path class="line" d="M90 31 H150"/><path class="line" d="M230 31 H290"/><path class="line" d="M370 31 H430"/><path class="line" d="M510 31 H600"/>
-            <text class="dim" x="400" y="14" text-anchor="middle">any fault, 1 clk</text>
-            <text class="dim" x="555" y="14" text-anchor="middle">operator reset only</text>
-            <text class="dim" x="470" y="56" text-anchor="middle">output held low, latched</text>
-          </svg>
-          <figcaption>Fig. 2. No path returns from FAULT without an external reset; a transient cannot re-enable the drive.</figcaption>
-        </figure>
-        <div class="prose">
-          <p>When a fault asserts, the output drops to a safe state and stays there until an operator resets it, so a transient glitch cannot quietly put the drive back in motion. A separate configuration-validation module rejects out-of-range parameters at load time rather than letting bad settings reach the driver stage. Carried through the complete flow, from simulation to a physical board.</p>
-        </div>
-        <p class="refs"><a href="https://github.com/NightCrawler9924/FaultLatchedPWM">source</a></p>
+  <article class="entry" id="p2">
+    <div class="idx">02<b>Register transfer level</b></div>
+    <div>
+      <h3><a href="https://github.com/NightCrawler9924/FaultLatchedPWM">FaultLatchedPWM</a></h3>
+      <p class="meta">Solo &middot; 2026 &middot; Verilog HDL on Tang Nano 20K FPGA</p>
+      <table class="spec">
+        <tr><th>Function</th><td>deterministic PWM motor controller with latched fault handling</td></tr>
+        <tr><th>State machine</th><td>INIT, IDLE, RUN, FAULT, SAFE</td></tr>
+        <tr><th>Fault response</th><td>output held low, latched until operator reset</td></tr>
+        <tr><th>Config guard</th><td>separate module rejects out-of-range parameters at load</td></tr>
+        <tr><th>Flow completed</th><td>simulation, synthesis, place-and-route, physical board</td></tr>
+      </table>
+      <figure>
+        <svg viewBox="0 0 720 60" role="img" aria-label="State machine: INIT to IDLE to RUN; RUN to FAULT on fault; FAULT to SAFE only on operator reset">
+          <g class="box"><rect x="10" y="18" width="80" height="26" rx="2"/><rect x="150" y="18" width="80" height="26" rx="2"/><rect x="290" y="18" width="80" height="26" rx="2"/><rect class="hi" x="430" y="18" width="80" height="26" rx="2"/><rect x="600" y="18" width="80" height="26" rx="2"/></g>
+          <g class="lbl" text-anchor="middle"><text x="50" y="35">INIT</text><text x="190" y="35">IDLE</text><text x="330" y="35">RUN</text><text x="470" y="35">FAULT</text><text x="640" y="35">SAFE</text></g>
+          <path class="line" d="M90 31 H150"/><path class="line" d="M230 31 H290"/><path class="line" d="M370 31 H430"/><path class="line" d="M510 31 H600"/>
+          <text class="dim" x="400" y="14" text-anchor="middle">any fault, 1 clk</text>
+          <text class="dim" x="555" y="14" text-anchor="middle">operator reset only</text>
+          <text class="dim" x="470" y="56" text-anchor="middle">output held low, latched</text>
+        </svg>
+        <figcaption>Fig. 2. No path returns from FAULT without an external reset; a transient cannot re-enable the drive.</figcaption>
+      </figure>
+      <div class="prose">
+        <p>When a fault asserts, the output drops to a safe state and stays there until an operator resets it, so a transient glitch cannot quietly put the drive back in motion. A separate configuration-validation module rejects out-of-range parameters at load time rather than letting bad settings reach the driver stage. Carried through the complete flow, from simulation to a physical board.</p>
       </div>
-    </article>
+      <p class="refs"><a href="https://github.com/NightCrawler9924/FaultLatchedPWM">Source &rarr;</a></p>
+    </div>
+  </article>
 
-    <article class="entry" id="p3">
-      <div class="idx">1.3<b>Architecture &amp; toolchain</b></div>
-      <div>
-        <h3>RISC-V Toolchain to Hardware Emulation Pipeline</h3>
-        <p class="meta">Solo &middot; 2025 &middot; Bare-metal C, RISC-V assembly, gdb</p>
-        <table class="spec">
-          <tr><th>Components</th><td>cross-compiler, bare-metal startup, cycle-accurate emulator</td></tr>
-          <tr><th>Pipeline</th><td>5 stage, IF/ID/EX/MEM/WB, forwarding and stalling as separate modules</td></tr>
-          <tr><th>Throughput</th><td>~1.0 IPC after hazard debugging</td></tr>
-          <tr><th>Validation</th><td>25-program regression suite, C and assembly</td></tr>
-          <tr><th>Built in</th><td>C</td></tr>
-        </table>
-        <div class="prose">
-          <p>Most of the work was hazard debugging, tracing execution cycle by cycle in gdb and comparing register state by hand, because a wrong value three instructions later usually originates several cycles earlier.</p>
-        </div>
-        <p class="refs"><a href="https://github.com/NightCrawler9924">source</a></p>
+  <article class="entry" id="p3">
+    <div class="idx">03<b>Architecture &amp; toolchain</b></div>
+    <div>
+      <h3>RISC-V Toolchain to Hardware Emulation Pipeline</h3>
+      <p class="meta">Solo &middot; 2025 &middot; Bare-metal C, RISC-V assembly, gdb</p>
+      <table class="spec">
+        <tr><th>Components</th><td>cross-compiler, bare-metal startup, cycle-accurate emulator</td></tr>
+        <tr><th>Pipeline</th><td>5 stage, IF/ID/EX/MEM/WB, forwarding and stalling as separate modules</td></tr>
+        <tr><th>Throughput</th><td>~1.0 IPC after hazard debugging</td></tr>
+        <tr><th>Validation</th><td>25-program regression suite, C and assembly</td></tr>
+        <tr><th>Built in</th><td>C</td></tr>
+      </table>
+      <div class="prose">
+        <p>Most of the work was hazard debugging, tracing execution cycle by cycle in gdb and comparing register state by hand, because a wrong value three instructions later usually originates several cycles earlier.</p>
       </div>
-    </article>
+      <p class="refs"><a href="https://github.com/NightCrawler9924">Source &rarr;</a></p>
+    </div>
+  </article>
 
-    <article class="entry" id="p4">
-      <div class="idx">1.4<b>Embedded &amp; edge ML</b></div>
-      <div>
-        <h3>Wildlife-Vehicle Collision Early Warning System</h3>
-        <p class="meta">UBC undergraduate research &middot; May 2026 to present &middot; Python, YOLOv8, Raspberry Pi 5, Hailo-8L NPU</p>
-        <table class="spec">
-          <tr><th>Model</th><td>YOLOv8n, fine-tuned; mAP50 0.823, mAP50-95 0.638</td></tr>
-          <tr><th>Dataset</th><td>7 classes, 3,015 sourced, 2,860 after filtering, fixed-seed split</td></tr>
-          <tr><th>Quantization</th><td>INT8, 2,001-image calibration set, quantization-aware fine-tuning</td></tr>
-          <tr><th>Camera calibration</th><td>OpenCV checkerboard on the mounted unit, 1.34 px reprojection error</td></tr>
-          <tr><th>Range estimate</th><td>thin-lens geometry fused with time-to-contact optical expansion</td></tr>
-          <tr><th>Deployment</th><td>systemd service, self-recovering; cold boot to first detection ~45 s</td></tr>
-          <tr><th>Tests</th><td>47 unit tests, run without hardware via simulation backend</td></tr>
-        </table>
-        <figure>
-          <svg viewBox="0 0 720 60" role="img" aria-label="Pipeline: camera, YOLOv8n INT8 on Hailo-8L, range estimate, alert, running as a systemd service">
-            <g class="box"><rect x="10" y="18" width="90" height="26"/><rect class="hi" x="150" y="18" width="150" height="26"/><rect x="350" y="18" width="130" height="26"/><rect x="530" y="18" width="80" height="26"/></g>
-            <g class="lbl" text-anchor="middle"><text x="55" y="35">camera</text><text x="225" y="35">YOLOv8n INT8 / Hailo-8L</text><text x="415" y="35">range estimate</text><text x="570" y="35">alert</text></g>
-            <path class="line" d="M100 31 H150"/><path class="line" d="M300 31 H350"/><path class="line" d="M480 31 H530"/>
-            <text class="dim" x="55" y="56" text-anchor="middle">OpenCV calibrated</text>
-            <text class="dim" x="415" y="56" text-anchor="middle">thin lens + time to contact</text>
-            <text class="dim" x="570" y="56" text-anchor="middle">GPIO / display</text>
-          </svg>
-          <figcaption>Fig. 3. Everything runs on the Pi. No cloud dependency.</figcaption>
-        </figure>
-        <div class="prose">
-          <p>The Hailo compiler refused the model. I traced it to an incompatible automatic postprocess-extraction step and rebuilt the export path with explicit end-node parsing and a custom NMS configuration rather than working around it. The camera calibration replaced a placeholder focal length that every prior distance measurement had silently depended on.</p>
-          <p>Bugs fixed on the real unit: a SIGTERM handler bypassed by a vendored library, a non-daemon thread that hung shutdown, a race between the alert thread and hardware cleanup (confirmed with a 20-trial stress test, fixed with a lock and idempotent teardown), a flaky I2C connector, and an apparent startup hang that was stdout block-buffering.</p>
-        </div>
+  <article class="entry" id="p4">
+    <div class="idx">04<b>Embedded &amp; edge ML</b></div>
+    <div>
+      <h3>Wildlife-Vehicle Collision Early Warning System</h3>
+      <p class="meta">UBC undergraduate research &middot; May 2026 to present &middot; Python, YOLOv8, Raspberry Pi 5, Hailo-8L NPU</p>
+      <table class="spec">
+        <tr><th>Model</th><td>YOLOv8n, fine-tuned; mAP50 0.823, mAP50-95 0.638</td></tr>
+        <tr><th>Dataset</th><td>7 classes, 3,015 sourced, 2,860 after filtering, fixed-seed split</td></tr>
+        <tr><th>Quantization</th><td>INT8, 2,001-image calibration set, quantization-aware fine-tuning</td></tr>
+        <tr><th>Camera calibration</th><td>OpenCV checkerboard on the mounted unit, 1.34 px reprojection error</td></tr>
+        <tr><th>Range estimate</th><td>thin-lens geometry fused with time-to-contact optical expansion</td></tr>
+        <tr><th>Deployment</th><td>systemd service, self-recovering; cold boot to first detection ~45 s</td></tr>
+        <tr><th>Tests</th><td>47 unit tests, run without hardware via simulation backend</td></tr>
+      </table>
+      <figure>
+        <svg viewBox="0 0 720 60" role="img" aria-label="Pipeline: camera, YOLOv8n INT8 on Hailo-8L, range estimate, alert, running as a systemd service">
+          <g class="box"><rect x="10" y="18" width="90" height="26" rx="2"/><rect class="hi" x="150" y="18" width="150" height="26" rx="2"/><rect x="350" y="18" width="130" height="26" rx="2"/><rect x="530" y="18" width="80" height="26" rx="2"/></g>
+          <g class="lbl" text-anchor="middle"><text x="55" y="35">camera</text><text x="225" y="35">YOLOv8n INT8 / Hailo-8L</text><text x="415" y="35">range estimate</text><text x="570" y="35">alert</text></g>
+          <path class="line" d="M100 31 H150"/><path class="line" d="M300 31 H350"/><path class="line" d="M480 31 H530"/>
+          <text class="dim" x="55" y="56" text-anchor="middle">OpenCV calibrated</text>
+          <text class="dim" x="415" y="56" text-anchor="middle">thin lens + time to contact</text>
+          <text class="dim" x="570" y="56" text-anchor="middle">GPIO / display</text>
+        </svg>
+        <figcaption>Fig. 3. Everything runs on the Pi. No cloud dependency.</figcaption>
+      </figure>
+      <div class="prose">
+        <p>The Hailo compiler refused the model. I traced it to an incompatible automatic postprocess-extraction step and rebuilt the export path with explicit end-node parsing and a custom NMS configuration rather than working around it. The camera calibration replaced a placeholder focal length that every prior distance measurement had silently depended on.</p>
+        <p>Bugs fixed on the real unit: a SIGTERM handler bypassed by a vendored library, a non-daemon thread that hung shutdown, a race between the alert thread and hardware cleanup (confirmed with a 20-trial stress test, fixed with a lock and idempotent teardown), a flaky I2C connector, and an apparent startup hang that was stdout block-buffering.</p>
       </div>
-    </article>
+    </div>
+  </article>
 
-    <article class="entry" id="p5">
-      <div class="idx">1.5<b>Applied machine learning</b></div>
-      <div>
-        <h3>AI-in-Farming: Crop Disease Classifier</h3>
-        <p class="meta">Solo &middot; 2025 &middot; Python, TensorFlow, NumPy, pandas</p>
-        <table class="spec">
-          <tr><th>Task</th><td>crop disease from leaf imagery, convolutional classifier</td></tr>
-          <tr><th>Dataset</th><td>~15,000 images</td></tr>
-          <tr><th>Test accuracy</th><td>92%</td></tr>
-          <tr><th>Method</th><td>confusion analysis drove architecture changes, not blind hyperparameter search</td></tr>
-        </table>
-        <p class="refs"><a href="https://github.com/NightCrawler9924">source</a></p>
+  <article class="entry" id="p5">
+    <div class="idx">05<b>Applied machine learning</b></div>
+    <div>
+      <h3>AI-in-Farming: Crop Disease Classifier</h3>
+      <p class="meta">Solo &middot; 2025 &middot; Python, TensorFlow, NumPy, pandas</p>
+      <table class="spec">
+        <tr><th>Task</th><td>crop disease from leaf imagery, convolutional classifier</td></tr>
+        <tr><th>Dataset</th><td>~15,000 images</td></tr>
+        <tr><th>Test accuracy</th><td>92%</td></tr>
+        <tr><th>Method</th><td>confusion analysis drove architecture changes, not blind hyperparameter search</td></tr>
+      </table>
+      <p class="refs"><a href="https://github.com/NightCrawler9924">Source &rarr;</a></p>
+    </div>
+  </article>
+
+  <article class="entry" id="p6">
+    <div class="idx">06<b>Production application</b></div>
+    <div>
+      <h3><a href="https://janvani-sable.vercel.app/">Janvani, Citizen Journalism Platform</a></h3>
+      <p class="meta">Solo, live in production &middot; 2026 to present &middot; Next.js, TypeScript, Node.js, PostgreSQL, Redis</p>
+      <table class="spec">
+        <tr><th>What it is</th><td>verified student journalists publish, the public comments</td></tr>
+        <tr><th>Stack</th><td>React and Next.js in TypeScript; REST on Node.js; PostgreSQL schema I designed and migrate; Redis</td></tr>
+        <tr><th>Security review</th><td>16 points before launch; access-control flaw and stored secrets found and fixed</td></tr>
+        <tr><th>Rate limiting</th><td>Redis-backed, built from the same review to close the class of problem</td></tr>
+        <tr><th>Delivery</th><td>GitHub Actions CI, Sentry in production</td></tr>
+        <tr><th>Team</th><td>1</td></tr>
+      </table>
+      <div class="prose">
+        <p>The access-control flaw let a signed-in user reach another user's records through a predictable API route. An LLM API is integrated as a production feature, not a demo. When something breaks I read the logs, reproduce it, and write the test that should have caught it.</p>
       </div>
-    </article>
-
-    <article class="entry" id="p6">
-      <div class="idx">1.6<b>Production application</b></div>
-      <div>
-        <h3>Janvani, Citizen Journalism Platform</h3>
-        <p class="meta">Solo, live in production &middot; 2026 to present &middot; Next.js, TypeScript, Node.js, PostgreSQL, Redis</p>
-        <table class="spec">
-          <tr><th>What it is</th><td>verified student journalists publish, the public comments</td></tr>
-          <tr><th>Stack</th><td>React and Next.js in TypeScript; REST on Node.js; PostgreSQL schema I designed and migrate; Redis</td></tr>
-          <tr><th>Security review</th><td>16 points before launch; access-control flaw and stored secrets found and fixed</td></tr>
-          <tr><th>Rate limiting</th><td>Redis-backed, built from the same review to close the class of problem</td></tr>
-          <tr><th>Delivery</th><td>GitHub Actions CI, Sentry in production</td></tr>
-          <tr><th>Team</th><td>1</td></tr>
-        </table>
-        <div class="prose">
-          <p>The access-control flaw let a signed-in user reach another user's records through a predictable API route. An LLM API is integrated as a production feature, not a demo. When something breaks I read the logs, reproduce it, and write the test that should have caught it.</p>
-        </div>
-        <p class="refs"><a href="https://janvani-sable.vercel.app/">live site</a></p>
-      </div>
-    </article>
-
-  </div>
+      <p class="refs"><a href="https://janvani-sable.vercel.app/">Live site &rarr;</a></p>
+    </div>
+  </article>
 </section>
 
 <section id="experience">
-  <div class="wrap">
-    <div class="sec-h"><span class="n">2</span><h2>Experience</h2></div>
-    <table class="list">
-      <tr><th>May 2026 to present</th><td><b>Undergraduate Research Assistant</b><i>University of British Columbia, Kelowna, BC</i><p>Two projects under the same supervisor. First, an edge ML detection pipeline owned end to end, from dataset construction through INT8 deployment on an NPU to a self-recovering field unit. Second, from September 2026, analog amplifier linearization: a polynomial predistortion stage modelled in LTspice with coefficients fit in Python, and an SDR feedback loop with a learned predistorter that tracks drift.</p></td></tr>
-      <tr><th>2026 to present</th><td><b>Founder and Sole Developer</b><i>Janvani, live in production</i><p>Design, build, secure, deploy, and support a production web platform without a team. Every issue that surfaces in production escalates to me.</p></td></tr>
-      <tr><th>Jul 2025 to present</th><td><b>Sales Advisor</b><i>Best Buy Canada, Kelowna, BC</i><p>Diagnose customer hardware and software problems across 20+ consultations a day and explain cause and fix in plain language to people with no technical background.</p></td></tr>
-      <tr><th>Nov 2023 to Dec 2024</th><td><b>Founder</b><i>The StoreNinja, New Delhi, India</i><p>Ran an e-commerce operation across 200+ products solo for 14 months, coordinating vendors and delivery timelines and setting prices from margin data.</p></td></tr>
-    </table>
-  </div>
+  <div class="sh">Experience</div>
+  <article class="entry xp"><div class="when">May 2026 to present</div><div><h3>Undergraduate Research Assistant</h3><p class="org">University of British Columbia &middot; Kelowna, BC</p><p>Two projects under the same supervisor. First, an edge ML detection pipeline owned end to end, from dataset construction through INT8 deployment on an NPU to a self-recovering field unit. Second, from September 2026, analog amplifier linearization: a polynomial predistortion stage modelled in LTspice with coefficients fit in Python, and an SDR feedback loop with a learned predistorter that tracks drift.</p></div></article>
+  <article class="entry xp"><div class="when">2026 to present</div><div><h3>Founder and Sole Developer</h3><p class="org">Janvani &middot; live in production</p><p>Design, build, secure, deploy, and support a production web platform without a team. Every issue that surfaces in production escalates to me.</p></div></article>
+  <article class="entry xp"><div class="when">Jul 2025 to present</div><div><h3>Sales Advisor</h3><p class="org">Best Buy Canada &middot; Kelowna, BC</p><p>Diagnose customer hardware and software problems across 20+ consultations a day and explain cause and fix in plain language to people with no technical background.</p></div></article>
+  <article class="entry xp"><div class="when">Nov 2023 to Dec 2024</div><div><h3>Founder</h3><p class="org">The StoreNinja &middot; New Delhi, India</p><p>Ran an e-commerce operation across 200+ products solo for 14 months, coordinating vendors and delivery timelines and setting prices from margin data.</p></div></article>
 </section>
 
 <section id="toolkit">
-  <div class="wrap">
-    <div class="sec-h"><span class="n">3</span><h2>Toolkit</h2><span class="r">what I actually use</span></div>
-    <table class="list tk">
-      <tr><th>Languages</th><td><b>C</b>, <b>Python</b>, TypeScript, JavaScript, Java, SQL, Bash, Verilog HDL, RISC-V assembly</td></tr>
-      <tr><th>Systems, hardware</th><td>Embedded Linux, systemd, UART / I2C / SPI / GPIO, FPGA design flow, LTspice, software-defined radio, Raspberry Pi, Arduino, gdb, GCC cross-compiler</td></tr>
-      <tr><th>Machine learning</th><td>TensorFlow, YOLOv8, OpenCV, INT8 quantization, Hailo Dataflow Compiler, model evaluation, LLM API integration</td></tr>
-      <tr><th>Web, data</th><td>React, Next.js, Node.js, Flask, REST APIs, PostgreSQL, Redis, schema design and migrations</td></tr>
-      <tr><th>Practice</th><td>Git, GitHub Actions CI/CD, automated testing with simulation backends, security review, root cause analysis, technical documentation, Claude Code and Copilot as daily coding agents</td></tr>
-      <tr><th>Education</th><td>B.A.Sc. Computer Engineering, UBC Okanagan, expected May 2029. Fall 2026: Microcomputer Engineering, Microelectronics I, Linear Circuit Theory, Industrial Automation. Data Structures and Algorithms in Java. OpenCV University certificate, 2026.</td></tr>
-    </table>
+  <div class="sh">Toolkit</div>
+  <div class="tk">
+    <div class="k">Languages</div><div class="v"><b>C</b>, <b>Python</b>, TypeScript, JavaScript, Java, SQL, Bash, Verilog HDL, RISC-V assembly</div>
+    <div class="k">Systems, hardware</div><div class="v">Embedded Linux, systemd, UART / I2C / SPI / GPIO, FPGA design flow, LTspice, software-defined radio, Raspberry Pi, Arduino, gdb, GCC cross-compiler</div>
+    <div class="k">Machine learning</div><div class="v">TensorFlow, YOLOv8, OpenCV, INT8 quantization, Hailo Dataflow Compiler, model evaluation, LLM API integration</div>
+    <div class="k">Web, data</div><div class="v">React, Next.js, Node.js, Flask, REST APIs, PostgreSQL, Redis, schema design and migrations</div>
+    <div class="k">Practice</div><div class="v">Git, GitHub Actions CI/CD, automated testing with simulation backends, security review, root cause analysis, technical documentation, Claude Code and Copilot as daily coding agents</div>
+    <div class="k">Education</div><div class="v">B.A.Sc. Computer Engineering, UBC Okanagan, expected May 2029. Fall 2026: Microcomputer Engineering, Microelectronics I, Linear Circuit Theory, Industrial Automation. Data Structures and Algorithms in Java. OpenCV University certificate, 2026.</div>
   </div>
 </section>
 
-<section id="contact" class="contact">
-  <div class="wrap">
-    <div class="sec-h"><span class="n">4</span><h2>Contact</h2></div>
-    <div class="prose"><p>Looking for co-op terms starting January 2027, 4 to 16 months, anywhere in Canada. Embedded, firmware, test and verification, edge ML, or full-stack. I reply within two days.</p></div>
-    <a class="btn pri" href="mailto:deepanshsabh.60@gmail.com">Email me</a>
-    <a class="btn" href="Deepansh-Sabharwal-Resume.pdf">Resume (PDF)</a>
-    <a class="btn" href="https://github.com/NightCrawler9924">GitHub</a>
-  </div>
+<section id="contact">
+  <div class="sh">Contact</div>
+  <div class="prose"><p>Looking for co-op terms starting January 2027, 4 to 16 months, anywhere in Canada. Embedded, firmware, test and verification, edge ML, or full-stack. Canadian permanent resident. I reply within two days.</p></div>
+  <a class="btn pri" href="mailto:deepanshsabh.60@gmail.com">Email me</a>
+  <a class="btn" href="Deepansh-Sabharwal-Resume.pdf">Resume (PDF)</a>
 </section>
 
-<footer class="wrap">
-  <span>Deepansh Sabharwal &middot; Kelowna, British Columbia</span>
-  <span>Rev 2026-09-20 &middot; one HTML file, no framework</span>
-</footer>
+<footer>Hand-written HTML, one file, no framework. Type set in Inter and JetBrains Mono. Kelowna, British Columbia. Rev 2026-09-20.</footer>
 </main>
+</div>
+
+<script>
+(function(){
+  var links=document.querySelectorAll('.side-nav a');if(!links.length||!('IntersectionObserver' in window))return;
+  var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.remove('on')});var a=map[e.target.id];if(a)a.classList.add('on')}})},{rootMargin:'-40% 0px -55% 0px'});
+  document.querySelectorAll('main section').forEach(function(s){io.observe(s)});
+})();
+</script>
 </body>
 </html>
