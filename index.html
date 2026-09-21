@@ -9,6 +9,11 @@
 <meta property="og:description" content="Computer Engineering, UBC Okanagan. Embedded systems, edge ML, RTL, analog signal correction.">
 <meta property="og:url" content="https://deepanshsabharwal.com">
 <meta property="og:type" content="profile">
+<meta property="og:image" content="https://deepanshsabharwal.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://deepanshsabharwal.com/og.png">
 <link rel="canonical" href="https://deepanshsabharwal.com">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231F3A5F'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' font-weight='700' fill='%23FBFAF7' text-anchor='middle'%3EDS%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -137,6 +142,11 @@ figure.playing [data-step].on .box{stroke:var(--acc);stroke-width:1.6}
 .steps li.on{display:block;border-left-color:var(--acc);color:var(--fg)}
 .steps li b{color:var(--fg);font-weight:500}
 .steps li b::after{content:" ";}
+.log{margin:0 0 18px;padding:12px 14px;border:1px solid var(--line);border-radius:4px;background:var(--bg-2);font-family:var(--mono);font-size:12px;line-height:1.55}
+.log-h{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-3);margin:0 0 8px}
+.log ol{list-style:none;margin:0;padding:0}
+.log li{display:grid;grid-template-columns:84px 1fr;gap:10px;padding:5px 0;border-top:1px solid var(--line)}
+.log time{color:var(--warn);white-space:nowrap}
 
 /* experience */
 .xp .when{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-3);padding-top:5px}
@@ -235,7 +245,14 @@ footer{font-family:var(--mono);font-size:12px;color:var(--fg-3);padding:0 0 48px
         <figcaption><span>Fig. 1. Feed-forward inverse with a slow feedback re-fit. Dashed path is the adaptation loop.</span><button class="dissect" type="button">Dissect &rarr;</button></figcaption>
       </figure>
       <ol class="steps"><li><b>Input.</b>The test signal, x(t). The amplifier's curve is measured first from DC sweep data, point by point, which is what the correction is fit against.</li><li><b>Predistorter.</b>A polynomial, a1x + a3x&#179;, chosen to be the inverse of the amplifier's own curve. The coefficients are not derived by hand; they are fit in Python to the sweep data.</li><li><b>Amplifier.</b>An LTC6078 stage at 10 V/V, diode clipped at &plusmn;1 V. Past the knee it compresses, and the dominant error is the cubic term. The predistorter has already bent the input the other way.</li><li><b>Output.</b>y(t) should track G&middot;x further into the knee than it would without correction. The design target is 10 dB less third harmonic. No measured number yet.</li><li><b>SDR capture.</b>A software-defined radio samples the real output, not the LTspice model. This is what makes the loop honest about temperature and load drift.</li><li><b>Re-fit.</b>The captured output goes back into the fitter, the coefficients update, and the predistorter tracks the amplifier as it drifts. This is the learned part.</li></ol>
-      <div class="prose">
+            <div class="log" aria-label="Research log">
+        <div class="log-h">Research log</div>
+        <ol>
+          <li><time datetime="2026-09">Sept 2026</time>Project started. Amplifier stage chosen (LTC6078, 10 V/V, clipped at &plusmn;1 V). LTspice model built; DC sweep data collected; first polynomial fit in Python.</li>
+          <li><time datetime="2026-10">Next</time>SDR capture of the real output, then the re-fit loop. Third-harmonic measurement before and after correction goes here.</li>
+        </ol>
+      </div>
+<div class="prose">
         <p><b>What this is.</b> An amplifier is only linear up to a point. Push the input past that knee and the output no longer follows it, and the error shows up as harmonics, mostly the third. Predistortion means bending the input the opposite way first, so the amplifier's own curve straightens it back out. The interesting part is that the right bend changes as the amplifier warms up, so the correction has to be measured and re-fit rather than set once.</p>
         <p>A diode-clipped op amp stage distorts once it passes its compression knee, and the dominant term is cubic. I am designing a polynomial predistortion stage that applies the inverse of that curve ahead of the amplifier so the chain stays linear further into the knee. The model lives in LTspice; the coefficients are fit in Python from DC sweep data rather than derived by hand.</p>
         <p>Fixed coefficients drift with temperature and load, so the second half is an SDR feedback loop that captures the amplifier's actual output and re-fits the inverse with a learned predistorter. This entry gets numbers when the loop closes.</p>
@@ -455,7 +472,11 @@ footer{font-family:var(--mono);font-size:12px;color:var(--fg-3);padding:0 0 48px
       f.classList.toggle('playing',i>0);list.classList.toggle('open',i>0);
       btn.textContent=i===0?'Dissect \u2192':i<n?'Next ('+i+'/'+n+') \u2192':'Reset'}
     btn.addEventListener('click',function(){i=i>=n?0:i+1;paint()});
-    paint()})
+    paint();
+    if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+      var played=false,io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting||played)return;played=true;io.disconnect();
+        var k=0,id=setInterval(function(){if(i!==k){clearInterval(id);return}i=++k;paint();if(k>=n)clearInterval(id)},700)})},{threshold:.6});
+      io.observe(f)}})
 })();
 (function(){
   var b=document.getElementById('theme'),h=document.documentElement;
@@ -471,5 +492,8 @@ footer{font-family:var(--mono);font-size:12px;color:var(--fg-3);padding:0 0 48px
   document.querySelectorAll('main section').forEach(function(s){io.observe(s)});
 })();
 </script>
+<!-- analytics: sign up at goatcounter.com, then replace SITECODE and uncomment
+<script data-goatcounter="https://SITECODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+-->
 </body>
 </html>
